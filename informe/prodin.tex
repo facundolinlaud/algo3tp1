@@ -32,6 +32,38 @@ Finalmente, el problema satisface el principio de optimalidad.
 \vskip 8pt
 $\qedwhite$
 
+\subsection{Diseño}
+\begin{codebox}
+	\Procname{$\proc{Subset-Sum}(i, accumulator)$}
+		\li \If $(i, accumulator) \in dic$ \textbf{then}				\RComment $O(1)$
+		\li \Then
+			\If $i = 0$ \textbf{then}									\RComment $O(1)$
+			\li \Then
+				\If $accumulator = 0$ \textbf{then}						\RComment $O(1)$
+				\li \Then
+					 $dic[i][accumulator] \leftarrow 0$ 				\RComment $O(1)$
+					  \li
+				\Else
+					\li $dic[i][accumulator] \leftarrow \infty$ 		\RComment $O(1)$
+					\li
+				\End
+			\Else
+				\li \If $V[i] > T$ \textbf{then}						\RComment $O(1)$
+				\li \Then
+					 $dic[i][accumulator] \leftarrow \func{Subset-Sum}(i - 1, accumulator)$
+					 \li
+				\Else
+					\li $dic[i][accumulator] \leftarrow \func{min}\Big(\func{Subset-Sum}(i - 1, accumulator),$
+					\Indentmore \li $1 + \func{Subset-Sum}(i - 1, accumulator - V[i])\Big)$
+				\End
+			\End
+		\End
+
+		\zi
+		\li \Return $dic[i][accumulator]$								\RComment $O(1)$
+	\End
+\end{codebox}
+
 \subsection{Implementación}
 \subsection{Complejidad}
 \subsection{Análisis de performance}
