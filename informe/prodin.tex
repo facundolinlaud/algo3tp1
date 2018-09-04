@@ -1,0 +1,37 @@
+\section{Programación dinámica}
+\subsection{Solución}
+Antes que nada, debemos demostrar que el Principio de Optimalidad de Bellman vale para el problema de la suma de subconjuntos. Es decir, que toda solución óptima de un problema es construida a partir de subsoluciones óptimas de sus respectivos subproblemas. ¿Entonces, se cumple el principio de optimalidad? Verifiquémoslo.
+
+\subsubsection{Cumplimiento del Principio de Optimalidad}
+Asumiendo $I$ un conjunto solución de $n$ índices correspondientes a elementos en $V$ tal que $I=\{1, ..., n\}$ y $\sum_{i \in I}v_{i} = T$ con $T$ el valor objetivo. Para cada valor posible en $V$ hay dos posibilidades: que sea parte de la solución o no lo sea.
+
+\begin{enumerate}[I)]
+\item $n \notin I \implies I \subseteq \{1, 2, ..., n-1\}$
+	\vskip 0pt
+	De esta manera, el valor de $T$ no cambia. Es decir: $\sum_{i \in I}v_{i}=T$ con $I$ solución óptima por hipótesis. Luego, $I$ remanece solución óptima para el subproblema de valor objetivo $T$.
+\item $n \in I:$
+	\vskip 0pt
+	En este caso, se tiene que cumplir $\sum_{i \in I^\prime}v_{i}=T-v_{i}$ con $I^\prime=I-\{n\}$ y $I^\prime$ solución óptima.
+	\vskip 8pt
+	Si $I^\prime=I-\{n\}$ \textbf{no} fuese solución óptima entonces existiría un $I=I^{\prime\prime}$ mínimo (y óptimo) tal que $|I^{\prime\prime}| < |I^\prime|$ y $\sum_{i \in I^{\prime\prime}}v_{i} = T - v_{n}$
+	\vskip 8pt
+	Pero si $I^{\prime\prime}$ fuese solución óptima del subproblema $n-1$ entonces la solución óptima del problema $n$ sería $I = I^{\prime\prime} \cup \{n\}$ y recordando la equivalencia $I=I^\prime \cup \{n\}$ que fue obtenida anteriormente, podemos generar un sistema de ecuaciones y luego aplicar álgebra:
+	\vskip 8pt
+	$
+		\begin{cases}
+			I^\prime = I - \{n\} \\ 
+			I = I^{\prime\prime} \cup \{n\}
+		\end{cases}
+		\iff
+		I^\prime = (I^{\prime\prime} \cup \{n\}) - \{n\} \iff I^\prime = I^{\prime\prime}
+	$
+	\vskip 8pt
+	La equivalencia entre $I^\prime$ e $I^{\prime\prime}$ obtenida como conclusión contradice la declaración $|I^{\prime\prime}| < |I^\prime|$, obteniéndose un absurdo. Luego, $I^\prime$ es subsolución óptima del subproblema.
+\end{enumerate}
+Finalmente, el problema satisface el principio de optimalidad.
+\vskip 8pt
+$\qedwhite$
+
+\subsection{Implementación}
+\subsection{Complejidad}
+\subsection{Análisis de performance}

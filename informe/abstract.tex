@@ -1,0 +1,14 @@
+En este documento se analizará el problema de la suma de subconjuntos (\textit{subset sum} en inglés). Dado un conjunto de $n$ elementos $V$ generalizados $v_{i}$ y un valor objetivo $T$, decidir si existe un subconjunto de S cuyos elementos sumen exactamente $T$ y, de existir múltiples soluciones, dar el mínimo cardinal.
+
+\vskip 8pt
+
+Es interesante analizar este problema y sus derivados por su importante papel, por ejemplo, en las Ciencias de la Computación. Uno de sus caso de uso es encontrar la mejor distribución de tareas a ejecutar en dos procesadores, minimizando tiempos de \textit{idling} no es mas que una instancia del \textit{subset sum} con $T = \frac{total}{2}$, siendo $total$ la suma de los tiempos totales de todas las tareas a ejecutar.
+
+\vskip 8pt
+
+Este problema nos invita a preguntarnos:
+\begin{itemize}
+	\item ¿Todas las instancias de este problema tienen solución?
+	\item ¿Qué técnicas algorítmicas podemos emplear en nuestras soluciones y cuáles son sus complejidades?
+	\item ¿Hay \textit{entry sets} más o menos performantes? ¿Qué forma tienen?
+\end{itemize}
