@@ -33,36 +33,60 @@ Finalmente, el problema satisface el principio de optimalidad.
 $\qedwhite$
 
 \subsection{Diseño}
-\begin{codebox}
-	\Procname{$\proc{Subset-Sum}(i, accumulator)$}
-		\li \If $(i, accumulator) \in dic$ \textbf{then}				\RComment $O(1)$
-		\li \Then
-			\If $i = 0$ \textbf{then}									\RComment $O(1)$
-			\li \Then
-				\If $accumulator = 0$ \textbf{then}						\RComment $O(1)$
+\begin{center}
+	\begin{minipage}{.8\textwidth}
+		\begin{codebox}
+			\Procname{$\proc{Subset-Sum}(i, accumulator)$}
+				\li \If $(i, accumulator) \in dic$ \textbf{then}				\RComment $O(1)$
 				\li \Then
-					 $dic[i][accumulator] \leftarrow 0$ 				\RComment $O(1)$
-					  \li
-				\Else
-					\li $dic[i][accumulator] \leftarrow \infty$ 		\RComment $O(1)$
-					\li
+					\If $i = 0$ \textbf{then}									\RComment $O(1)$
+					\li \Then
+						\If $accumulator = 0$ \textbf{then}						\RComment $O(1)$
+						\li \Then
+							 $dic[i][accumulator] \leftarrow 0$ 				\RComment $O(1)$
+							  \li
+						\Else
+							\li $dic[i][accumulator] \leftarrow \infty$ 		\RComment $O(1)$
+							\li
+						\End
+					\Else
+						\li \If $V[i] > T$ \textbf{then}						\RComment $O(1)$
+						\li \Then
+							 $dic[i][accumulator] \leftarrow \func{Subset-Sum}(i - 1, accumulator)$
+							 \li
+						\Else
+							\li $dic[i][accumulator] \leftarrow \func{min}\Big(\func{Subset-Sum}(i - 1, accumulator),$
+							\Indentmore \li $1 + \func{Subset-Sum}(i - 1, accumulator - V[i])\Big)$
+						\End
+					\End
 				\End
-			\Else
-				\li \If $V[i] > T$ \textbf{then}						\RComment $O(1)$
-				\li \Then
-					 $dic[i][accumulator] \leftarrow \func{Subset-Sum}(i - 1, accumulator)$
-					 \li
-				\Else
-					\li $dic[i][accumulator] \leftarrow \func{min}\Big(\func{Subset-Sum}(i - 1, accumulator),$
-					\Indentmore \li $1 + \func{Subset-Sum}(i - 1, accumulator - V[i])\Big)$
-				\End
-			\End
-		\End
 
-		\zi
-		\li \Return $dic[i][accumulator]$								\RComment $O(1)$
-	\End
-\end{codebox}
+				\zi
+				\li \Return $dic[i][accumulator]$								\RComment $O(1)$
+			\End
+		\end{codebox}
+
+		\footnotesize Algoritmo
+		\label{fig:algoritmo}
+	\end{minipage}
+\end{center}
+Este algorítmo tiene un enfoque top-down. Es invocado con los parámetros $(i, accumulator)$ donde $i$ representa el i-ésimo elemento dentro de un conjunto $V$ de valores posibles utilizados para intentar sumar el valor objetivo $T$. La línea 1 pregunta si la dupla $(i, accumulator)$ está \textit{cacheada}, es decir, si ya fue calculada anteriormente. Si la respuesta es no, se procede a calcularlo. El siguiente condicional representa una de las condiciones necesarias para el caso base: que nos hayamos quedado sin elementos para analizar en el conjunto $V$. Si esto sucede, el algoritmo encontró una respuesta para este camino recursivo, pero depende del valor de $accumulator$:
+
+\begin{itemize}
+	\item Si $accumulator$ es cero, entonces la solución del camino recursivo es cero. Es decir, necesito 0 elementos del conjunto V para sumar 0.
+	\item En cambio, si el valor de $accumulator$ no es cero, el camino no tiene solución, pues el camino recursivo no dispone de elementos suficientes para sumar $accumulator$.
+\end{itemize}
+
+Cualquiera sea la respuesta, esta se almacena en una matriz global $dic$ en los índices $(i, accumulator)$ para ser reutilizada la próxima vez que la función $Subset-Sum$ sea invocada con los mismos parámetros.
+
+\vskip 8pt
+
+Si el valor de $i$ es distinto de cero, entonces estamos en presencia de un paso recursivo. Aquí existen dos casos posibles:
+\begin{itemize}
+	\item $V[i]$ es mayor al valor acumulado al que se quiere llegar; es decir, el elemento del conjunto $V$ que se está analizando supera el valor de $accumulated$ por lo tanto no puede ser parte de la solución. En este, caso el algoritmo continúa por el camino recursivo donde $V[i]$ no es solución.
+	\item $V[i]$ no es mayor al valor acumulado y podría llegar a ser parte de la solución. En este caso, se consideran y exploran ambos caminos: donde $V[i]$ es incluído en la solución y donde no lo es. El algoritmo se quedará con el menor de los dos caminos. Es decir, el de menor cardinalidad. Aquí es importante aclarar la importancia de devolver $\infty$ en el caso base sin solución explicado anteriormente.
+\end{itemize}
+Nuevamente, cualquiera sea el resultado del camino recursivo, éste se guardará en el diccionario con los índices correspondientes. Finalmente, el algoritmo retornará lo que sea que haya guardado recientemente o no en los índices $(i, accumulator)$ del diccionario.
 
 \subsection{Implementación}
 \subsection{Complejidad}
