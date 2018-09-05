@@ -82,7 +82,13 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/facundo/Documents/compu/algo3/taller/tp1/repo/impl/main.cpp">
+		<Unit filename="/Users/facundo/Documents/compu/algo3/taller/tp1/repo/impl/src/dynamic_programming.cpp">
+			<Option target="impl"/>
+		</Unit>
+		<Unit filename="/Users/facundo/Documents/compu/algo3/taller/tp1/repo/impl/src/dynamic_programming.h">
+			<Option target="impl"/>
+		</Unit>
+		<Unit filename="/Users/facundo/Documents/compu/algo3/taller/tp1/repo/impl/src/main.cpp">
 			<Option target="impl"/>
 		</Unit>
 		<Unit filename="/Users/facundo/Documents/compu/algo3/taller/tp1/repo/impl/CMakeLists.txt">

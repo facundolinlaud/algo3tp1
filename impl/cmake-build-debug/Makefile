@@ -123,32 +123,59 @@ impl/fast:
 	$(MAKE) -f CMakeFiles/impl.dir/build.make CMakeFiles/impl.dir/build
 .PHONY : impl/fast
 
-main.o: main.cpp.o
+src/dynamic_programming.o: src/dynamic_programming.cpp.o
 
-.PHONY : main.o
+.PHONY : src/dynamic_programming.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) -f CMakeFiles/impl.dir/build.make CMakeFiles/impl.dir/main.cpp.o
-.PHONY : main.cpp.o
+src/dynamic_programming.cpp.o:
+	$(MAKE) -f CMakeFiles/impl.dir/build.make CMakeFiles/impl.dir/src/dynamic_programming.cpp.o
+.PHONY : src/dynamic_programming.cpp.o
 
-main.i: main.cpp.i
+src/dynamic_programming.i: src/dynamic_programming.cpp.i
 
-.PHONY : main.i
+.PHONY : src/dynamic_programming.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) -f CMakeFiles/impl.dir/build.make CMakeFiles/impl.dir/main.cpp.i
-.PHONY : main.cpp.i
+src/dynamic_programming.cpp.i:
+	$(MAKE) -f CMakeFiles/impl.dir/build.make CMakeFiles/impl.dir/src/dynamic_programming.cpp.i
+.PHONY : src/dynamic_programming.cpp.i
 
-main.s: main.cpp.s
+src/dynamic_programming.s: src/dynamic_programming.cpp.s
 
-.PHONY : main.s
+.PHONY : src/dynamic_programming.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) -f CMakeFiles/impl.dir/build.make CMakeFiles/impl.dir/main.cpp.s
-.PHONY : main.cpp.s
+src/dynamic_programming.cpp.s:
+	$(MAKE) -f CMakeFiles/impl.dir/build.make CMakeFiles/impl.dir/src/dynamic_programming.cpp.s
+.PHONY : src/dynamic_programming.cpp.s
+
+src/main.o: src/main.cpp.o
+
+.PHONY : src/main.o
+
+# target to build an object file
+src/main.cpp.o:
+	$(MAKE) -f CMakeFiles/impl.dir/build.make CMakeFiles/impl.dir/src/main.cpp.o
+.PHONY : src/main.cpp.o
+
+src/main.i: src/main.cpp.i
+
+.PHONY : src/main.i
+
+# target to preprocess a source file
+src/main.cpp.i:
+	$(MAKE) -f CMakeFiles/impl.dir/build.make CMakeFiles/impl.dir/src/main.cpp.i
+.PHONY : src/main.cpp.i
+
+src/main.s: src/main.cpp.s
+
+.PHONY : src/main.s
+
+# target to generate assembly for a file
+src/main.cpp.s:
+	$(MAKE) -f CMakeFiles/impl.dir/build.make CMakeFiles/impl.dir/src/main.cpp.s
+.PHONY : src/main.cpp.s
 
 # Help Target
 help:
@@ -159,9 +186,12 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... impl"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... src/dynamic_programming.o"
+	@echo "... src/dynamic_programming.i"
+	@echo "... src/dynamic_programming.s"
+	@echo "... src/main.o"
+	@echo "... src/main.i"
+	@echo "... src/main.s"
 .PHONY : help
 
 
