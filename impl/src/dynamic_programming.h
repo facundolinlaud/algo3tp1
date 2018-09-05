@@ -21,5 +21,7 @@ public:
     dynamic_programming();
 
     int calculate(int n, int t, int values[n]);
+
+    void print_dic(int n, int t);
 };
 #endif //IMPL_DYNAMIC_PROGRAMMING_H

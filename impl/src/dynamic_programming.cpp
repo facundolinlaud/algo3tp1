@@ -2,6 +2,7 @@
 // Created by Facundo Linlaud on 5/9/18.
 //
 
+#include <iostream>
 #include "dynamic_programming.h"
 
 static const int ZERO = 0;
@@ -58,4 +59,15 @@ void dynamic_programming::destroy_dic(int n){
         delete dic[i];
 
     delete [] dic;
+}
+
+void dynamic_programming::print_dic(int n, int t){
+    for(int i = 0; i <= n; i++){
+        for(int accumulator = 0; accumulator <= t; accumulator++){
+            int val = dic[i][accumulator];
+            std::cout << val << "    ";
+        }
+
+        std::cout << std::endl;
+    }
 }

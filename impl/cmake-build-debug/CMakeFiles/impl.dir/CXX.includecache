@@ -7,6 +7,8 @@
 #IncludeRegexTransform: 
 
 /Users/facundo/Documents/compu/algo3/taller/tp1/repo/impl/src/dynamic_programming.cpp
+iostream
+-
 dynamic_programming.h
 /Users/facundo/Documents/compu/algo3/taller/tp1/repo/impl/src/dynamic_programming.h
 
