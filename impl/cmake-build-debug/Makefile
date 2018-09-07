@@ -23,6 +23,9 @@ SUFFIXES =
 .SUFFIXES: .hpux_make_needs_suffix_list
 
 
+# Produce verbose output by default.
+VERBOSE = 1
+
 # Suppress display of executed commands.
 $(VERBOSE).SILENT:
 
@@ -123,6 +126,33 @@ impl/fast:
 	$(MAKE) -f CMakeFiles/impl.dir/build.make CMakeFiles/impl.dir/build
 .PHONY : impl/fast
 
+src/brute_force.o: src/brute_force.cpp.o
+
+.PHONY : src/brute_force.o
+
+# target to build an object file
+src/brute_force.cpp.o:
+	$(MAKE) -f CMakeFiles/impl.dir/build.make CMakeFiles/impl.dir/src/brute_force.cpp.o
+.PHONY : src/brute_force.cpp.o
+
+src/brute_force.i: src/brute_force.cpp.i
+
+.PHONY : src/brute_force.i
+
+# target to preprocess a source file
+src/brute_force.cpp.i:
+	$(MAKE) -f CMakeFiles/impl.dir/build.make CMakeFiles/impl.dir/src/brute_force.cpp.i
+.PHONY : src/brute_force.cpp.i
+
+src/brute_force.s: src/brute_force.cpp.s
+
+.PHONY : src/brute_force.s
+
+# target to generate assembly for a file
+src/brute_force.cpp.s:
+	$(MAKE) -f CMakeFiles/impl.dir/build.make CMakeFiles/impl.dir/src/brute_force.cpp.s
+.PHONY : src/brute_force.cpp.s
+
 src/dynamic_programming.o: src/dynamic_programming.cpp.o
 
 .PHONY : src/dynamic_programming.o
@@ -186,6 +216,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... impl"
+	@echo "... src/brute_force.o"
+	@echo "... src/brute_force.i"
+	@echo "... src/brute_force.s"
 	@echo "... src/dynamic_programming.o"
 	@echo "... src/dynamic_programming.i"
 	@echo "... src/dynamic_programming.s"

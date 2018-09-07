@@ -1,12 +1,12 @@
 #include <iostream>
-#include <string>
 #include "dynamic_programming.h"
+#include "brute_force.h"
 
 using namespace std;
 
 int main(int argc, char *argv[]) {
-    if(argc < 2){
-        cout << "./ejec {T} {n} {v1} ... {vn}" << endl;
+    if(argc < 3){
+        cout << "./ejec {bf/bt/pd} {T} {n} {v1} ... {vn}" << endl;
         return 0;
     }
 
@@ -24,14 +24,27 @@ int main(int argc, char *argv[]) {
         values[i] = stoi(arguments[i + 4]);
     }
 
-    int resultado;
-    if(arguments[1] == "pd") {
+    int result;
+    int computations;
+
+    if(arguments[1] == "bf") {
+        brute_force bf(values, n);
+        result = bf.calculate(t);
+        computations = bf.computations;
+
+    }else if(arguments[1] == "bt") {
+
+    }else if(arguments[1] == "dp") {
         dynamic_programming dp;
-        resultado = dp.calculate(n, t, values);
+        result = dp.calculate(n, t, values);
+        computations = dp.computations;
+    }else{
+        cout << "Unrecognized algorithm!" << endl;
+        return 0;
     }
 
     cout << "##################" << endl;
-    cout << "Resultado: " << resultado << endl;
+    cout << "Resultado: (" << arguments[1] << ") " << result << " en " << computations << " computaciones" << endl;
     cout << "##################" << endl;
 
     return 0;

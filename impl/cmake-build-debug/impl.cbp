@@ -82,6 +82,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/facundo/Documents/compu/algo3/taller/tp1/repo/impl/src/brute_force.cpp">
+			<Option target="impl"/>
+		</Unit>
+		<Unit filename="/Users/facundo/Documents/compu/algo3/taller/tp1/repo/impl/src/brute_force.h">
+			<Option target="impl"/>
+		</Unit>
 		<Unit filename="/Users/facundo/Documents/compu/algo3/taller/tp1/repo/impl/src/dynamic_programming.cpp">
 			<Option target="impl"/>
 		</Unit>
@@ -89,6 +95,9 @@
 			<Option target="impl"/>
 		</Unit>
 		<Unit filename="/Users/facundo/Documents/compu/algo3/taller/tp1/repo/impl/src/main.cpp">
+			<Option target="impl"/>
+		</Unit>
+		<Unit filename="/Users/facundo/Documents/compu/algo3/taller/tp1/repo/impl/src/utils.h">
 			<Option target="impl"/>
 		</Unit>
 		<Unit filename="/Users/facundo/Documents/compu/algo3/taller/tp1/repo/impl/CMakeLists.txt">

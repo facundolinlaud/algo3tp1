@@ -6,6 +6,10 @@
 #define IMPL_DYNAMIC_PROGRAMMING_H
 
 class dynamic_programming {
+    const int ZERO = 0;
+    const int NO_ELEMENT = -1;
+    const int INFINITY = 999;
+
 private:
     int** dic;
 
@@ -15,9 +19,9 @@ private:
 
     void initialize_dic(int n, int t);
 
-    int min(int a, int b);
-
 public:
+    int computations;
+
     dynamic_programming();
 
     int calculate(int n, int t, int values[n]);
