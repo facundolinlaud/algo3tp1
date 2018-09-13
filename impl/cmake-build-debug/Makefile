@@ -126,6 +126,33 @@ impl/fast:
 	$(MAKE) -f CMakeFiles/impl.dir/build.make CMakeFiles/impl.dir/build
 .PHONY : impl/fast
 
+src/back_tracking.o: src/back_tracking.cpp.o
+
+.PHONY : src/back_tracking.o
+
+# target to build an object file
+src/back_tracking.cpp.o:
+	$(MAKE) -f CMakeFiles/impl.dir/build.make CMakeFiles/impl.dir/src/back_tracking.cpp.o
+.PHONY : src/back_tracking.cpp.o
+
+src/back_tracking.i: src/back_tracking.cpp.i
+
+.PHONY : src/back_tracking.i
+
+# target to preprocess a source file
+src/back_tracking.cpp.i:
+	$(MAKE) -f CMakeFiles/impl.dir/build.make CMakeFiles/impl.dir/src/back_tracking.cpp.i
+.PHONY : src/back_tracking.cpp.i
+
+src/back_tracking.s: src/back_tracking.cpp.s
+
+.PHONY : src/back_tracking.s
+
+# target to generate assembly for a file
+src/back_tracking.cpp.s:
+	$(MAKE) -f CMakeFiles/impl.dir/build.make CMakeFiles/impl.dir/src/back_tracking.cpp.s
+.PHONY : src/back_tracking.cpp.s
+
 src/brute_force.o: src/brute_force.cpp.o
 
 .PHONY : src/brute_force.o
@@ -216,6 +243,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... impl"
+	@echo "... src/back_tracking.o"
+	@echo "... src/back_tracking.i"
+	@echo "... src/back_tracking.s"
 	@echo "... src/brute_force.o"
 	@echo "... src/brute_force.i"
 	@echo "... src/brute_force.s"

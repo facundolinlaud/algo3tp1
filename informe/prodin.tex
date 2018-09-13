@@ -1,5 +1,4 @@
 \section{Programación dinámica}
-\subsection{Solución}
 Antes que nada, debemos demostrar que el Principio de Optimalidad de Bellman vale para el problema de la suma de subconjuntos. Es decir, que toda solución óptima de un problema es construida a partir de subsoluciones óptimas de sus respectivos subproblemas. ¿Entonces, se cumple el principio de optimalidad? Verifiquémoslo.
 
 \subsubsection{Cumplimiento del Principio de Optimalidad}
@@ -31,8 +30,12 @@ Asumiendo $I$ un conjunto solución de $n$ índices correspondientes a elementos
 Finalmente, el problema satisface el principio de optimalidad.
 \vskip 8pt
 $\qedwhite$
+\vskip 8pt
+De esta manera, formulamos el problema recursivamente:
+\vskip 8pt
+$f(i, v) = min\{f(i - 1, v), f(i - 1, v - v_{i} + 1)\}$
 
-\subsection{Diseño}
+\subsection{Solución}
 \begin{center}
 	\begin{minipage}{.8\textwidth}
 		\begin{codebox}
@@ -44,8 +47,7 @@ $\qedwhite$
 						\If $accumulator = 0$ \textbf{then}						\RComment $O(1)$
 						\li \Then
 							 $dic[i][accumulator] \leftarrow 0$ 				\RComment $O(1)$
-							  \li
-						\Else
+						\li \Else
 							\li $dic[i][accumulator] \leftarrow \infty$ 		\RComment $O(1)$
 							\li
 						\End
@@ -53,8 +55,7 @@ $\qedwhite$
 						\li \If $V[i] > T$ \textbf{then}						\RComment $O(1)$
 						\li \Then
 							 $dic[i][accumulator] \leftarrow \func{Subset-Sum}(i - 1, accumulator)$
-							 \li
-						\Else
+						\li \Else
 							\li $dic[i][accumulator] \leftarrow \func{min}\Big(\func{Subset-Sum}(i - 1, accumulator),$
 							\Indentmore \li $1 + \func{Subset-Sum}(i - 1, accumulator - V[i])\Big)$
 						\End
@@ -88,6 +89,12 @@ Si el valor de $i$ es distinto de cero, entonces estamos en presencia de un paso
 \end{itemize}
 Nuevamente, cualquiera sea el resultado del camino recursivo, este se guardará en el diccionario con los índices correspondientes. Finalmente, el algoritmo retornará lo que sea que haya guardado recientemente o no en los índices $(i, accumulator)$ del diccionario.
 
-\subsection{Implementación}
 \subsection{Complejidad}
+Debido a la naturaleza de la técnica de programación dinámica, la complejidad del algoritmo queda definida de la siguiente manera:
+$\mathcal{O}(f) = \mathcal{O}(\#subproblemas) * \mathcal{O}(\#costo \ por \ subproblema)$.
+
+\vskip 8pt
+
+Para esto, debemos resolver la complejidad del algoritmo exceptuando las recursiones. Es fácil observar que, asumiendo un diccionario con escritura y lectura en $\mathcal{O}(1)$, todo el algoritmo es $\mathcal{O}(1)$. Luego, la complejidad de la solución entera estará determinada por la cantidad de subproblemas totales, que es exactamente $n * T$, recordando que $n$ es la cantidad de números utilizables para llegar al objetivo $T$. Es decir, el algoritmo sólo hace recursión sobre los subproblemas cuyo resultado no calculó previamente. En caso de haberlo calculado, este estará disponible en el diccionario en $\mathcal{O}(1)$.
+
 \subsection{Análisis de performance}

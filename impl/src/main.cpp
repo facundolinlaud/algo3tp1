@@ -1,6 +1,7 @@
 #include <iostream>
 #include "dynamic_programming.h"
 #include "brute_force.h"
+#include "back_tracking.h"
 
 using namespace std;
 
@@ -31,9 +32,10 @@ int main(int argc, char *argv[]) {
         brute_force bf(values, n);
         result = bf.calculate(t);
         computations = bf.computations;
-
     }else if(arguments[1] == "bt") {
-
+        back_tracking bt(values, n);
+        result = bt.calculate(t);
+        computations = bt.computations;
     }else if(arguments[1] == "dp") {
         dynamic_programming dp;
         result = dp.calculate(n, t, values);

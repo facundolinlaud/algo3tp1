@@ -82,6 +82,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/facundo/Documents/compu/algo3/taller/tp1/repo/impl/src/back_tracking.cpp">
+			<Option target="impl"/>
+		</Unit>
+		<Unit filename="/Users/facundo/Documents/compu/algo3/taller/tp1/repo/impl/src/back_tracking.h">
+			<Option target="impl"/>
+		</Unit>
 		<Unit filename="/Users/facundo/Documents/compu/algo3/taller/tp1/repo/impl/src/brute_force.cpp">
 			<Option target="impl"/>
 		</Unit>

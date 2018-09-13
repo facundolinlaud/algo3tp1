@@ -11,6 +11,8 @@ set(SOURCE_FILES
         src/dynamic_programming.h
         src/brute_force.cpp
         src/brute_force.h
+        src/back_tracking.cpp
+        src/back_tracking.h
         src/utils.h
         )
 add_executable(impl ${SOURCE_FILES})

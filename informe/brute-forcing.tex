@@ -1,5 +1,93 @@
 \section{Brute-forcing}
+Sea la tupla $(V, n, T)$ una instancia del problema de la Suma De Subconjuntos, definimos su conjunto de posibles soluciones $S$ (sobre el cual trabajará el algoritmo de \textit{brute force}) como todas las combinaciones de elementos posibles sobre el conjunto $V$. Es decir, $S = \mathcal{P}(V)$.
+
 \subsection{Solución}
-\subsection{Implementación}
+\begin{center}
+	\begin{minipage}[t]{.49\textwidth}
+		\raggedright
+		\begin{codebox}
+			\Procname{$\proc{Subset-Sum}(t)$}
+				\li \If $t = 0$ \textbf{then} \Return $0$
+				\zi
+
+				\li $\id{i} \gets 0$
+				\li \While $!\func{Is-Subset-Solution}(i, 0, t) \ and \ i \leq n$ \textbf{do}
+				\Do
+					\li $i++$
+					\zi
+				\End
+
+				\li \If $i < n$ \textbf{then}
+				\li \Then
+					\Return $i$
+					\li
+				\Else
+					\li \Return $\infty$
+				\End
+			\End
+		\end{codebox}
+	\end{minipage}%
+	\begin{minipage}[t]{.5\textwidth}
+		\raggedleft
+		\begin{codebox}
+			\Procname{$\proc{Is-Subset-Solution}(k, \ from, \ t)$}
+				\li \If $k = 0$ \textbf{then}
+				\Then
+					\li \If $t = 0$ \textbf{then}
+					\li \Then
+						\Return $true$
+					\li \Else
+						\li \Return $false$
+					\End
+				\li \Else
+					\li \If $k = n - from$ \textbf{then}
+					\li \Then
+						\Return $\func{Is-Subset-Solution}(k - 1,$
+						\zi $from + 1, t - V[from])$
+					\li \Else
+						\li \Return $\func{Is-Subset-Solution}(k - 1,$
+						\zi $from + 1, t - V[from])$ \textbf{or}
+						\zi $\func{Is-Subset-Solution}(k, from + 1, t)$
+					\End
+				\End
+			\End
+		\end{codebox}
+		\footnotesize Algoritmo
+		\label{fig:algoritmo}
+	\end{minipage}
+\end{center}
+Se puede observar que el algoritmo está dividido en dos:
+\begin{itemize}
+	\item La función $Subset-Sum$ que toma un parámetro $t$ que representa la suma objetivo (y original) a alcanzar
+	\item La función $Is-Subset-Solution$ que toma tres parámetros: $k$ que representa el tamaño de grupos en los cuales se intentará agrupar el conjunto de valores originales para llegar a $t$. El segundo parámetro es $from$, un índice que apunta a un elemento dentro de la lista de valores $V$ consideraba global, válida y disponible (junto con su respectivo tamaño $n$). El tercer parámetro es $t$ y lleva la suma acumulada objetivo del subproblema.
+\end{itemize}
+
+El funcionamiento del algoritmo es sencillo: se empieza invocando la función $Subset-Sum$ con una suma objetivo determinada. Esta función, a su vez, invoca $n$ veces la rutina $Is-Subset-Solution(i$, $from = 0$, t = $t)$, con $i = 1, ..., n$. Además, el bucle se seguirá ejecutándo mientras esta última rutina no retorne $true$.
+
+\vskip 8pt
+
+¿Qué hace $Is-Subset-Solution$? La función de esta rutina es buscar recursivamente subconjuntos de $V$ con cardinal $k$ donde la totalidad de sus elementos sumen $t$. Dado la naturalidad recursiva del método, se presentan los siguientes dos casos bases que se dan cuando $k = 0$, es decir, cuando el subconjunto que queremos armar ya tiene la máxima capacidad de elementos que es la que se quiere analizar:
+\begin{itemize}
+	\item Si $t = 0$, es decir, si ya sumamos lo que teníamos que sumar, entonces se retorna $true$ dado que el conjunto $V$ tiene un subconjunto de $k$ elementos que sumen $t$.
+	\item Si $t \neq 0$ significa que todavía no llegamos a $t$, pero tampoco nos queda espacio para agregar elementos de $V$ porque recordemos que $k = 0$. Luego, se retorna $false$ porque no podemos llegar a $t$ sin sumar ningún elemento.
+\end{itemize}
+Luego, los pasos recursivos se dan cuando $k \neq 0$, es decir, cuando todavía tenemos espacio para considerar (o no) un elemento de $V$ en nuestro subconjunto solución:
+\begin{itemize}
+	\item Si $k = n - from$ significa que todavía nos quedan elegir $k$ elementos de $V$ y, además, nos quedan $k$ elementos por examinar de $V$ pues el resto ya los agregamos o descartamos. Esto significa que sí o sí tengo que agregar el número actual al que apunta $from$ a la posible solución, sino voy a llegar al final de la lista $V$ y me van a faltar elementos por agregar al subconjunto de $k$ elementos. Luego, retorno el resultado de la recursión incluyendo este número, es decir, incrementándo en 1 a $from$ para analizar el siguiente elemento, decrementándo en 1 el valor de $k$ (porque acabamos de sumar un elemento, por lo tanto nos faltan $k - 1$) y restando $V_{from}$ al valor de $t$.
+	\item  Si $k \neq n - from$ entonces nos podemos dar la libertad de incluir o no al valor $V_{from}$ en nuestra posible solución. Luego, hacemos recursión sobre ambos caminos y, como la rutina es booleana, devolvemos $true$ si cualquiera de los dos es también $true$.
+\end{itemize}
+
+Finalmente, si $Is-Subset-Solution$ devuelve $true$ para algun cardinal $k$ entonces $Subset-Sum$ detendrá el bucle y devolverá el cardinal que resultó tener una solución. Este cardinal es mínimo porque el bucle comienza desde el menor cardinal posible para un subconjunto de $V$ e incrementa secuencialmente hasta llegar a $n$. Si no se encuentra un subconjunto solución para todos los valores válidos de $i$, se retorna infinito.
+
+\vskip 8pt
+
+De esta manera, podemos asegurar que el algoritmo de \textit{brute force} llega a una solución, si es que la hay, pues el conjunto de posibles soluciones que son inspeccionadas por el algoritmo abarca todas las combinaciones posibles del conjunto de valores $V$.
+
 \subsection{Complejidad}
+Es fácil chequear que cada llamada a $Is-Subset-Solution$ se realiza $n$ veces y que el resto de las instrucciones involucradas se computa en $O(1)$. Luego, basta calcular la complejidad de esta última subrutina para determinar la complejidad del algoritmo entero.
+
+\vskip 8pt
+
+Podemos demostrar que la complejidad de $Is-Subset-Solution$ pertenece a la clase $O(n*2^{n}$) pues cada llamada a esta función debe resolver reccurentemente, como mucho, $2^{n}$ problemas: es decir, para cada elemento $e$ de $V$, analizar el camino donde $V_{e}$ pertenece a la posible solución así como el camino donde $V_{e}$ no pertenece a la posible solución. De hecho, la complejidad real del algoritmo nunca será igual a $n*2^{n}$ porque cada recursión se detendrá al haber completado todos los grupos de $k$ elementos.
+
 \subsection{Análisis de performance}
