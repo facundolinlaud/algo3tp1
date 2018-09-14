@@ -10,14 +10,14 @@ Sea la tupla $(V, n, T)$ una instancia del problema de la Suma De Subconjuntos, 
 				\li \If $t = 0$ \textbf{then} \Return $0$
 				\zi
 
-				\li $\id{i} \gets 0$
-				\li \While $!\func{Is-Subset-Solution}(i, 0, t) \ and \ i \leq n$ \textbf{do}
+				\li $\id{i} \gets 1$
+				\li \While $i \leq n \ and \ !\func{Is-Subset-Solution}(i, 0, t)$ \textbf{do}
 				\Do
 					\li $i++$
 					\zi
 				\End
 
-				\li \If $i < n$ \textbf{then}
+				\li \If $i \leq n$ \textbf{then}
 				\li \Then
 					\Return $i$
 					\li
@@ -52,8 +52,7 @@ Sea la tupla $(V, n, T)$ una instancia del problema de la Suma De Subconjuntos, 
 				\End
 			\End
 		\end{codebox}
-		\footnotesize Algoritmo
-		\label{fig:algoritmo}
+		\label{fig:alg-bruteforce}
 	\end{minipage}
 \end{center}
 Se puede observar que el algoritmo está dividido en dos:

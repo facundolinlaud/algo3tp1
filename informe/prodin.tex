@@ -33,7 +33,16 @@ $\qedwhite$
 \vskip 8pt
 De esta manera, formulamos el problema recursivamente:
 \vskip 8pt
-$f(i, v) = min\{f(i - 1, v), f(i - 1, v - v_{i} + 1)\}$
+\begin{center}
+	$
+	f(i, t) =
+	\begin{cases}
+		0 & \mbox{ si } i = 0 \wedge t = 0 \\
+		\infty & \mbox{ si } i = 0 \wedge t > 0 \\
+		min\{f(i - 1, t), f(i - 1, t - v_{i}) + 1\}  & \mbox{ sino}
+	\end{cases}
+$
+\end{center}
 
 \subsection{Solución}
 \begin{center}
@@ -67,8 +76,7 @@ $f(i, v) = min\{f(i - 1, v), f(i - 1, v - v_{i} + 1)\}$
 			\End
 		\end{codebox}
 
-		\footnotesize Algoritmo
-		\label{fig:algoritmo}
+		\label{fig:alg-prodin}
 	\end{minipage}
 \end{center}
 Este algorítmo tiene un enfoque top-down. Es invocado con los parámetros $(i, accumulator)$ donde $i$ representa el i-ésimo elemento dentro de un conjunto $V$ de valores posibles utilizados para intentar sumar el valor objetivo $T$. La línea 1 pregunta si la dupla $(i, accumulator)$ está \textit{cacheada}, es decir, si ya fue calculada anteriormente. Si la respuesta es no, se procede a calcularlo. El siguiente condicional representa una de las condiciones necesarias para el caso base: que nos hayamos quedado sin elementos para analizar en el conjunto $V$. Si esto sucede, el algoritmo encontró una respuesta para este camino recursivo, pero depende del valor de $accumulator$:

@@ -2,6 +2,7 @@
 // Created by Facundo Linlaud on 5/9/18.
 //
 
+#include <iostream>
 #include "brute_force.h"
 
 brute_force::brute_force(int _values[], int _n) : values(_values), n(_n){}
@@ -29,11 +30,11 @@ int brute_force::calculate(int t){
     if(t == 0)
         return 0;
 
-    int i = 0;
+    int i = 1;
 
-    while(!is_subset_solution(i, 0, t) and i <= n){
+    while(i <= n and !is_subset_solution(i, 0, t)){
         i++;
     }
 
-    return i < n ? i : INFINITY;
+    return i <= n ? i : INFINITY;
 }

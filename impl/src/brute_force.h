@@ -6,7 +6,7 @@
 #define IMPL_BRUTE_FORCE_H
 
 class brute_force {
-    const int INFINITY = 999;
+    const long INFINITY = 999999;
 
 private:
     int* values;

@@ -2,8 +2,13 @@
 #include "dynamic_programming.h"
 #include "brute_force.h"
 #include "back_tracking.h"
+#include <limits>
+#include <time.h>
+#include <iomanip>
 
 using namespace std;
+
+typedef std::numeric_limits< double > dbl;
 
 int main(int argc, char *argv[]) {
     if(argc < 3){
@@ -28,6 +33,9 @@ int main(int argc, char *argv[]) {
     int result;
     int computations;
 
+    clock_t start, end;
+    start = clock();
+
     if(arguments[1] == "bf") {
         brute_force bf(values, n);
         result = bf.calculate(t);
@@ -45,8 +53,17 @@ int main(int argc, char *argv[]) {
         return 0;
     }
 
+    end = clock();
+//    cout.precision(dbl::max_digits10);
+    double cpu_ticks_used = (double) (end - start);
+    double cpu_time_used = cpu_ticks_used / CLOCKS_PER_SEC;
+
     cout << "##################" << endl;
-    cout << "Resultado: (" << arguments[1] << ") " << result << " en " << computations << " computaciones" << endl;
+    cout << "Algoritmo: " << arguments[1] << endl;
+    cout << "Resultado: " << result << endl;
+    cout << "Recursiones: " << computations << endl;
+    cout << "Ticks: " << cpu_ticks_used << endl;
+    cout << "Segundos: " << fixed << std::setprecision(15) << cpu_time_used << endl;
     cout << "##################" << endl;
 
     return 0;

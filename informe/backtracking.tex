@@ -1,5 +1,46 @@
 \section{Backtracking}
+La técnica de backtracking hace foco en el descarte de ramificaciones infactibles dado un problema y ciertas condiciones. A continuación, analizamos la solución al problema de la suma de subconjuntos con backtracking.
+
 \subsection{Solución}
-\subsection{Implementación}
+\begin{center}
+	\begin{minipage}{.8\textwidth}
+		\begin{codebox}
+			\Procname{$\proc{Subset-Sum}(i, t, cardinal\_so\_far)$}
+				\li \If $cardinal\_so\_far \geq minimum\_cardinal\_so\_far$ \textbf{then} \Then
+					\li \Return $\infty$
+				\End
+				\zi
+				\li \If $i = 0$ \textbf{then} \Then
+					\li \If $t = 0$ \textbf{then}
+					\li \Then
+						\If $cardinal\_so\_far < minimum\_cardinal\_so\_far$ \textbf{then} \Then
+							\li $minimum\_cardinal\_so\_far = cardinal\_so\_far$
+						\End
+						\zi
+						\li \Return $0$
+					\li \Else
+						\li \Return $\infty$
+					\End
+				\li \Else \If $values[i] > t$ \textbf{then}
+					\li \Return $\func{Subset-Sum}(i - 1, t, cardinal\_so\_far)$
+				\li \Else
+					\li \Return $\func{min}\Big(\func{Subset-Sum}(i - 1, t, cardinal\_so\_far),$
+					\Indentmore \Indentmore \zi $1 + \func{Subset-Sum}(i - 1, t - values[i], cardinal\_so\_far + 1)\Big)$
+				\End
+			\End
+		\end{codebox}
+
+		\label{fig:alg-backtracking}
+	\end{minipage}
+\end{center}
+
+En este algoritmo se asumen globales las variables $values$ (los valores disponibles para intentar sumar $T$), su respectiva dimensión $n$ y una variable $minimum\_cardinal\_so\_far$ inicializada en infinito. La función $Subset-Sum$ es invocada por primera vez con la tupla $(i, t, cardinal\_so\_far) = (n, T, 0)$.
+
+\vskip 8pt
+
+El funcionamiento del algoritmo es similar al de \textit{brute-force} pero más inteligente. Es decir, en el momento en el que una rama deja de ser factible, esta es descartada inmediatamente. Esto se puede observar en las líneas 10 y 11 donde, si el valor que se está evaluando en el momento excede la suma buscada, entonces se desecha la alternativa. Esto representa una poda por factibilidad. Además, se lleva un registro de cual fue el mínimo cardinal entre todas las soluciones encontradas hasta el momento y se utiliza como límite para futuras exploraciones. Es decir, si se encontró una solución con cardinal $m$, cualquier subconjunto de $valores$ que sume $T$ pero disponga de un cardinal mayor a $m$ no será una solución óptima al problema. Esto se conoce como una poda por optimalidad y se puede observar en las líneas 1, 2, 5 y 6.
+
 \subsection{Complejidad}
+Este algoritmo comparte la misma complejidad de peor caso que la implementación \textit{brute force}. En el peor de los escenarios, el algoritmo debe resolver $n*2^n$ subproblemas pues por cada elemento a evaluar de $values$, se pueden llegar a computar las $2^n$ configuraciones de elementos posibles.
+
 \subsection{Análisis de performance}

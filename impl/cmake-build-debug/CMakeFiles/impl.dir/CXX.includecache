@@ -7,6 +7,8 @@
 #IncludeRegexTransform: 
 
 /Users/facundo/Documents/compu/algo3/taller/tp1/repo/impl/src/back_tracking.cpp
+iostream
+-
 back_tracking.h
 /Users/facundo/Documents/compu/algo3/taller/tp1/repo/impl/src/back_tracking.h
 utils.h
@@ -15,6 +17,8 @@ utils.h
 /Users/facundo/Documents/compu/algo3/taller/tp1/repo/impl/src/back_tracking.h
 
 /Users/facundo/Documents/compu/algo3/taller/tp1/repo/impl/src/brute_force.cpp
+iostream
+-
 brute_force.h
 /Users/facundo/Documents/compu/algo3/taller/tp1/repo/impl/src/brute_force.h
 
@@ -39,6 +43,12 @@ brute_force.h
 /Users/facundo/Documents/compu/algo3/taller/tp1/repo/impl/src/brute_force.h
 back_tracking.h
 /Users/facundo/Documents/compu/algo3/taller/tp1/repo/impl/src/back_tracking.h
+limits
+-
+time.h
+-
+iomanip
+-
 
 /Users/facundo/Documents/compu/algo3/taller/tp1/repo/impl/src/utils.h
 

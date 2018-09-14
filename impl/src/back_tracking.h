@@ -7,20 +7,22 @@
 
 
 class back_tracking {
-    const int INFINITY = 999;
+    const long INFINITY = 999999;
+    const int NO_ELEMENT = -1;
 
 private:
     int* values;
     int n;
+    long minimum_cardinal_so_far;
 
-    int bt(int i, int t);
+    long bt(int i, int t, long cardinal_so_far);
 
 public:
-    int computations;
+    long computations;
 
     back_tracking(int values[], int _n);
 
-    int calculate(int t);
+    long calculate(int t);
 };
 
 
