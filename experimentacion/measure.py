@@ -9,15 +9,16 @@ import random
 def main(params, output_file):
 	log('starting', 0)
 	results_per_exec = {}
+	problems = build_problems(params)
 
 	for run_name, run_desc in params['runs'].items():
 		log('exec %s' % run_name, 1)
-		results_per_exec[run_name] = run_for_algorithm(params, run_desc['algorithm'])
+		results_per_exec[run_name] = run_for_algorithm(params, run_desc['algorithm'], problems)
 	
 	save_to_file(output_file, results_per_exec)
 	return
 
-def run_for_algorithm(params, algorithm):
+def run_for_algorithm(params, algorithm, problems):
 	results_per_n = {}
 
 	for i in range(params['n_start'], params['n_end'], params['n_step']):
@@ -26,11 +27,21 @@ def run_for_algorithm(params, algorithm):
 
 		for r in range(0, params['repetitions_per_n']):
 			log('repetition %i' % r, 3)
-			problem = create_subset_problem_of_size(i, params['include_unsolvable_problems'])
-			result = execute(params['exe'], algorithm, problem, i)
+			result = execute(params['exe'], algorithm, problems[i][r], i)
 			results_per_n[i].append(result)
 
 	return results_per_n
+
+def build_problems(params):
+	problems = {}
+
+	for i in range(params['n_start'], params['n_end'], params['n_step']):
+		problems[i] = []
+
+		for r in range(0, params['repetitions_per_n']):
+			problems[i].append(create_subset_problem_of_size(i, params['include_unsolvable_problems']))
+
+	return problems
 
 def create_subset_problem_of_size(n, include_unsolvable_problems):
 	MAX_VALUE = 99 # el maximo valor de un elemento en values
