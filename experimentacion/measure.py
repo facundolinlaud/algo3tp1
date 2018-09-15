@@ -70,12 +70,14 @@ def create_subset_problem_of_size(n, include_unsolvable_problems):
 		random.shuffle(values)
 
 		result['T'] = T
+		result['has_solution'] = True
 	else:
 		for i in range(0, n):
 			probably_garbage_value = random.randint(MIN_VALUE, MAX_VALUE)
 			values.append(probably_garbage_value)
 
 		result['T'] = random.randint(0, MAX_VALUE * 2 * n)
+		result['has_solution'] = False
 
 	result['values'] = values
 	return result
@@ -88,19 +90,19 @@ def execute(exe, algorithm, problem, values_cardinal):
 		str(values_cardinal)] + [str(i) for i in problem['values']]
 
 	console_out = subprocess.run(command, stdout = subprocess.PIPE)
-	return get_time(str(console_out.stdout))
+	return get_time(str(console_out.stdout), problem['T'], problem['has_solution'])
 
-def get_time(console_out):
+def get_time(console_out, T, solvable):
 	lines = console_out.split('\\n')
-	lines_of_interest = [i for i, s in enumerate(lines) if 'Segundos' in s]
-
-	if(len(lines_of_interest) == 0):
-		log('error leyendo output de consola. iniciando debug:', 4)
-		pdb.set_trace()
-
-	line_of_interest = lines_of_interest[0]
-
-	return lines[line_of_interest].split()[-1]
+	
+	return {
+		'resultado' : int(lines[2].split()[-1]),
+		'recursiones' : int(lines[3].split()[-1]),
+		'ticks' : float(lines[4].split()[-1]),
+		'segundos' : float(lines[5].split()[-1]),
+		'T' : T,
+		'has_solution' : solvable
+	}
 
 def save_to_file(file_name, results):
 	log('saving to file', 0)

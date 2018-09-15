@@ -2,11 +2,11 @@
 #include "dynamic_programming.h"
 #include "brute_force.h"
 #include "back_tracking.h"
-#include <limits>
-#include <time.h>
 #include <iomanip>
+#include <chrono>
 
 using namespace std;
+using namespace std::chrono;
 
 typedef std::numeric_limits< double > dbl;
 
@@ -35,6 +35,7 @@ int main(int argc, char *argv[]) {
 
     clock_t start, end;
     start = clock();
+    high_resolution_clock::time_point t1 = high_resolution_clock::now();
 
     if(arguments[1] == "bf") {
         brute_force bf(values, n);
@@ -54,7 +55,9 @@ int main(int argc, char *argv[]) {
     }
 
     end = clock();
-//    cout.precision(dbl::max_digits10);
+    high_resolution_clock::time_point t2 = high_resolution_clock::now();
+    duration<double> time_span = duration_cast<duration<double>>(t2 - t1);
+
     double cpu_ticks_used = (double) (end - start);
     double cpu_time_used = cpu_ticks_used / CLOCKS_PER_SEC;
 
@@ -63,6 +66,7 @@ int main(int argc, char *argv[]) {
     cout << "Resultado: " << result << endl;
     cout << "Recursiones: " << computations << endl;
     cout << "Ticks: " << cpu_ticks_used << endl;
+    cout << "Chrono:   " << fixed << std::setprecision(15) << time_span.count() << endl;
     cout << "Segundos: " << fixed << std::setprecision(15) << cpu_time_used << endl;
     cout << "##################" << endl;
 

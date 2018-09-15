@@ -20,23 +20,43 @@ def do_statistics(raw_input):
 	for run_name, run_results in raw_input.items():
 		plot_runs[run_name] = {}
 
-		for size, str_measures in run_results.items():
-			masked_measures = [int(i) for i in str_measures]
+		for cardinal, str_measures in run_results.items():
+			masked_measures = []
+			masked_ticks = []
+			masked_recursiones = []
+			masked_Ts = []
+
+			for m in str_measures:
+				masked_measures.append(float(m['segundos']))
+				masked_ticks.append(int(m['ticks']))
+				masked_recursiones.append(float(m['recursiones']))
+				masked_Ts.append(int(m['T']))
+
 			masked_measures = stats.mstats.trim(masked_measures, (0.15, 0.15), relative=True)
 			measures = []
+			ticks = []
+			recursiones = []
+			Ts = []
 
-			for m in masked_measures.tolist():
+			measures = []
+			for i, m in enumerate(masked_measures.tolist()):
 				if m is not None:
 					measures.append(m)
+					ticks.append(masked_ticks[i])
+					recursiones.append(masked_recursiones[i])
+					Ts.append(masked_Ts[i])
 
 			mean = statistics.mean(measures)
-	
-			plot_runs[run_name][size] = {}
-			plot_runs[run_name][size]['mean'] = mean
-			plot_runs[run_name][size]['median'] = statistics.median(measures)
-			plot_runs[run_name][size]['stdev'] = statistics.stdev(measures)
-			plot_runs[run_name][size]['variance'] = statistics.variance(measures, mean)
-			plot_runs[run_name][size]['sterr'] = stats.sem(measures)
+			plot_runs[run_name][cardinal] = {}
+			plot_runs[run_name][cardinal]['mean'] = mean
+			plot_runs[run_name][cardinal]['median'] = statistics.median(measures)
+			plot_runs[run_name][cardinal]['stdev'] = statistics.stdev(measures)
+			plot_runs[run_name][cardinal]['variance'] = statistics.variance(measures, mean)
+			plot_runs[run_name][cardinal]['sterr'] = stats.sem(measures)
+			# cosas super extra
+			plot_runs[run_name][cardinal]['mean_ticks'] = statistics.mean(ticks)
+			plot_runs[run_name][cardinal]['mean_recursiones'] = statistics.mean(recursiones)
+			plot_runs[run_name][cardinal]['mean_Ts'] = statistics.mean(Ts)
 
 	log('Parsed runs:', 0)
 	print(plot_runs)
@@ -48,15 +68,9 @@ def preplot(runs):
 
 	# pdb.set_trace()
 	for run_name in runs:
-		xs = []
+		xs = [int(i) for i in runs[run_name].keys()]
 		ys = []
 		yerror = []
-
-		for dimension in runs[run_name].keys():
-			xy = dimension.split('x')
-			x = int(xy[0])
-			y = int(xy[1])
-			xs.append(x * y)
 
 		for stats in runs[run_name].values():
 			ys.append(stats['mean'])
@@ -65,8 +79,11 @@ def preplot(runs):
 		xs, ys, yerror = (list(t) for t in zip(*sorted(zip(xs, ys, yerror)))) # sorts xs, ys and yerror by xs
 
 		xs = [int(i) for i in xs]
-		ys = [int(i) for i in ys]
-		yerror = [int(i) for i in yerror]
+		ys = [float(i) for i in ys]
+		yerror = [float(i) for i in yerror]
+
+		print(run_name)
+		print(ys)
 
 		lines[run_name] = {}
 		lines[run_name]['xs'] = xs
@@ -86,17 +103,18 @@ def plot(lines):
 	
 	## scaling y limites de los ejes
 	#plt.yscale('log', basey=2)
-	plt.xscale('log', basex=2)
+	# plt.xscale('log', basex=2)
 
 	## setup
 	for run_name, line in lines.items():
-		plt.errorbar(line['xs'], line['ys'], yerr=line['yerror'], label=run_name, color=resolve_color(run_name), linewidth=1, xerr=None, fmt='o-', ecolor=None, elinewidth=1, capsize=1, barsabove=False, lolims=False, uplims=False, xlolims=False, xuplims=False, errorevery=1, capthick=0.5, hold=None, data=None, markersize=3)
+		plt.errorbar(line['xs'], line['ys'], label=run_name, color=resolve_color(run_name), linewidth=1, xerr=None, fmt='o-', ecolor=None, elinewidth=1, capsize=1, barsabove=False, lolims=False, uplims=False, xlolims=False, xuplims=False, errorevery=1, capthick=0.5, hold=None, data=None, markersize=3)
+		# plt.errorbar(line['xs'], line['ys'], yerr=line['yerror'], label=run_name, color=resolve_color(run_name), linewidth=1, xerr=None, fmt='o-', ecolor=None, elinewidth=1, capsize=1, barsabove=False, lolims=False, uplims=False, xlolims=False, xuplims=False, errorevery=1, capthick=0.5, hold=None, data=None, markersize=3)
 
 	## labels
 	#plt.suptitle('Ondas', fontsize=16)
 	#plt.title('Ciclos consumidos por píxel en función de píxeles totales\ncon desviación estándar')
-	plt.xlabel('# pixeles')
-	plt.ylabel('# ciclos/pixeles')
+	plt.xlabel('n')
+	plt.ylabel('Tiempo (segundos)')
 	plt.legend()
 	#plt.legend(loc='upper right', bbox_to_anchor=(0.99, 0.8)) # para que no tape la linea de O0
 
@@ -127,11 +145,11 @@ def read_file(file_name):
 
 def resolve_color(run_name):
 	colors = {
-		'ASM' : 'C4',	# purpura
-		'O0' : 'C0',	# azul
-		'O1' : 'C2',	# verde
+		'' : 'C4',	# purpura
+		'Back-Tracking' : 'C0',	# azul
+		'Prog. Din.' : 'C2',	# verde
 		'O2' : 'C1',	# dorado
-		'O3' : 'C3'		# rojo
+		'Brute-Force' : 'C3'		# rojo
 	}
 
 	if run_name in colors.keys():
