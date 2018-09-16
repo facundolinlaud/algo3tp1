@@ -29,10 +29,10 @@ def do_statistics(raw_input):
 			for m in str_measures:
 				masked_measures.append(float(m['segundos']))
 				masked_ticks.append(int(m['ticks']))
-				masked_recursiones.append(float(m['recursiones']))
+				masked_recursiones.append(int(m['recursiones']))
 				masked_Ts.append(int(m['T']))
 
-			masked_measures = stats.mstats.trim(masked_measures, (0.3, 0), relative=True)
+			masked_measures = stats.mstats.trim(masked_measures, (0, 0), relative=True)
 			measures = []
 			ticks = []
 			recursiones = []
@@ -48,6 +48,7 @@ def do_statistics(raw_input):
 
 			mean = statistics.mean(measures)
 			plot_runs[run_name][cardinal] = {}
+			plot_runs[run_name][cardinal]['all_measures'] = measures
 			plot_runs[run_name][cardinal]['mean'] = mean
 			plot_runs[run_name][cardinal]['median'] = statistics.median(measures)
 			plot_runs[run_name][cardinal]['stdev'] = statistics.stdev(measures)
@@ -67,16 +68,19 @@ def preplot(runs):
 	lines = {}
 
 	# pdb.set_trace()
+	############################ prog din ##############################
 	prodin = 'Prog. Din.'
+	yss = []
 	xs = [int(i) for i in runs[prodin].keys()]
 	ys = []
 	yerror = []
 
 	for stats in runs[prodin].values():
 		ys.append(stats['mean'])
+		yss.append(stats['all_measures'])
 		yerror.append(stats['stdev'])
 
-	xs, ys, yerror = (list(t) for t in zip(*sorted(zip(xs, ys, yerror)))) # sorts xs, ys and yerror by xs
+	# xs, ys, yerror = (list(t) for t in zip(*sorted(zip(xs, ys, yerror)))) # sorts xs, ys and yerror by xs
 
 	xs = [int(i) for i in xs]
 	ys = [float(i) for i in ys]
@@ -84,35 +88,48 @@ def preplot(runs):
 
 	lines[prodin] = {}
 	lines[prodin]['xs'] = xs
+	lines[prodin]['yss'] = yss
 	lines[prodin]['ys'] = ys
 	lines[prodin]['yerror'] = yerror
 
-	#xs = pixels
-	#ys = ciclos
-	for index in range(0, len(lines[prodin]['ys'])):
-		lines[prodin]['ys'][index] /= lines[prodin]['xs'][index]
-		lines[prodin]['yerror'][index] /= lines[prodin]['xs'][index]
+	######################### prog din lin aprox #########################
+	lines['lineal_aprox'] = get_linear_aprox(xs, ys)
 
-
-	A = np.vstack([lines[prodin]['xs'], np.ones(len(lines[prodin]['xs']))]).T
-	m, c = np.linalg.lstsq(A, lines[prodin]['ys'])[0]
-	lines['lineal_aprox'] = {
-		'A' : A,
-		'm' : m,
-		'c' : c
-	}
-
-	cota_xs = runs[prodin].keys()
+	######################### complejidad ###############################
+	cota_xs = []#runs[prodin].keys()
 	cota_ys = []
 
+	segundos = []
+	recursiones = []
+
 	for cardinal, stats in runs[prodin].items():
-		cota_ys.append(cardinal * stats['mean_Ts'] / 1000000)
+		segundos.append(stats['mean'])
+		recursiones.append(stats['mean_recursiones'])
+
+	Os_de_1 = np.divide(segundos, recursiones)
+	O_de_1 = statistics.mean(Os_de_1)
+
+	for cardinal, stats in runs[prodin].items():
+		cota_xs.append(cardinal)
+		cota_ys.append(cardinal * stats['mean_Ts'] * O_de_1)
 
 	lines['cota'] = {}
 	lines['cota']['xs'] = cota_xs
 	lines['cota']['ys'] = cota_ys
 
+	######################## complejidad lin aprox #########################
+	lines['cota_linear_aprox'] = get_linear_aprox(cota_xs, cota_ys)
 	return lines
+
+def get_linear_aprox(xs, ys):
+	# pdb.set_trace()
+	A = np.vstack([xs, np.ones(len(xs))]).T
+	m, c = np.linalg.lstsq(A, ys)[0]
+	return {
+		'A' : A,
+		'm' : m,
+		'c' : c
+	}
 
 def plot(lines):
 	log('plotting', 0)
@@ -124,26 +141,44 @@ def plot(lines):
 	## setup
 	run_name = 'Prog. Din.'
 	line = lines[run_name]
-	plt.errorbar(line['xs'], line['ys'], label='Programación Dinámica', color=resolve_color(run_name), linewidth=1, xerr=None, fmt='o-', ecolor=None, elinewidth=1, capsize=1, barsabove=False, lolims=False, uplims=False, xlolims=False, xuplims=False, errorevery=1, capthick=0.5, hold=None, data=None, markersize=3)
+
+	########## scatter ##########
+	plt.scatter([], [], c='g', label='Programación Dinámica')
+
+	for xe, ye in zip(line['xs'], line['yss']):
+		s=[np.sqrt(i) for i in line['xs']]
+		plt.scatter([xe] * len(ye), ye, c="g", alpha=0.15, s=20)
+
+	##################
+	# plt.errorbar(line['xs'], line['ys'], yerr=line['yerror'], label='Programación Dinámica', color=resolve_color(run_name), 
+	# 	linewidth=1, xerr=None, fmt='o-', ecolor=None, elinewidth=1, capsize=1, barsabove=False, lolims=False, 
+	# 	uplims=False, xlolims=False, xuplims=False, errorevery=2, capthick=1, hold=None, data=None, markersize=2)
 
 	cota = lines['cota']
-	# plt.errorbar(cota['xs'], cota['ys'], label='Cota superior', color='C3', linewidth=1, xerr=None, fmt='o-', ecolor=None, elinewidth=1, capsize=1, barsabove=False, lolims=False, uplims=False, xlolims=False, xuplims=False, errorevery=1, capthick=0.5, hold=None, data=None, markersize=3)
+	plt.errorbar(cota['xs'], cota['ys'], label='Cota superior', color='C3', linewidth=1, xerr=None, fmt='o-',
+	ecolor=None, elinewidth=1, capsize=1, barsabove=False, lolims=False, uplims=False, xlolims=False, 
+	xuplims=False, errorevery=1, capthick=0.5, hold=None, data=None, markersize=3)
 
-	m = lines['lineal_aprox']['m']
-	c = lines['lineal_aprox']['c']
+	#m = lines['lineal_aprox']['m']
+	#c = lines['lineal_aprox']['c']
+	#start_line_x = line['xs'][0]
+	#end_line_x = line['xs'][-1]
+	#x = np.linspace(start_line_x, end_line_x, 1000)
+	#plt.plot(x, m*x + c, 'r', linestyle='-', linewidth=1, color='g')
+#
+#	#x2 = np.linspace(18, end_line_x, 1000)
+#	#cota_m = lines['cota_linear_aprox']['m']
+#	#cota_c = lines['cota_linear_aprox']['c']
+#	#plt.plot(x2, cota_m*x2 + cota_c, 'r', linestyle='-', linewidth=1, color='r')
+	##############
 
-	start_line_x = line['xs'][0]
-	end_line_x = line['xs'][-1]
-	x = np.linspace(start_line_x, end_line_x, 1000)
-	plt.plot(x, m*x + c, 'r', linestyle='-.', label='Aproximación Lineal', linewidth=1)
-
-		# plt.errorbar(line['xs'], line['ys'], yerr=line['yerror'], label=run_name, color=resolve_color(run_name), linewidth=1, xerr=None, fmt='o-', ecolor=None, elinewidth=1, capsize=1, barsabove=False, lolims=False, uplims=False, xlolims=False, xuplims=False, errorevery=1, capthick=0.5, hold=None, data=None, markersize=3)
+	# plt.errorbar(line['xs'], line['ys'], yerr=line['yerror'], label=run_name, color=resolve_color(run_name), linewidth=1, xerr=None, fmt='o-', ecolor=None, elinewidth=1, capsize=1, barsabove=False, lolims=False, uplims=False, xlolims=False, xuplims=False, errorevery=1, capthick=0.5, hold=None, data=None, markersize=3)
 
 	## labels
 	#plt.suptitle('Ondas', fontsize=16)
 	#plt.title('Ciclos consumidos por píxel en función de píxeles totales\ncon desviación estándar')
 	plt.xlabel('n')
-	plt.ylabel('Tiempo (segundos)')
+	plt.ylabel('Tiempo (milésimas)')
 	plt.legend()
 	plt.ticklabel_format(style='sci', axis='y')
 	#plt.legend(loc='upper right', bbox_to_anchor=(0.99, 0.8)) # para que no tape la linea de O0

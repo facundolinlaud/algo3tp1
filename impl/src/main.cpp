@@ -54,8 +54,8 @@ int main(int argc, char *argv[]) {
         return 0;
     }
 
-    end = clock();
     high_resolution_clock::time_point t2 = high_resolution_clock::now();
+    end = clock();
     duration<double> time_span = duration_cast<duration<double>>(t2 - t1);
 
     double cpu_ticks_used = (double) (end - start);

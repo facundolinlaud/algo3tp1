@@ -32,21 +32,23 @@ def run_for_algorithm(params, algorithm, problems):
 
 	return results_per_n
 
+MAX_VALUE = 99 # el maximo valor de un elemento en values
+MIN_VALUE = 0 # el minimo valor de un elemento en values
+
 def build_problems(params):
 	problems = {}
 
 	for i in range(params['n_start'], params['n_end'], params['n_step']):
 		problems[i] = []
 
+		T_for_n = random.randint(1, MAX_VALUE * MAX_VALUE)
+
 		for r in range(0, params['repetitions_per_n']):
-			problems[i].append(create_subset_problem_of_size(i, params['include_unsolvable_problems']))
+			problems[i].append(create_subset_problem_of_size(i, params['include_unsolvable_problems'], T_for_n))
 
 	return problems
 
-def create_subset_problem_of_size(n, include_unsolvable_problems):
-	MAX_VALUE = 99 # el maximo valor de un elemento en values
-	MIN_VALUE = 0 # el minimo valor de un elemento en values
-
+def create_subset_problem_of_size(n, include_unsolvable_problems, T):
 	with_solution = random.randint(0, 1)
 
 	values = []
@@ -54,13 +56,10 @@ def create_subset_problem_of_size(n, include_unsolvable_problems):
 
 	if(with_solution and include_unsolvable_problems):
 		assured_solution_cardinal = random.randint(1, n)
-		T = 0
+		t_divided_by_assured_cardinal = int(T / assured_solution_cardinal)
+		values += [t_divided_by_assured_cardinal] * (assured_solution_cardinal - 1)
+		values.append(T - t_divided_by_assured_cardinal * (assured_solution_cardinal - 1))
 		
-		for i in range(0, assured_solution_cardinal):
-			solution_element = random.randint(MIN_VALUE, MAX_VALUE)
-			values.append(solution_element)
-			T += solution_element
-
 		garbage_cardinal = n - assured_solution_cardinal
 
 		for i in range(0, garbage_cardinal):
@@ -101,7 +100,8 @@ def get_time(console_out, T, solvable):
 		'ticks' : float(lines[4].split()[-1]),
 		'segundos' : float(lines[5].split()[-1]),
 		'T' : T,
-		'has_solution' : solvable
+		'has_solution' : solvable,
+		'seg2' : float(lines[6].split()[-1])
 	}
 
 def save_to_file(file_name, results):
