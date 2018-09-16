@@ -41,7 +41,7 @@ def build_problems(params):
 	for i in range(params['n_start'], params['n_end'], params['n_step']):
 		problems[i] = []
 
-		T_for_n = random.randint(1, MAX_VALUE * MAX_VALUE)
+		T_for_n = random.randint(999, 99999999)
 
 		for r in range(0, params['repetitions_per_n']):
 			problems[i].append(create_subset_problem_of_size(i, params['include_unsolvable_problems'], T_for_n))

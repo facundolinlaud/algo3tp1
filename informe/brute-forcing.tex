@@ -83,10 +83,8 @@ Finalmente, si $Is-Subset-Solution$ devuelve $true$ para algun cardinal $k$ ento
 De esta manera, podemos asegurar que el algoritmo de \textit{brute force} llega a una solución, si es que la hay, pues el conjunto de posibles soluciones que son inspeccionadas por el algoritmo abarca todas las combinaciones posibles del conjunto de valores $V$.
 
 \subsection{Complejidad}
-Es fácil chequear que cada llamada a $Is-Subset-Solution$ se realiza $n$ veces y que el resto de las instrucciones involucradas se computa en $O(1)$. Luego, basta calcular la complejidad de esta última subrutina para determinar la complejidad del algoritmo entero.
+Es fácil chequear que cada llamada a $Is-Subset-Solution$ se realiza $n$ veces y que el resto de las instrucciones involucradas se computa en $\mathcal{O}(1)$. Luego, basta calcular la complejidad de esta última subrutina para determinar la complejidad del algoritmo entero.
 
 \vskip 8pt
 
 Podemos demostrar que la complejidad de $Is-Subset-Solution$ pertenece a la clase $O(n*2^{n}$) pues cada llamada a esta función debe resolver reccurentemente, como mucho, $2^{n}$ problemas: es decir, para cada elemento $e$ de $V$, analizar el camino donde $V_{e}$ pertenece a la posible solución así como el camino donde $V_{e}$ no pertenece a la posible solución. De hecho, la complejidad real del algoritmo nunca será igual a $n*2^{n}$ porque cada recursión se detendrá al haber completado todos los grupos de $k$ elementos.
-
-\subsection{Análisis de performance}

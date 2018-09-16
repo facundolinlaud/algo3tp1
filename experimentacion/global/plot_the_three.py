@@ -5,6 +5,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 from scipy import stats
 from sys import argv
+import math
 
 
 def main(raw_input):
@@ -102,7 +103,7 @@ def plot(lines):
 	log('plotting', 0)
 	
 	## scaling y limites de los ejes
-	#plt.yscale('log', basey=2)
+	plt.yscale('log', basey=2)
 	# plt.xscale('log', basex=2)
 
 	## setup
@@ -123,6 +124,10 @@ def plot(lines):
 	plt.grid(b=True, which='major', color='black', linestyle='dotted', alpha=0.3)
 	plt.grid(b=True, which='minor', color='black', linestyle='dotted', alpha=0.05)
 	plt.minorticks_on()
+
+	xs = line['xs']
+	xint = range(min(xs), math.ceil(max(xs))+1, 3)
+	plt.xticks(xint)
 
 	plt.draw()
 	plt.show()
@@ -145,11 +150,9 @@ def read_file(file_name):
 
 def resolve_color(run_name):
 	colors = {
-		'' : 'C4',	# purpura
 		'Back-Tracking' : 'C0',	# azul
 		'Prog. Din.' : 'C2',	# verde
-		'O2' : 'C1',	# dorado
-		'Brute-Force' : 'C3'		# rojo
+		'Brute-Force' : 'mediumpurple'		# purpura
 	}
 
 	if run_name in colors.keys():

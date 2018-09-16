@@ -3,6 +3,7 @@ import pdb
 import statistics
 import matplotlib.pyplot as plt
 import numpy as np
+import math
 from scipy import stats
 from sys import argv
 
@@ -32,7 +33,9 @@ def do_statistics(raw_input):
 				masked_recursiones.append(int(m['recursiones']))
 				masked_Ts.append(int(m['T']))
 
-			masked_measures = stats.mstats.trim(masked_measures, (0, 0), relative=True)
+			masked_measures = np.multiply(masked_measures, [1000] * len(masked_measures)) # segundos a milisegundos
+
+			masked_measures = stats.mstats.trim(masked_measures, (0, 0.05), relative=True)
 			measures = []
 			ticks = []
 			recursiones = []
@@ -86,15 +89,6 @@ def preplot(runs):
 	ys = [float(i) for i in ys]
 	yerror = [float(i) for i in yerror]
 
-	lines[prodin] = {}
-	lines[prodin]['xs'] = xs
-	lines[prodin]['yss'] = yss
-	lines[prodin]['ys'] = ys
-	lines[prodin]['yerror'] = yerror
-
-	######################### prog din lin aprox #########################
-	lines['lineal_aprox'] = get_linear_aprox(xs, ys)
-
 	######################### complejidad ###############################
 	cota_xs = []#runs[prodin].keys()
 	cota_ys = []
@@ -111,7 +105,7 @@ def preplot(runs):
 
 	for cardinal, stats in runs[prodin].items():
 		cota_xs.append(cardinal)
-		cota_ys.append(cardinal * stats['mean_Ts'] * O_de_1)
+		cota_ys.append(cardinal * stats['mean_Ts'])
 
 	lines['cota'] = {}
 	lines['cota']['xs'] = cota_xs
@@ -119,6 +113,20 @@ def preplot(runs):
 
 	######################## complejidad lin aprox #########################
 	lines['cota_linear_aprox'] = get_linear_aprox(cota_xs, cota_ys)
+
+
+	##################################
+	ys = np.divide(ys, cota_ys)
+
+	lines[prodin] = {}
+	lines[prodin]['xs'] = xs
+	lines[prodin]['yss'] = yss
+	lines[prodin]['ys'] = ys
+	lines[prodin]['yerror'] = yerror
+
+	######################### prog din lin aprox #########################
+	lines['lineal_aprox'] = get_linear_aprox(xs, ys)
+
 	return lines
 
 def get_linear_aprox(xs, ys):
@@ -143,33 +151,33 @@ def plot(lines):
 	line = lines[run_name]
 
 	########## scatter ##########
-	plt.scatter([], [], c='g', label='Programación Dinámica')
+	# plt.scatter([], [], c='g', label='Programación Dinámica')
+	# for xe, ye in zip(line['xs'], line['yss']):
+	# 	plt.scatter([xe] * len(ye), ye, c="g", alpha=0.3)
 
-	for xe, ye in zip(line['xs'], line['yss']):
-		s=[np.sqrt(i) for i in line['xs']]
-		plt.scatter([xe] * len(ye), ye, c="g", alpha=0.15, s=20)
+	########## error bar con promedios de prodin ########
+	plt.errorbar(line['xs'], line['ys'], label=r'$\frac{Programación \ Dinámica}{(n*T)}$', color='green', 
+		linewidth=1, xerr=None, fmt='o', ecolor=None, elinewidth=1, capsize=1, barsabove=False, lolims=False, 
+		uplims=False, xlolims=False, xuplims=False, errorevery=2, capthick=1, hold=None, data=None, markersize=2)
 
-	##################
-	# plt.errorbar(line['xs'], line['ys'], yerr=line['yerror'], label='Programación Dinámica', color=resolve_color(run_name), 
-	# 	linewidth=1, xerr=None, fmt='o-', ecolor=None, elinewidth=1, capsize=1, barsabove=False, lolims=False, 
-	# 	uplims=False, xlolims=False, xuplims=False, errorevery=2, capthick=1, hold=None, data=None, markersize=2)
+	# cota = lines['cota']
+	# plt.errorbar(cota['xs'], cota['ys'], label='Cota n*T', color='C3', linewidth=1, xerr=None, fmt='o-.',
+	# ecolor=None, elinewidth=1, capsize=1, barsabove=False, lolims=False, uplims=False, xlolims=False, 
+	# xuplims=False, errorevery=1, capthick=0.5, hold=None, data=None, markersize=3)
 
-	cota = lines['cota']
-	plt.errorbar(cota['xs'], cota['ys'], label='Cota superior', color='C3', linewidth=1, xerr=None, fmt='o-',
-	ecolor=None, elinewidth=1, capsize=1, barsabove=False, lolims=False, uplims=False, xlolims=False, 
-	xuplims=False, errorevery=1, capthick=0.5, hold=None, data=None, markersize=3)
+	m = lines['lineal_aprox']['m']
+	c = lines['lineal_aprox']['c']
+	start_line_x = line['xs'][0]
+	end_line_x = line['xs'][-1]
+	x = np.linspace(start_line_x, end_line_x, 1000)
+	plt.plot(x, m*x + c, 'r', linestyle='-', linewidth=1, color='darkgreen', 
+		label='Aprox. lineal', alpha=1)
 
-	#m = lines['lineal_aprox']['m']
-	#c = lines['lineal_aprox']['c']
-	#start_line_x = line['xs'][0]
-	#end_line_x = line['xs'][-1]
-	#x = np.linspace(start_line_x, end_line_x, 1000)
-	#plt.plot(x, m*x + c, 'r', linestyle='-', linewidth=1, color='g')
-#
-#	#x2 = np.linspace(18, end_line_x, 1000)
-#	#cota_m = lines['cota_linear_aprox']['m']
-#	#cota_c = lines['cota_linear_aprox']['c']
-#	#plt.plot(x2, cota_m*x2 + cota_c, 'r', linestyle='-', linewidth=1, color='r')
+	# x2 = np.linspace(10, end_line_x, 1000)
+	# cota_m = lines['cota_linear_aprox']['m']
+	# cota_c = lines['cota_linear_aprox']['c']
+	# plt.plot(x2, cota_m*x2 + cota_c, 'r', linestyle='-', linewidth=1,
+	# 	color='firebrick', label='Aprox. lineal cota n*T', alpha=0.8)
 	##############
 
 	# plt.errorbar(line['xs'], line['ys'], yerr=line['yerror'], label=run_name, color=resolve_color(run_name), linewidth=1, xerr=None, fmt='o-', ecolor=None, elinewidth=1, capsize=1, barsabove=False, lolims=False, uplims=False, xlolims=False, xuplims=False, errorevery=1, capthick=0.5, hold=None, data=None, markersize=3)
@@ -180,7 +188,8 @@ def plot(lines):
 	plt.xlabel('n')
 	plt.ylabel('Tiempo (milésimas)')
 	plt.legend()
-	plt.ticklabel_format(style='sci', axis='y')
+	plt.ylim(-0.001, 0.001)
+	plt.ticklabel_format(axis='y', style='sci', scilimits=(-0.001, 0.001))
 	#plt.legend(loc='upper right', bbox_to_anchor=(0.99, 0.8)) # para que no tape la linea de O0
 
 	## grids
@@ -188,6 +197,10 @@ def plot(lines):
 	plt.grid(b=True, which='major', color='black', linestyle='dotted', alpha=0.3)
 	plt.grid(b=True, which='minor', color='black', linestyle='dotted', alpha=0.05)
 	plt.minorticks_on()
+
+	xs = line['xs']
+	xint = range(min(xs), math.ceil(max(xs))+1, 3)
+	plt.xticks(xint)
 
 	plt.draw()
 	plt.show()
