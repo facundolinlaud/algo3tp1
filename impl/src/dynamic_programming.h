@@ -24,7 +24,7 @@ public:
 
     dynamic_programming();
 
-    int calculate(int n, int t, int values[n]);
+    int calculate(int n, int t, int values[]);
 
     void print_dic(int n, int t);
 };

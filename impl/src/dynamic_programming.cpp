@@ -8,7 +8,7 @@
 
 dynamic_programming::dynamic_programming(){}
 
-int dynamic_programming::calculate(int n, int t, int values[n]){
+int dynamic_programming::calculate(int n, int t, int values[]){
     initialize_dic(n, t);
     int minimum_cardinal = subset_sum(values, n - 1, t);
     destroy_dic(n);
