@@ -97,7 +97,7 @@ def plot(lines):
 	log('plotting', 0)
 	
 	## scaling y limites de los ejes
-	plt.yscale('log', basey=2)
+	# plt.yscale('log', basey=2)
 	# plt.xscale('log', basex=2)
 
 	## setup
