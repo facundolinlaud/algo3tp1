@@ -10,9 +10,7 @@ def main(params, output_file):
 	log('starting', 0)
 	results_per_exec = {}
 	problems = build_problems(params)
-
-	# pdb.set_trace()
-
+	
 	for run_name, run_desc in params['runs'].items():
 		log('exec %s' % run_name, 1)
 		results_per_exec[run_name] = run_for_algorithm(params, run_desc['algorithm'], problems)
@@ -21,33 +19,41 @@ def main(params, output_file):
 	return
 
 def run_for_algorithm(params, algorithm, problems):
-	results_per_n = {}
+	results_per_T = {}
 
-	for i in range(params['n_start'], params['n_end'], params['n_step']):
-		log('n = %i' % i, 2)
-		results_per_n[i] = []
+	i = start = params['T_start']
+	end = params['T_end']
+	multiplier = params['T_multiplier']
+
+	while i < end:
+		log('T = %i' % i, 2)
+		results_per_T[i] = []
 
 		for r in range(0, params['repetitions_per_n']):
 			log('repetition %i' % r, 3)
-			result = execute(params['exe'], algorithm, problems[i][r], i)
-			results_per_n[i].append(result)
+			result = execute(params['exe'], algorithm, problems[i][r], params['fixed_n'])
+			results_per_T[i].append(result)
 
-	return results_per_n
+		i *= multiplier
+	return results_per_T
 
 MAX_VALUE = 99 # el maximo valor de un elemento en values
 MIN_VALUE = 0 # el minimo valor de un elemento en values
 
 def build_problems(params):
+	i = start = params['T_start']
+	end = params['T_end']
+	multiplier = params['T_multiplier']
 	problems = {}
-
-	for i in range(params['n_start'], params['n_end'], params['n_step']):
+	
+	while i < end:
 		problems[i] = []
 
-		T_for_n = random.randint(999, 99999999)
-
 		for r in range(0, params['repetitions_per_n']):
-			problems[i].append(create_subset_problem_of_size(i, params['include_unsolvable_problems'], 
-				T_for_n, params['shuffle_problems'], params['solutions_at_tail']))
+			problems[i].append(create_subset_problem_of_size(params['fixed_n'], params['include_unsolvable_problems'], 
+				i, params['shuffle_problems'], params['solutions_at_tail']))
+
+		i *= multiplier
 
 	return problems
 
@@ -81,7 +87,7 @@ def create_subset_problem_of_size(n, include_unsolvable_problems, T, shuffle_pro
 			probably_garbage_value = random.randint(MIN_VALUE, MAX_VALUE)
 			values.append(probably_garbage_value)
 
-		result['T'] = random.randint(0, MAX_VALUE * 2 * n)
+		result['T'] = T
 		result['has_solution'] = False
 
 	result['values'] = values

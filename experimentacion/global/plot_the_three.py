@@ -101,10 +101,10 @@ def preplot(runs):
 
 def plot(lines):
 	log('plotting', 0)
-	
+
 	## scaling y limites de los ejes
-	plt.yscale('log', basey=2)
-	# plt.xscale('log', basex=2)
+	# plt.yscale('log', basey=2)
+	plt.xscale('log', basex=10)
 
 	## setup
 	for run_name, line in lines.items():
@@ -127,7 +127,7 @@ def plot(lines):
 
 	xs = line['xs']
 	xint = range(min(xs), math.ceil(max(xs))+1, 3)
-	plt.xticks(xint)
+	# plt.xticks(xint)
 
 	plt.draw()
 	plt.show()
