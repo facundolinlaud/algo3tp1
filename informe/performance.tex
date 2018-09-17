@@ -83,3 +83,38 @@ Al igual que en los gráficos de fuerza bruta, la tendencia es clara: la funció
 		\label{fig:plot-bf-and-cota-log}
 	\end{minipage}%
 \end{figure}
+
+En estos experimentos podemos notar una tendencia extraña en el grafico \ref{fig:plot-bf-and-cota}, donde se aprecia una fluctuación alternante en la cota $n*T$. Al evaluar con detenimiento la situación, podemos observar que las depresiones en la cota también se ven reflejadas en las mediciones del algoritmo de programación dinámica. Lo mismo sucede con las elevaciones. Este fenómeno puede ser explicado sencillamente: la cota teórica del algoritmo es $n*T$ que no tiene una traducción directa con los segundos que puede demorar un algoritmo. Para esto, fue necesario calcular la equivalencia en segundos que llamaremos $\delta$ de una operación $\mathcal{O}(1)$ en nuestro algoritmo. Luego, estimamos el costo temporal en segundos de un problema $(V, n, T)$ como $n*T*\delta$. Si bien $\delta$ permanece igual para todos los $n$ (porque se utilizan todos los cardinales para calcularlo), $T$ no permanece inmutable. Es por eso que el valor final de $n*T*\delta$ es afectado por un valor $T$ que es elegido al azar para cada cardinal, explicando el por qué de las depresiones y elevaciones en la cota pero que, a su vez, son respetadas por el algoritmo de programación dinámica.
+
+\subsection{Algoritmo vs algoritmo}
+\subsubsection{Entradas densas y aleatorias}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.5\textwidth]{bf-and-bt-and-pd}
+	\caption{\footnotesize Segundos consumidos en función de la cantidad de elementos de $values$}
+	\label{fig:bf-and-bt-and-pd}
+\end{figure}
+
+Podemos observar la superioridad en performance de la implementación con Programación Dinámica versus Back Tracking y Fuerza Bruta para entradas densas y aleatorias, es decir, con una cantidad alta de elementos. Mientras que la primera es completamente lineal, las dos últimas son exponenciales. Pero este caso se da siempre y cuando la composición de los problemas sea totalmente aleatoria. ¿Qué situación tendríamos si las soluciones se encontrasen en una posición temprana de la lista? ¿Y si el valor objetivo $T$ es muy grande? ¿Y si, en cambio, las listas fuesen pequeñas?
+
+\subsubsection{Soluciones tempranas o tardías con $T$ elevado}
+\begin{figure}[H]
+	\centering
+	\begin{minipage}{0.48\textwidth}
+		\centering
+		\includegraphics[width=1\textwidth]{bf-and-bt-and-pd-noshuff-nounsolv-head}
+		\caption{\footnotesize Problemas sólo con soluciones tempranas (es decir, exclusivamente en el principio de $values$)}
+		\label{fig:bf-and-bt-and-pd-noshuff-nounsolv-head}
+	\end{minipage}%
+	\hspace{0.03\textwidth}
+	\begin{minipage}{0.48\textwidth}
+		\centering
+		\includegraphics[width=1\textwidth]{bf-and-bt-and-pd-noshuff-nounsolv-tail}
+		\caption{\footnotesize Problemas sólo con soluciones tardías (es decir, exclusivamente en el final de $values$)}
+		\label{fig:bf-and-bt-and-pd-noshuff-nounsolv-tail}
+	\end{minipage}%
+\end{figure}
+
+Para este experimento utilizamos un valor $T$ de ocho dígitos decimales. Podemos observar que en ambos casos el algoritmo de Programación Dinámica no tiene un buen desempeño. En cambio, el de Fuerza Bruta y Back Tracking compiten cercanamente. Cuando la solución a los problemas está exactamente al principio de la lista, el algoritmo de fuerza bruta resulta más eficiente y porque este – por como fue implementado – inicia su búsqueda desde el comienzo de la lista. En cambio, cuando la solución está al final de la secuencia, el algoritmo de Back Tracking es ligeramente más rápido por el motivo análogo al anterior: Back Tracking inicia su búsqueda desde el final de la lista de valores. ¿Pero qué pasa con el algoritmo de Programación Dinámica? No parece ser eficiente en ningún aspecto. Hipotetizamos que es por el excesivamente elevado valor de $T$. Analizaremos este aspecto en la siguiente sección.
+
+\subsubsection{Cardinal fijo, valor objetivo dinámico}

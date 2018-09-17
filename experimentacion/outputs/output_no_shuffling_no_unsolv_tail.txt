@@ -1,0 +1,3847 @@
+{
+  'Back-Tracking': {
+    10: [
+      {
+        'T': 35248122,
+        'has_solution': True,
+        'recursiones': 1927,
+        'resultado': 4,
+        'seg2': 0.000019,
+        'segundos': 0.000016846,
+        'ticks': 19.0
+      },
+      {
+        'T': 35248122,
+        'has_solution': True,
+        'recursiones': 1034,
+        'resultado': 1,
+        'seg2': 0.000027,
+        'segundos': 0.000015804,
+        'ticks': 27.0
+      },
+      {
+        'T': 35248122,
+        'has_solution': True,
+        'recursiones': 1927,
+        'resultado': 4,
+        'seg2': 0.00002,
+        'segundos': 0.000016835,
+        'ticks': 20.0
+      },
+      {
+        'T': 35248122,
+        'has_solution': True,
+        'recursiones': 1800,
+        'resultado': 3,
+        'seg2': 0.000027,
+        'segundos': 0.000022821,
+        'ticks': 27.0
+      },
+      {
+        'T': 35248122,
+        'has_solution': True,
+        'recursiones': 1927,
+        'resultado': 4,
+        'seg2': 0.00002,
+        'segundos': 0.000016789,
+        'ticks': 20.0
+      },
+      {
+        'T': 35248122,
+        'has_solution': True,
+        'recursiones': 2046,
+        'resultado': 9,
+        'seg2': 0.000028,
+        'segundos': 0.000022777,
+        'ticks': 28.0
+      },
+      {
+        'T': 35248122,
+        'has_solution': True,
+        'recursiones': 2046,
+        'resultado': 9,
+        'seg2': 0.00003,
+        'segundos': 0.00002442,
+        'ticks': 30.0
+      },
+      {
+        'T': 35248122,
+        'has_solution': True,
+        'recursiones': 1800,
+        'resultado': 3,
+        'seg2': 0.00005,
+        'segundos': 0.000036482,
+        'ticks': 50.0
+      },
+      {
+        'T': 35248122,
+        'has_solution': True,
+        'recursiones': 2043,
+        'resultado': 8,
+        'seg2': 0.000045,
+        'segundos': 0.00003168,
+        'ticks': 45.0
+      },
+      {
+        'T': 35248122,
+        'has_solution': True,
+        'recursiones': 2047,
+        'resultado': 10,
+        'seg2': 0.000028,
+        'segundos': 0.000024006,
+        'ticks': 28.0
+      },
+      {
+        'T': 35248122,
+        'has_solution': True,
+        'recursiones': 1990,
+        'resultado': 5,
+        'seg2': 0.000023,
+        'segundos': 0.000017516,
+        'ticks': 23.0
+      },
+      {
+        'T': 35248122,
+        'has_solution': True,
+        'recursiones': 2036,
+        'resultado': 7,
+        'seg2': 0.000022,
+        'segundos': 0.000019448,
+        'ticks': 22.0
+      },
+      {
+        'T': 35248122,
+        'has_solution': True,
+        'recursiones': 1927,
+        'resultado': 4,
+        'seg2': 0.000022,
+        'segundos': 0.000017259,
+        'ticks': 22.0
+      },
+      {
+        'T': 35248122,
+        'has_solution': True,
+        'recursiones': 2036,
+        'resultado': 7,
+        'seg2': 0.000028,
+        'segundos': 0.000023411,
+        'ticks': 28.0
+      },
+      {
+        'T': 35248122,
+        'has_solution': True,
+        'recursiones': 1990,
+        'resultado': 5,
+        'seg2': 0.00005,
+        'segundos': 0.000040421,
+        'ticks': 50.0
+      },
+      {
+        'T': 35248122,
+        'has_solution': True,
+        'recursiones': 1034,
+        'resultado': 1,
+        'seg2': 0.000014,
+        'segundos': 0.000010737,
+        'ticks': 14.0
+      },
+      {
+        'T': 35248122,
+        'has_solution': True,
+        'recursiones': 2021,
+        'resultado': 6,
+        'seg2': 0.000022,
+        'segundos': 0.000018582,
+        'ticks': 22.0
+      },
+      {
+        'T': 35248122,
+        'has_solution': True,
+        'recursiones': 1927,
+        'resultado': 4,
+        'seg2': 0.000027,
+        'segundos': 0.000023799,
+        'ticks': 27.0
+      },
+      {
+        'T': 35248122,
+        'has_solution': True,
+        'recursiones': 2047,
+        'resultado': 10,
+        'seg2': 0.000029,
+        'segundos': 0.00002487,
+        'ticks': 29.0
+      },
+      {
+        'T': 35248122,
+        'has_solution': True,
+        'recursiones': 2044,
+        'resultado': 8,
+        'seg2': 0.000028,
+        'segundos': 0.000024372,
+        'ticks': 28.0
+      }
+    ],
+    11: [
+      {
+        'T': 61804719,
+        'has_solution': True,
+        'recursiones': 2059,
+        'resultado': 1,
+        'seg2': 0.000028,
+        'segundos': 0.000024829,
+        'ticks': 28.0
+      },
+      {
+        'T': 61804719,
+        'has_solution': True,
+        'recursiones': 3593,
+        'resultado': 3,
+        'seg2': 0.000031,
+        'segundos': 0.00002788,
+        'ticks': 31.0
+      },
+      {
+        'T': 61804719,
+        'has_solution': True,
+        'recursiones': 4084,
+        'resultado': 8,
+        'seg2': 0.000035,
+        'segundos': 0.000032282,
+        'ticks': 35.0
+      },
+      {
+        'T': 61804719,
+        'has_solution': True,
+        'recursiones': 4091,
+        'resultado': 9,
+        'seg2': 0.000059,
+        'segundos': 0.000040409,
+        'ticks': 59.0
+      },
+      {
+        'T': 61804719,
+        'has_solution': True,
+        'recursiones': 4069,
+        'resultado': 7,
+        'seg2': 0.000035,
+        'segundos': 0.000031327,
+        'ticks': 35.0
+      },
+      {
+        'T': 61804719,
+        'has_solution': True,
+        'recursiones': 3848,
+        'resultado': 4,
+        'seg2': 0.000041,
+        'segundos': 0.000033268,
+        'ticks': 41.0
+      },
+      {
+        'T': 61804719,
+        'has_solution': True,
+        'recursiones': 3848,
+        'resultado': 4,
+        'seg2': 0.000071,
+        'segundos': 0.000062545,
+        'ticks': 71.0
+      },
+      {
+        'T': 61804719,
+        'has_solution': True,
+        'recursiones': 4095,
+        'resultado': 11,
+        'seg2': 0.000034,
+        'segundos': 0.000031064,
+        'ticks': 34.0
+      },
+      {
+        'T': 61804719,
+        'has_solution': True,
+        'recursiones': 3593,
+        'resultado': 3,
+        'seg2': 0.000047,
+        'segundos': 0.000040438,
+        'ticks': 47.0
+      },
+      {
+        'T': 61804719,
+        'has_solution': True,
+        'recursiones': 4095,
+        'resultado': 11,
+        'seg2': 0.000044,
+        'segundos': 0.000034948,
+        'ticks': 44.0
+      },
+      {
+        'T': 61804719,
+        'has_solution': True,
+        'recursiones': 4095,
+        'resultado': 11,
+        'seg2': 0.000034,
+        'segundos': 0.000032241,
+        'ticks': 34.0
+      },
+      {
+        'T': 61804719,
+        'has_solution': True,
+        'recursiones': 4069,
+        'resultado': 7,
+        'seg2': 0.000041,
+        'segundos': 0.000035034,
+        'ticks': 41.0
+      },
+      {
+        'T': 61804719,
+        'has_solution': True,
+        'recursiones': 4038,
+        'resultado': 6,
+        'seg2': 0.000048,
+        'segundos': 0.00004459,
+        'ticks': 48.0
+      },
+      {
+        'T': 61804719,
+        'has_solution': True,
+        'recursiones': 4095,
+        'resultado': 11,
+        'seg2': 0.000046,
+        'segundos': 0.000042777,
+        'ticks': 46.0
+      },
+      {
+        'T': 61804719,
+        'has_solution': True,
+        'recursiones': 4095,
+        'resultado': 11,
+        'seg2': 0.000035,
+        'segundos': 0.000031425,
+        'ticks': 35.0
+      },
+      {
+        'T': 61804719,
+        'has_solution': True,
+        'recursiones': 4069,
+        'resultado': 7,
+        'seg2': 0.000035,
+        'segundos': 0.000031164,
+        'ticks': 35.0
+      },
+      {
+        'T': 61804719,
+        'has_solution': True,
+        'recursiones': 3848,
+        'resultado': 4,
+        'seg2': 0.000062,
+        'segundos': 0.000047031,
+        'ticks': 62.0
+      },
+      {
+        'T': 61804719,
+        'has_solution': True,
+        'recursiones': 4094,
+        'resultado': 10,
+        'seg2': 0.000044,
+        'segundos': 0.000038154,
+        'ticks': 44.0
+      },
+      {
+        'T': 61804719,
+        'has_solution': True,
+        'recursiones': 4038,
+        'resultado': 6,
+        'seg2': 0.000048,
+        'segundos': 0.000042173,
+        'ticks': 48.0
+      },
+      {
+        'T': 61804719,
+        'has_solution': True,
+        'recursiones': 4069,
+        'resultado': 7,
+        'seg2': 0.000053,
+        'segundos': 0.000045913,
+        'ticks': 53.0
+      }
+    ],
+    12: [
+      {
+        'T': 79569815,
+        'has_solution': True,
+        'recursiones': 8180,
+        'resultado': 9,
+        'seg2': 0.000063,
+        'segundos': 0.000058844,
+        'ticks': 63.0
+      },
+      {
+        'T': 79569815,
+        'has_solution': True,
+        'recursiones': 8134,
+        'resultado': 7,
+        'seg2': 0.000061,
+        'segundos': 0.000058038,
+        'ticks': 61.0
+      },
+      {
+        'T': 79569815,
+        'has_solution': True,
+        'recursiones': 8134,
+        'resultado': 7,
+        'seg2': 0.000131,
+        'segundos': 0.000168667,
+        'ticks': 131.0
+      },
+      {
+        'T': 79569815,
+        'has_solution': True,
+        'recursiones': 7944,
+        'resultado': 5,
+        'seg2': 0.000098,
+        'segundos': 0.000092059,
+        'ticks': 98.0
+      },
+      {
+        'T': 79569815,
+        'has_solution': True,
+        'recursiones': 8191,
+        'resultado': 12,
+        'seg2': 0.000082,
+        'segundos': 0.000077338,
+        'ticks': 82.0
+      },
+      {
+        'T': 79569815,
+        'has_solution': True,
+        'recursiones': 7689,
+        'resultado': 4,
+        'seg2': 0.000057,
+        'segundos': 0.000054924,
+        'ticks': 57.0
+      },
+      {
+        'T': 79569815,
+        'has_solution': True,
+        'recursiones': 7178,
+        'resultado': 3,
+        'seg2': 0.000079,
+        'segundos': 0.00007226,
+        'ticks': 79.0
+      },
+      {
+        'T': 79569815,
+        'has_solution': True,
+        'recursiones': 8165,
+        'resultado': 8,
+        'seg2': 0.000088,
+        'segundos': 0.000084206,
+        'ticks': 88.0
+      },
+      {
+        'T': 79569815,
+        'has_solution': True,
+        'recursiones': 6155,
+        'resultado': 2,
+        'seg2': 0.000067,
+        'segundos': 0.000061691,
+        'ticks': 67.0
+      },
+      {
+        'T': 79569815,
+        'has_solution': True,
+        'recursiones': 6155,
+        'resultado': 2,
+        'seg2': 0.000049,
+        'segundos': 0.000045147,
+        'ticks': 49.0
+      },
+      {
+        'T': 79569815,
+        'has_solution': True,
+        'recursiones': 8187,
+        'resultado': 10,
+        'seg2': 0.000084,
+        'segundos': 0.000080279,
+        'ticks': 84.0
+      },
+      {
+        'T': 79569815,
+        'has_solution': True,
+        'recursiones': 4108,
+        'resultado': 1,
+        'seg2': 0.000035,
+        'segundos': 0.000033244,
+        'ticks': 35.0
+      },
+      {
+        'T': 79569815,
+        'has_solution': True,
+        'recursiones': 7944,
+        'resultado': 5,
+        'seg2': 0.000061,
+        'segundos': 0.000058126,
+        'ticks': 61.0
+      },
+      {
+        'T': 79569815,
+        'has_solution': True,
+        'recursiones': 8165,
+        'resultado': 8,
+        'seg2': 0.000063,
+        'segundos': 0.000058399,
+        'ticks': 63.0
+      },
+      {
+        'T': 79569815,
+        'has_solution': True,
+        'recursiones': 8190,
+        'resultado': 11,
+        'seg2': 0.000093,
+        'segundos': 0.000083355,
+        'ticks': 93.0
+      },
+      {
+        'T': 79569815,
+        'has_solution': True,
+        'recursiones': 6155,
+        'resultado': 2,
+        'seg2': 0.00007,
+        'segundos': 0.00006541,
+        'ticks': 70.0
+      },
+      {
+        'T': 79569815,
+        'has_solution': True,
+        'recursiones': 8191,
+        'resultado': 12,
+        'seg2': 0.000136,
+        'segundos': 0.000125991,
+        'ticks': 136.0
+      },
+      {
+        'T': 79569815,
+        'has_solution': True,
+        'recursiones': 8071,
+        'resultado': 6,
+        'seg2': 0.000066,
+        'segundos': 0.000062723,
+        'ticks': 66.0
+      },
+      {
+        'T': 79569815,
+        'has_solution': True,
+        'recursiones': 8071,
+        'resultado': 6,
+        'seg2': 0.000084,
+        'segundos': 0.00007897,
+        'ticks': 84.0
+      },
+      {
+        'T': 79569815,
+        'has_solution': True,
+        'recursiones': 7178,
+        'resultado': 3,
+        'seg2': 0.000091,
+        'segundos': 0.000084449,
+        'ticks': 91.0
+      }
+    ],
+    13: [
+      {
+        'T': 67781413,
+        'has_solution': True,
+        'recursiones': 12300,
+        'resultado': 2,
+        'seg2': 0.000146,
+        'segundos': 0.000141312,
+        'ticks': 146.0
+      },
+      {
+        'T': 67781413,
+        'has_solution': True,
+        'recursiones': 12300,
+        'resultado': 2,
+        'seg2': 0.00016,
+        'segundos': 0.000136829,
+        'ticks': 160.0
+      },
+      {
+        'T': 67781413,
+        'has_solution': True,
+        'recursiones': 15370,
+        'resultado': 4,
+        'seg2': 0.000167,
+        'segundos': 0.000162445,
+        'ticks': 167.0
+      },
+      {
+        'T': 67781413,
+        'has_solution': True,
+        'recursiones': 16357,
+        'resultado': 9,
+        'seg2': 0.00016,
+        'segundos': 0.000156359,
+        'ticks': 160.0
+      },
+      {
+        'T': 67781413,
+        'has_solution': True,
+        'recursiones': 14347,
+        'resultado': 3,
+        'seg2': 0.000107,
+        'segundos': 0.000103387,
+        'ticks': 107.0
+      },
+      {
+        'T': 67781413,
+        'has_solution': True,
+        'recursiones': 16263,
+        'resultado': 7,
+        'seg2': 0.000167,
+        'segundos': 0.000157786,
+        'ticks': 167.0
+      },
+      {
+        'T': 67781413,
+        'has_solution': True,
+        'recursiones': 16263,
+        'resultado': 7,
+        'seg2': 0.000156,
+        'segundos': 0.000151386,
+        'ticks': 156.0
+      },
+      {
+        'T': 67781413,
+        'has_solution': True,
+        'recursiones': 16357,
+        'resultado': 9,
+        'seg2': 0.000159,
+        'segundos': 0.000155206,
+        'ticks': 159.0
+      },
+      {
+        'T': 67781413,
+        'has_solution': True,
+        'recursiones': 16379,
+        'resultado': 11,
+        'seg2': 0.000124,
+        'segundos': 0.000120789,
+        'ticks': 124.0
+      },
+      {
+        'T': 67781413,
+        'has_solution': True,
+        'recursiones': 12300,
+        'resultado': 2,
+        'seg2': 0.000093,
+        'segundos': 0.000089819,
+        'ticks': 93.0
+      },
+      {
+        'T': 67781413,
+        'has_solution': True,
+        'recursiones': 16383,
+        'resultado': 13,
+        'seg2': 0.000165,
+        'segundos': 0.000159345,
+        'ticks': 165.0
+      },
+      {
+        'T': 67781413,
+        'has_solution': True,
+        'recursiones': 16357,
+        'resultado': 9,
+        'seg2': 0.000184,
+        'segundos': 0.000180139,
+        'ticks': 184.0
+      },
+      {
+        'T': 67781413,
+        'has_solution': True,
+        'recursiones': 16383,
+        'resultado': 13,
+        'seg2': 0.000136,
+        'segundos': 0.000131173,
+        'ticks': 136.0
+      },
+      {
+        'T': 67781413,
+        'has_solution': True,
+        'recursiones': 16383,
+        'resultado': 13,
+        'seg2': 0.000196,
+        'segundos': 0.000386646,
+        'ticks': 196.0
+      },
+      {
+        'T': 67781413,
+        'has_solution': True,
+        'recursiones': 8205,
+        'resultado': 1,
+        'seg2': 0.000087,
+        'segundos': 0.000082871,
+        'ticks': 87.0
+      },
+      {
+        'T': 67781413,
+        'has_solution': True,
+        'recursiones': 16357,
+        'resultado': 9,
+        'seg2': 0.000162,
+        'segundos': 0.000158308,
+        'ticks': 162.0
+      },
+      {
+        'T': 67781413,
+        'has_solution': True,
+        'recursiones': 14347,
+        'resultado': 3,
+        'seg2': 0.000151,
+        'segundos': 0.000146637,
+        'ticks': 151.0
+      },
+      {
+        'T': 67781413,
+        'has_solution': True,
+        'recursiones': 16136,
+        'resultado': 6,
+        'seg2': 0.000168,
+        'segundos': 0.000163884,
+        'ticks': 168.0
+      },
+      {
+        'T': 67781413,
+        'has_solution': True,
+        'recursiones': 8205,
+        'resultado': 1,
+        'seg2': 0.00009,
+        'segundos': 0.000085196,
+        'ticks': 90.0
+      },
+      {
+        'T': 67781413,
+        'has_solution': True,
+        'recursiones': 15881,
+        'resultado': 5,
+        'seg2': 0.000158,
+        'segundos': 0.000153361,
+        'ticks': 158.0
+      }
+    ],
+    14: [
+      {
+        'T': 214189,
+        'has_solution': True,
+        'recursiones': 30732,
+        'resultado': 4,
+        'seg2': 0.00028,
+        'segundos': 0.000275369,
+        'ticks': 280.0
+      },
+      {
+        'T': 214189,
+        'has_solution': True,
+        'recursiones': 32766,
+        'resultado': 13,
+        'seg2': 0.000266,
+        'segundos': 0.000264153,
+        'ticks': 266.0
+      },
+      {
+        'T': 214189,
+        'has_solution': True,
+        'recursiones': 30731,
+        'resultado': 4,
+        'seg2': 0.00024,
+        'segundos': 0.000239085,
+        'ticks': 240.0
+      },
+      {
+        'T': 214189,
+        'has_solution': True,
+        'recursiones': 24589,
+        'resultado': 2,
+        'seg2': 0.000177,
+        'segundos': 0.00017226,
+        'ticks': 177.0
+      },
+      {
+        'T': 214189,
+        'has_solution': True,
+        'recursiones': 28684,
+        'resultado': 3,
+        'seg2': 0.000277,
+        'segundos': 0.00029513,
+        'ticks': 277.0
+      },
+      {
+        'T': 214189,
+        'has_solution': True,
+        'recursiones': 32763,
+        'resultado': 12,
+        'seg2': 0.000231,
+        'segundos': 0.000227882,
+        'ticks': 231.0
+      },
+      {
+        'T': 214189,
+        'has_solution': True,
+        'recursiones': 32756,
+        'resultado': 11,
+        'seg2': 0.00037,
+        'segundos': 0.000357809,
+        'ticks': 370.0
+      },
+      {
+        'T': 214189,
+        'has_solution': True,
+        'recursiones': 31754,
+        'resultado': 5,
+        'seg2': 0.000293,
+        'segundos': 0.000288715,
+        'ticks': 293.0
+      },
+      {
+        'T': 214189,
+        'has_solution': True,
+        'recursiones': 32756,
+        'resultado': 11,
+        'seg2': 0.000231,
+        'segundos': 0.000227851,
+        'ticks': 231.0
+      },
+      {
+        'T': 214189,
+        'has_solution': True,
+        'recursiones': 32266,
+        'resultado': 6,
+        'seg2': 0.000228,
+        'segundos': 0.00022453,
+        'ticks': 228.0
+      },
+      {
+        'T': 214189,
+        'has_solution': True,
+        'recursiones': 16399,
+        'resultado': 1,
+        'seg2': 0.000162,
+        'segundos': 0.00015822,
+        'ticks': 162.0
+      },
+      {
+        'T': 214189,
+        'has_solution': True,
+        'recursiones': 31754,
+        'resultado': 5,
+        'seg2': 0.00024,
+        'segundos': 0.000236651,
+        'ticks': 240.0
+      },
+      {
+        'T': 214189,
+        'has_solution': True,
+        'recursiones': 32647,
+        'resultado': 8,
+        'seg2': 0.000319,
+        'segundos': 0.000313542,
+        'ticks': 319.0
+      },
+      {
+        'T': 214189,
+        'has_solution': True,
+        'recursiones': 32741,
+        'resultado': 10,
+        'seg2': 0.000226,
+        'segundos': 0.000222877,
+        'ticks': 226.0
+      },
+      {
+        'T': 214189,
+        'has_solution': True,
+        'recursiones': 32265,
+        'resultado': 6,
+        'seg2': 0.000222,
+        'segundos': 0.000217839,
+        'ticks': 222.0
+      },
+      {
+        'T': 214189,
+        'has_solution': True,
+        'recursiones': 31754,
+        'resultado': 5,
+        'seg2': 0.000305,
+        'segundos': 0.000301378,
+        'ticks': 305.0
+      },
+      {
+        'T': 214189,
+        'has_solution': True,
+        'recursiones': 32756,
+        'resultado': 11,
+        'seg2': 0.000324,
+        'segundos': 0.000486546,
+        'ticks': 324.0
+      },
+      {
+        'T': 214189,
+        'has_solution': True,
+        'recursiones': 24589,
+        'resultado': 2,
+        'seg2': 0.000236,
+        'segundos': 0.000232323,
+        'ticks': 236.0
+      },
+      {
+        'T': 214189,
+        'has_solution': True,
+        'recursiones': 32763,
+        'resultado': 12,
+        'seg2': 0.000321,
+        'segundos': 0.00031988,
+        'ticks': 321.0
+      },
+      {
+        'T': 214189,
+        'has_solution': True,
+        'recursiones': 32647,
+        'resultado': 8,
+        'seg2': 0.000325,
+        'segundos': 0.000316312,
+        'ticks': 325.0
+      }
+    ],
+    15: [
+      {
+        'T': 74115939,
+        'has_solution': True,
+        'recursiones': 65535,
+        'resultado': 15,
+        'seg2': 0.000441,
+        'segundos': 0.000439445,
+        'ticks': 441.0
+      },
+      {
+        'T': 74115939,
+        'has_solution': True,
+        'recursiones': 49166,
+        'resultado': 2,
+        'seg2': 0.000368,
+        'segundos': 0.00036525,
+        'ticks': 368.0
+      },
+      {
+        'T': 74115939,
+        'has_solution': True,
+        'recursiones': 32784,
+        'resultado': 1,
+        'seg2': 0.000249,
+        'segundos': 0.000246197,
+        'ticks': 249.0
+      },
+      {
+        'T': 74115939,
+        'has_solution': True,
+        'recursiones': 63499,
+        'resultado': 5,
+        'seg2': 0.000565,
+        'segundos': 0.00056119,
+        'ticks': 565.0
+      },
+      {
+        'T': 74115939,
+        'has_solution': True,
+        'recursiones': 65524,
+        'resultado': 12,
+        'seg2': 0.000618,
+        'segundos': 0.00061782,
+        'ticks': 618.0
+      },
+      {
+        'T': 74115939,
+        'has_solution': True,
+        'recursiones': 61452,
+        'resultado': 4,
+        'seg2': 0.000632,
+        'segundos': 0.000777577,
+        'ticks': 632.0
+      },
+      {
+        'T': 74115939,
+        'has_solution': True,
+        'recursiones': 65510,
+        'resultado': 11,
+        'seg2': 0.000705,
+        'segundos': 0.000701507,
+        'ticks': 705.0
+      },
+      {
+        'T': 74115939,
+        'has_solution': True,
+        'recursiones': 63500,
+        'resultado': 5,
+        'seg2': 0.000626,
+        'segundos': 0.000626014,
+        'ticks': 626.0
+      },
+      {
+        'T': 74115939,
+        'has_solution': True,
+        'recursiones': 65034,
+        'resultado': 7,
+        'seg2': 0.000631,
+        'segundos': 0.000624573,
+        'ticks': 631.0
+      },
+      {
+        'T': 74115939,
+        'has_solution': True,
+        'recursiones': 49166,
+        'resultado': 2,
+        'seg2': 0.000439,
+        'segundos': 0.000436153,
+        'ticks': 439.0
+      },
+      {
+        'T': 74115939,
+        'has_solution': True,
+        'recursiones': 32783,
+        'resultado': 1,
+        'seg2': 0.000318,
+        'segundos': 0.000314133,
+        'ticks': 318.0
+      },
+      {
+        'T': 74115939,
+        'has_solution': True,
+        'recursiones': 65534,
+        'resultado': 14,
+        'seg2': 0.000632,
+        'segundos': 0.000625237,
+        'ticks': 632.0
+      },
+      {
+        'T': 74115939,
+        'has_solution': True,
+        'recursiones': 32783,
+        'resultado': 1,
+        'seg2': 0.000303,
+        'segundos': 0.000300626,
+        'ticks': 303.0
+      },
+      {
+        'T': 74115939,
+        'has_solution': True,
+        'recursiones': 65534,
+        'resultado': 14,
+        'seg2': 0.000646,
+        'segundos': 0.00064812,
+        'ticks': 646.0
+      },
+      {
+        'T': 74115939,
+        'has_solution': True,
+        'recursiones': 65531,
+        'resultado': 13,
+        'seg2': 0.000582,
+        'segundos': 0.000579108,
+        'ticks': 582.0
+      },
+      {
+        'T': 74115939,
+        'has_solution': True,
+        'recursiones': 65478,
+        'resultado': 10,
+        'seg2': 0.000626,
+        'segundos': 0.000817021,
+        'ticks': 626.0
+      },
+      {
+        'T': 74115939,
+        'has_solution': True,
+        'recursiones': 65033,
+        'resultado': 7,
+        'seg2': 0.000602,
+        'segundos': 0.000599291,
+        'ticks': 602.0
+      },
+      {
+        'T': 74115939,
+        'has_solution': True,
+        'recursiones': 32783,
+        'resultado': 1,
+        'seg2': 0.000317,
+        'segundos': 0.000358282,
+        'ticks': 317.0
+      },
+      {
+        'T': 74115939,
+        'has_solution': True,
+        'recursiones': 49166,
+        'resultado': 2,
+        'seg2': 0.000446,
+        'segundos': 0.000443716,
+        'ticks': 446.0
+      },
+      {
+        'T': 74115939,
+        'has_solution': True,
+        'recursiones': 65534,
+        'resultado': 14,
+        'seg2': 0.001055,
+        'segundos': 0.001049549,
+        'ticks': 1055.0
+      }
+    ],
+    16: [
+      {
+        'T': 39524403,
+        'has_solution': True,
+        'recursiones': 131070,
+        'resultado': 15,
+        'seg2': 0.001234,
+        'segundos': 0.001223884,
+        'ticks': 1234.0
+      },
+      {
+        'T': 39524403,
+        'has_solution': True,
+        'recursiones': 130824,
+        'resultado': 9,
+        'seg2': 0.001236,
+        'segundos': 0.00123625,
+        'ticks': 1236.0
+      },
+      {
+        'T': 39524403,
+        'has_solution': True,
+        'recursiones': 131067,
+        'resultado': 14,
+        'seg2': 0.00182,
+        'segundos': 0.001812469,
+        'ticks': 1820.0
+      },
+      {
+        'T': 39524403,
+        'has_solution': True,
+        'recursiones': 130951,
+        'resultado': 10,
+        'seg2': 0.001228,
+        'segundos': 0.001223402,
+        'ticks': 1228.0
+      },
+      {
+        'T': 39524403,
+        'has_solution': True,
+        'recursiones': 130951,
+        'resultado': 10,
+        'seg2': 0.001897,
+        'segundos': 0.001901168,
+        'ticks': 1897.0
+      },
+      {
+        'T': 39524403,
+        'has_solution': True,
+        'recursiones': 131067,
+        'resultado': 14,
+        'seg2': 0.001235,
+        'segundos': 0.001232866,
+        'ticks': 1235.0
+      },
+      {
+        'T': 39524403,
+        'has_solution': True,
+        'recursiones': 65552,
+        'resultado': 1,
+        'seg2': 0.000524,
+        'segundos': 0.000550635,
+        'ticks': 524.0
+      },
+      {
+        'T': 39524403,
+        'has_solution': True,
+        'recursiones': 131070,
+        'resultado': 15,
+        'seg2': 0.001004,
+        'segundos': 0.001023576,
+        'ticks': 1004.0
+      },
+      {
+        'T': 39524403,
+        'has_solution': True,
+        'recursiones': 65552,
+        'resultado': 1,
+        'seg2': 0.000437,
+        'segundos': 0.000435474,
+        'ticks': 437.0
+      },
+      {
+        'T': 39524403,
+        'has_solution': True,
+        'recursiones': 131070,
+        'resultado': 15,
+        'seg2': 0.000999,
+        'segundos': 0.001007961,
+        'ticks': 999.0
+      },
+      {
+        'T': 39524403,
+        'has_solution': True,
+        'recursiones': 131060,
+        'resultado': 13,
+        'seg2': 0.001422,
+        'segundos': 0.001408757,
+        'ticks': 1422.0
+      },
+      {
+        'T': 39524403,
+        'has_solution': True,
+        'recursiones': 65552,
+        'resultado': 1,
+        'seg2': 0.000503,
+        'segundos': 0.000499754,
+        'ticks': 503.0
+      },
+      {
+        'T': 39524403,
+        'has_solution': True,
+        'recursiones': 114702,
+        'resultado': 3,
+        'seg2': 0.000873,
+        'segundos': 0.00086905,
+        'ticks': 873.0
+      },
+      {
+        'T': 39524403,
+        'has_solution': True,
+        'recursiones': 131045,
+        'resultado': 12,
+        'seg2': 0.001374,
+        'segundos': 0.001430738,
+        'ticks': 1374.0
+      },
+      {
+        'T': 39524403,
+        'has_solution': True,
+        'recursiones': 98319,
+        'resultado': 2,
+        'seg2': 0.000691,
+        'segundos': 0.000693847,
+        'ticks': 691.0
+      },
+      {
+        'T': 39524403,
+        'has_solution': True,
+        'recursiones': 131071,
+        'resultado': 16,
+        'seg2': 0.000885,
+        'segundos': 0.000888252,
+        'ticks': 885.0
+      },
+      {
+        'T': 39524403,
+        'has_solution': True,
+        'recursiones': 131014,
+        'resultado': 11,
+        'seg2': 0.000874,
+        'segundos': 0.000870526,
+        'ticks': 874.0
+      },
+      {
+        'T': 39524403,
+        'has_solution': True,
+        'recursiones': 131071,
+        'resultado': 16,
+        'seg2': 0.001251,
+        'segundos': 0.001266951,
+        'ticks': 1251.0
+      },
+      {
+        'T': 39524403,
+        'has_solution': True,
+        'recursiones': 131070,
+        'resultado': 15,
+        'seg2': 0.001248,
+        'segundos': 0.001467463,
+        'ticks': 1248.0
+      },
+      {
+        'T': 39524403,
+        'has_solution': True,
+        'recursiones': 130569,
+        'resultado': 8,
+        'seg2': 0.001249,
+        'segundos': 0.00148094,
+        'ticks': 1249.0
+      }
+    ],
+    17: [
+      {
+        'T': 73400358,
+        'has_solution': True,
+        'recursiones': 262023,
+        'resultado': 11,
+        'seg2': 0.002025,
+        'segundos': 0.002081931,
+        'ticks': 2025.0
+      },
+      {
+        'T': 73400358,
+        'has_solution': True,
+        'recursiones': 261896,
+        'resultado': 10,
+        'seg2': 0.001935,
+        'segundos': 0.002212635,
+        'ticks': 1935.0
+      },
+      {
+        'T': 73400358,
+        'has_solution': True,
+        'recursiones': 262132,
+        'resultado': 14,
+        'seg2': 0.001817,
+        'segundos': 0.001809637,
+        'ticks': 1817.0
+      },
+      {
+        'T': 73400358,
+        'has_solution': True,
+        'recursiones': 262142,
+        'resultado': 16,
+        'seg2': 0.001917,
+        'segundos': 0.001915668,
+        'ticks': 1917.0
+      },
+      {
+        'T': 73400358,
+        'has_solution': True,
+        'recursiones': 258060,
+        'resultado': 6,
+        'seg2': 0.00189,
+        'segundos': 0.001928745,
+        'ticks': 1890.0
+      },
+      {
+        'T': 73400358,
+        'has_solution': True,
+        'recursiones': 262117,
+        'resultado': 13,
+        'seg2': 0.001917,
+        'segundos': 0.00197349,
+        'ticks': 1917.0
+      },
+      {
+        'T': 73400358,
+        'has_solution': True,
+        'recursiones': 262142,
+        'resultado': 16,
+        'seg2': 0.001919,
+        'segundos': 0.001918758,
+        'ticks': 1919.0
+      },
+      {
+        'T': 73400358,
+        'has_solution': True,
+        'recursiones': 131090,
+        'resultado': 1,
+        'seg2': 0.00123,
+        'segundos': 0.001442317,
+        'ticks': 1230.0
+      },
+      {
+        'T': 73400358,
+        'has_solution': True,
+        'recursiones': 262143,
+        'resultado': 17,
+        'seg2': 0.002175,
+        'segundos': 0.002222892,
+        'ticks': 2175.0
+      },
+      {
+        'T': 73400358,
+        'has_solution': True,
+        'recursiones': 260107,
+        'resultado': 7,
+        'seg2': 0.001832,
+        'segundos': 0.001839302,
+        'ticks': 1832.0
+      },
+      {
+        'T': 73400358,
+        'has_solution': True,
+        'recursiones': 131089,
+        'resultado': 1,
+        'seg2': 0.000872,
+        'segundos': 0.000868205,
+        'ticks': 872.0
+      },
+      {
+        'T': 73400358,
+        'has_solution': True,
+        'recursiones': 245774,
+        'resultado': 4,
+        'seg2': 0.001635,
+        'segundos': 0.001632271,
+        'ticks': 1635.0
+      },
+      {
+        'T': 73400358,
+        'has_solution': True,
+        'recursiones': 262132,
+        'resultado': 14,
+        'seg2': 0.002639,
+        'segundos': 0.002669269,
+        'ticks': 2639.0
+      },
+      {
+        'T': 73400358,
+        'has_solution': True,
+        'recursiones': 260107,
+        'resultado': 7,
+        'seg2': 0.002492,
+        'segundos': 0.00283199,
+        'ticks': 2492.0
+      },
+      {
+        'T': 73400358,
+        'has_solution': True,
+        'recursiones': 261641,
+        'resultado': 9,
+        'seg2': 0.00179,
+        'segundos': 0.00178693,
+        'ticks': 1790.0
+      },
+      {
+        'T': 73400358,
+        'has_solution': True,
+        'recursiones': 262086,
+        'resultado': 12,
+        'seg2': 0.001915,
+        'segundos': 0.001941807,
+        'ticks': 1915.0
+      },
+      {
+        'T': 73400358,
+        'has_solution': True,
+        'recursiones': 262117,
+        'resultado': 13,
+        'seg2': 0.001833,
+        'segundos': 0.001858199,
+        'ticks': 1833.0
+      },
+      {
+        'T': 73400358,
+        'has_solution': True,
+        'recursiones': 262086,
+        'resultado': 12,
+        'seg2': 0.001974,
+        'segundos': 0.001972306,
+        'ticks': 1974.0
+      },
+      {
+        'T': 73400358,
+        'has_solution': True,
+        'recursiones': 262143,
+        'resultado': 17,
+        'seg2': 0.002307,
+        'segundos': 0.002343803,
+        'ticks': 2307.0
+      },
+      {
+        'T': 73400358,
+        'has_solution': True,
+        'recursiones': 131089,
+        'resultado': 1,
+        'seg2': 0.000926,
+        'segundos': 0.000930304,
+        'ticks': 926.0
+      }
+    ],
+    18: [
+      {
+        'T': 75534592,
+        'has_solution': True,
+        'recursiones': 523785,
+        'resultado': 10,
+        'seg2': 0.004353,
+        'segundos': 0.004633576,
+        'ticks': 4353.0
+      },
+      {
+        'T': 75534592,
+        'has_solution': True,
+        'recursiones': 507919,
+        'resultado': 5,
+        'seg2': 0.004271,
+        'segundos': 0.004545914,
+        'ticks': 4271.0
+      },
+      {
+        'T': 75534592,
+        'has_solution': True,
+        'recursiones': 524040,
+        'resultado': 11,
+        'seg2': 0.004131,
+        'segundos': 0.004202915,
+        'ticks': 4131.0
+      },
+      {
+        'T': 75534592,
+        'has_solution': True,
+        'recursiones': 520204,
+        'resultado': 7,
+        'seg2': 0.00387,
+        'segundos': 0.00401381,
+        'ticks': 3870.0
+      },
+      {
+        'T': 75534592,
+        'has_solution': True,
+        'recursiones': 522251,
+        'resultado': 8,
+        'seg2': 0.004738,
+        'segundos': 0.004855966,
+        'ticks': 4738.0
+      },
+      {
+        'T': 75534592,
+        'has_solution': True,
+        'recursiones': 262162,
+        'resultado': 1,
+        'seg2': 0.001926,
+        'segundos': 0.00197679,
+        'ticks': 1926.0
+      },
+      {
+        'T': 75534592,
+        'has_solution': True,
+        'recursiones': 516109,
+        'resultado': 6,
+        'seg2': 0.003472,
+        'segundos': 0.003467369,
+        'ticks': 3472.0
+      },
+      {
+        'T': 75534592,
+        'has_solution': True,
+        'recursiones': 491535,
+        'resultado': 4,
+        'seg2': 0.00499,
+        'segundos': 0.007203575,
+        'ticks': 4990.0
+      },
+      {
+        'T': 75534592,
+        'has_solution': True,
+        'recursiones': 491535,
+        'resultado': 4,
+        'seg2': 0.004577,
+        'segundos': 0.004959527,
+        'ticks': 4577.0
+      },
+      {
+        'T': 75534592,
+        'has_solution': True,
+        'recursiones': 523785,
+        'resultado': 10,
+        'seg2': 0.004503,
+        'segundos': 0.004579436,
+        'ticks': 4503.0
+      },
+      {
+        'T': 75534592,
+        'has_solution': True,
+        'recursiones': 262162,
+        'resultado': 1,
+        'seg2': 0.001964,
+        'segundos': 0.001975031,
+        'ticks': 1964.0
+      },
+      {
+        'T': 75534592,
+        'has_solution': True,
+        'recursiones': 393233,
+        'resultado': 2,
+        'seg2': 0.003886,
+        'segundos': 0.004650478,
+        'ticks': 3886.0
+      },
+      {
+        'T': 75534592,
+        'has_solution': True,
+        'recursiones': 523785,
+        'resultado': 10,
+        'seg2': 0.003682,
+        'segundos': 0.003685447,
+        'ticks': 3682.0
+      },
+      {
+        'T': 75534592,
+        'has_solution': True,
+        'recursiones': 524230,
+        'resultado': 13,
+        'seg2': 0.003691,
+        'segundos': 0.003705164,
+        'ticks': 3691.0
+      },
+      {
+        'T': 75534592,
+        'has_solution': True,
+        'recursiones': 524040,
+        'resultado': 11,
+        'seg2': 0.0051,
+        'segundos': 0.005348627,
+        'ticks': 5100.0
+      },
+      {
+        'T': 75534592,
+        'has_solution': True,
+        'recursiones': 522251,
+        'resultado': 8,
+        'seg2': 0.006333,
+        'segundos': 0.006440237,
+        'ticks': 6333.0
+      },
+      {
+        'T': 75534592,
+        'has_solution': True,
+        'recursiones': 262162,
+        'resultado': 1,
+        'seg2': 0.002936,
+        'segundos': 0.009960441,
+        'ticks': 2936.0
+      },
+      {
+        'T': 75534592,
+        'has_solution': True,
+        'recursiones': 524230,
+        'resultado': 13,
+        'seg2': 0.006326,
+        'segundos': 0.010431047,
+        'ticks': 6326.0
+      },
+      {
+        'T': 75534592,
+        'has_solution': True,
+        'recursiones': 524276,
+        'resultado': 15,
+        'seg2': 0.004959,
+        'segundos': 0.005542399,
+        'ticks': 4959.0
+      },
+      {
+        'T': 75534592,
+        'has_solution': True,
+        'recursiones': 524286,
+        'resultado': 17,
+        'seg2': 0.004315,
+        'segundos': 0.004355609,
+        'ticks': 4315.0
+      }
+    ],
+    19: [
+      {
+        'T': 53122999,
+        'has_solution': True,
+        'recursiones': 1046539,
+        'resultado': 9,
+        'seg2': 0.011477,
+        'segundos': 0.018271727,
+        'ticks': 11477.0
+      },
+      {
+        'T': 53122999,
+        'has_solution': True,
+        'recursiones': 1048575,
+        'resultado': 19,
+        'seg2': 0.009557,
+        'segundos': 0.009799777,
+        'ticks': 9557.0
+      },
+      {
+        'T': 53122999,
+        'has_solution': True,
+        'recursiones': 1044492,
+        'resultado': 8,
+        'seg2': 0.008882,
+        'segundos': 0.008928464,
+        'ticks': 8882.0
+      },
+      {
+        'T': 53122999,
+        'has_solution': True,
+        'recursiones': 1048455,
+        'resultado': 13,
+        'seg2': 0.009607,
+        'segundos': 0.010150631,
+        'ticks': 9607.0
+      },
+      {
+        'T': 53122999,
+        'has_solution': True,
+        'recursiones': 1046539,
+        'resultado': 9,
+        'seg2': 0.010208,
+        'segundos': 0.011376781,
+        'ticks': 10208.0
+      },
+      {
+        'T': 53122999,
+        'has_solution': True,
+        'recursiones': 1048564,
+        'resultado': 16,
+        'seg2': 0.009663,
+        'segundos': 0.010235744,
+        'ticks': 9663.0
+      },
+      {
+        'T': 53122999,
+        'has_solution': True,
+        'recursiones': 983056,
+        'resultado': 4,
+        'seg2': 0.009273,
+        'segundos': 0.010587942,
+        'ticks': 9273.0
+      },
+      {
+        'T': 53122999,
+        'has_solution': True,
+        'recursiones': 1040397,
+        'resultado': 7,
+        'seg2': 0.010471,
+        'segundos': 0.013012954,
+        'ticks': 10471.0
+      },
+      {
+        'T': 53122999,
+        'has_solution': True,
+        'recursiones': 786450,
+        'resultado': 2,
+        'seg2': 0.023484,
+        'segundos': 0.073363522,
+        'ticks': 23484.0
+      },
+      {
+        'T': 53122999,
+        'has_solution': True,
+        'recursiones': 1048073,
+        'resultado': 11,
+        'seg2': 0.020654,
+        'segundos': 0.040630286,
+        'ticks': 20654.0
+      },
+      {
+        'T': 53122999,
+        'has_solution': True,
+        'recursiones': 1048455,
+        'resultado': 13,
+        'seg2': 0.010764,
+        'segundos': 0.010768233,
+        'ticks': 10764.0
+      },
+      {
+        'T': 53122999,
+        'has_solution': True,
+        'recursiones': 1040397,
+        'resultado': 7,
+        'seg2': 0.01214,
+        'segundos': 0.030879044,
+        'ticks': 12140.0
+      },
+      {
+        'T': 53122999,
+        'has_solution': True,
+        'recursiones': 1048571,
+        'resultado': 17,
+        'seg2': 0.009886,
+        'segundos': 0.013350454,
+        'ticks': 9886.0
+      },
+      {
+        'T': 53122999,
+        'has_solution': True,
+        'recursiones': 1040397,
+        'resultado': 7,
+        'seg2': 0.007536,
+        'segundos': 0.007556734,
+        'ticks': 7536.0
+      },
+      {
+        'T': 53122999,
+        'has_solution': True,
+        'recursiones': 524307,
+        'resultado': 1,
+        'seg2': 0.005158,
+        'segundos': 0.00638976,
+        'ticks': 5158.0
+      },
+      {
+        'T': 53122999,
+        'has_solution': True,
+        'recursiones': 1048574,
+        'resultado': 18,
+        'seg2': 0.01018,
+        'segundos': 0.011671911,
+        'ticks': 10180.0
+      },
+      {
+        'T': 53122999,
+        'has_solution': True,
+        'recursiones': 524307,
+        'resultado': 1,
+        'seg2': 0.005535,
+        'segundos': 0.005534041,
+        'ticks': 5535.0
+      },
+      {
+        'T': 53122999,
+        'has_solution': True,
+        'recursiones': 1032206,
+        'resultado': 6,
+        'seg2': 0.010045,
+        'segundos': 0.01063624,
+        'ticks': 10045.0
+      },
+      {
+        'T': 53122999,
+        'has_solution': True,
+        'recursiones': 1046539,
+        'resultado': 9,
+        'seg2': 0.011727,
+        'segundos': 0.012725427,
+        'ticks': 11727.0
+      },
+      {
+        'T': 53122999,
+        'has_solution': True,
+        'recursiones': 1048549,
+        'resultado': 15,
+        'seg2': 0.010873,
+        'segundos': 0.01195196,
+        'ticks': 10873.0
+      }
+    ]
+  },
+  'Brute-Force': {
+    10: [
+      {
+        'T': 35248122,
+        'has_solution': True,
+        'recursiones': 942,
+        'resultado': 4,
+        'seg2': 0.000012,
+        'segundos': 0.000009281,
+        'ticks': 12.0
+      },
+      {
+        'T': 35248122,
+        'has_solution': True,
+        'recursiones': 20,
+        'resultado': 1,
+        'seg2': 0.000007,
+        'segundos': 0.000003287,
+        'ticks': 7.0
+      },
+      {
+        'T': 35248122,
+        'has_solution': True,
+        'recursiones': 942,
+        'resultado': 4,
+        'seg2': 0.000012,
+        'segundos': 0.000009209,
+        'ticks': 12.0
+      },
+      {
+        'T': 35248122,
+        'has_solution': True,
+        'recursiones': 403,
+        'resultado': 3,
+        'seg2': 0.000009,
+        'segundos': 0.000006114,
+        'ticks': 9.0
+      },
+      {
+        'T': 35248122,
+        'has_solution': True,
+        'recursiones': 942,
+        'resultado': 4,
+        'seg2': 0.000012,
+        'segundos': 0.000009319,
+        'ticks': 12.0
+      },
+      {
+        'T': 35248122,
+        'has_solution': True,
+        'recursiones': 3048,
+        'resultado': 9,
+        'seg2': 0.000043,
+        'segundos': 0.000033995,
+        'ticks': 43.0
+      },
+      {
+        'T': 35248122,
+        'has_solution': True,
+        'recursiones': 3048,
+        'resultado': 9,
+        'seg2': 0.000037,
+        'segundos': 0.000033032,
+        'ticks': 37.0
+      },
+      {
+        'T': 35248122,
+        'has_solution': True,
+        'recursiones': 403,
+        'resultado': 3,
+        'seg2': 0.000013,
+        'segundos': 0.000008188,
+        'ticks': 13.0
+      },
+      {
+        'T': 35248122,
+        'has_solution': True,
+        'recursiones': 2984,
+        'resultado': 8,
+        'seg2': 0.000033,
+        'segundos': 0.000029702,
+        'ticks': 33.0
+      },
+      {
+        'T': 35248122,
+        'has_solution': True,
+        'recursiones': 3059,
+        'resultado': 10,
+        'seg2': 0.000025,
+        'segundos': 0.000021925,
+        'ticks': 25.0
+      },
+      {
+        'T': 35248122,
+        'has_solution': True,
+        'recursiones': 1655,
+        'resultado': 5,
+        'seg2': 0.000026,
+        'segundos': 0.000020289,
+        'ticks': 26.0
+      },
+      {
+        'T': 35248122,
+        'has_solution': True,
+        'recursiones': 2775,
+        'resultado': 7,
+        'seg2': 0.000033,
+        'segundos': 0.000029361,
+        'ticks': 33.0
+      },
+      {
+        'T': 35248122,
+        'has_solution': True,
+        'recursiones': 942,
+        'resultado': 4,
+        'seg2': 0.000019,
+        'segundos': 0.000014716,
+        'ticks': 19.0
+      },
+      {
+        'T': 35248122,
+        'has_solution': True,
+        'recursiones': 2775,
+        'resultado': 7,
+        'seg2': 0.000031,
+        'segundos': 0.000023449,
+        'ticks': 31.0
+      },
+      {
+        'T': 35248122,
+        'has_solution': True,
+        'recursiones': 1655,
+        'resultado': 5,
+        'seg2': 0.000026,
+        'segundos': 0.000020514,
+        'ticks': 26.0
+      },
+      {
+        'T': 35248122,
+        'has_solution': True,
+        'recursiones': 20,
+        'resultado': 1,
+        'seg2': 0.000016,
+        'segundos': 0.000004919,
+        'ticks': 16.0
+      },
+      {
+        'T': 35248122,
+        'has_solution': True,
+        'recursiones': 2326,
+        'resultado': 6,
+        'seg2': 0.000037,
+        'segundos': 0.000028534,
+        'ticks': 37.0
+      },
+      {
+        'T': 35248122,
+        'has_solution': True,
+        'recursiones': 942,
+        'resultado': 4,
+        'seg2': 0.000022,
+        'segundos': 0.00001166,
+        'ticks': 22.0
+      },
+      {
+        'T': 35248122,
+        'has_solution': True,
+        'recursiones': 3059,
+        'resultado': 10,
+        'seg2': 0.00004,
+        'segundos': 0.000033514,
+        'ticks': 40.0
+      },
+      {
+        'T': 35248122,
+        'has_solution': True,
+        'recursiones': 2984,
+        'resultado': 8,
+        'seg2': 0.000028,
+        'segundos': 0.00002226,
+        'ticks': 28.0
+      }
+    ],
+    11: [
+      {
+        'T': 61804719,
+        'has_solution': True,
+        'recursiones': 22,
+        'resultado': 1,
+        'seg2': 0.00001,
+        'segundos': 0.000004521,
+        'ticks': 10.0
+      },
+      {
+        'T': 61804719,
+        'has_solution': True,
+        'recursiones': 526,
+        'resultado': 3,
+        'seg2': 0.000022,
+        'segundos': 0.000010477,
+        'ticks': 22.0
+      },
+      {
+        'T': 61804719,
+        'has_solution': True,
+        'recursiones': 5768,
+        'resultado': 8,
+        'seg2': 0.00004,
+        'segundos': 0.000037082,
+        'ticks': 40.0
+      },
+      {
+        'T': 61804719,
+        'has_solution': True,
+        'recursiones': 6042,
+        'resultado': 9,
+        'seg2': 0.000044,
+        'segundos': 0.000040835,
+        'ticks': 44.0
+      },
+      {
+        'T': 61804719,
+        'has_solution': True,
+        'recursiones': 5109,
+        'resultado': 7,
+        'seg2': 0.000037,
+        'segundos': 0.000033662,
+        'ticks': 37.0
+      },
+      {
+        'T': 61804719,
+        'has_solution': True,
+        'recursiones': 1350,
+        'resultado': 4,
+        'seg2': 0.000021,
+        'segundos': 0.000016605,
+        'ticks': 21.0
+      },
+      {
+        'T': 61804719,
+        'has_solution': True,
+        'recursiones': 1350,
+        'resultado': 4,
+        'seg2': 0.000015,
+        'segundos': 0.00001191,
+        'ticks': 15.0
+      },
+      {
+        'T': 61804719,
+        'has_solution': True,
+        'recursiones': 6130,
+        'resultado': 11,
+        'seg2': 0.000043,
+        'segundos': 0.000039267,
+        'ticks': 43.0
+      },
+      {
+        'T': 61804719,
+        'has_solution': True,
+        'recursiones': 526,
+        'resultado': 3,
+        'seg2': 0.000012,
+        'segundos': 0.000007813,
+        'ticks': 12.0
+      },
+      {
+        'T': 61804719,
+        'has_solution': True,
+        'recursiones': 6130,
+        'resultado': 11,
+        'seg2': 0.000076,
+        'segundos': 0.000067899,
+        'ticks': 76.0
+      },
+      {
+        'T': 61804719,
+        'has_solution': True,
+        'recursiones': 6130,
+        'resultado': 11,
+        'seg2': 0.000045,
+        'segundos': 0.000039734,
+        'ticks': 45.0
+      },
+      {
+        'T': 61804719,
+        'has_solution': True,
+        'recursiones': 5109,
+        'resultado': 7,
+        'seg2': 0.000037,
+        'segundos': 0.000033496,
+        'ticks': 37.0
+      },
+      {
+        'T': 61804719,
+        'has_solution': True,
+        'recursiones': 3988,
+        'resultado': 6,
+        'seg2': 0.000029,
+        'segundos': 0.000026925,
+        'ticks': 29.0
+      },
+      {
+        'T': 61804719,
+        'has_solution': True,
+        'recursiones': 6130,
+        'resultado': 11,
+        'seg2': 0.000043,
+        'segundos': 0.000039578,
+        'ticks': 43.0
+      },
+      {
+        'T': 61804719,
+        'has_solution': True,
+        'recursiones': 6130,
+        'resultado': 11,
+        'seg2': 0.000042,
+        'segundos': 0.00003933,
+        'ticks': 42.0
+      },
+      {
+        'T': 61804719,
+        'has_solution': True,
+        'recursiones': 5109,
+        'resultado': 7,
+        'seg2': 0.000037,
+        'segundos': 0.000033204,
+        'ticks': 37.0
+      },
+      {
+        'T': 61804719,
+        'has_solution': True,
+        'recursiones': 1350,
+        'resultado': 4,
+        'seg2': 0.000015,
+        'segundos': 0.000011855,
+        'ticks': 15.0
+      },
+      {
+        'T': 61804719,
+        'has_solution': True,
+        'recursiones': 6118,
+        'resultado': 10,
+        'seg2': 0.000063,
+        'segundos': 0.000058798,
+        'ticks': 63.0
+      },
+      {
+        'T': 61804719,
+        'has_solution': True,
+        'recursiones': 3988,
+        'resultado': 6,
+        'seg2': 0.000034,
+        'segundos': 0.000029575,
+        'ticks': 34.0
+      },
+      {
+        'T': 61804719,
+        'has_solution': True,
+        'recursiones': 5109,
+        'resultado': 7,
+        'seg2': 0.000056,
+        'segundos': 0.000051088,
+        'ticks': 56.0
+      }
+    ],
+    12: [
+      {
+        'T': 79569815,
+        'has_solution': True,
+        'recursiones': 11820,
+        'resultado': 9,
+        'seg2': 0.000075,
+        'segundos': 0.000070988,
+        'ticks': 75.0
+      },
+      {
+        'T': 79569815,
+        'has_solution': True,
+        'recursiones': 9105,
+        'resultado': 7,
+        'seg2': 0.000089,
+        'segundos': 0.000082447,
+        'ticks': 89.0
+      },
+      {
+        'T': 79569815,
+        'has_solution': True,
+        'recursiones': 9105,
+        'resultado': 7,
+        'seg2': 0.000083,
+        'segundos': 0.000070093,
+        'ticks': 83.0
+      },
+      {
+        'T': 79569815,
+        'has_solution': True,
+        'recursiones': 3959,
+        'resultado': 5,
+        'seg2': 0.000031,
+        'segundos': 0.000027692,
+        'ticks': 31.0
+      },
+      {
+        'T': 79569815,
+        'has_solution': True,
+        'recursiones': 12273,
+        'resultado': 12,
+        'seg2': 0.0001,
+        'segundos': 0.000096997,
+        'ticks': 100.0
+      },
+      {
+        'T': 79569815,
+        'has_solution': True,
+        'recursiones': 1881,
+        'resultado': 4,
+        'seg2': 0.000018,
+        'segundos': 0.000014875,
+        'ticks': 18.0
+      },
+      {
+        'T': 79569815,
+        'has_solution': True,
+        'recursiones': 672,
+        'resultado': 3,
+        'seg2': 0.000015,
+        'segundos': 0.000010968,
+        'ticks': 15.0
+      },
+      {
+        'T': 79569815,
+        'has_solution': True,
+        'recursiones': 10886,
+        'resultado': 8,
+        'seg2': 0.000068,
+        'segundos': 0.000065617,
+        'ticks': 68.0
+      },
+      {
+        'T': 79569815,
+        'has_solution': True,
+        'recursiones': 167,
+        'resultado': 2,
+        'seg2': 0.000019,
+        'segundos': 0.00001899,
+        'ticks': 19.0
+      },
+      {
+        'T': 79569815,
+        'has_solution': True,
+        'recursiones': 167,
+        'resultado': 2,
+        'seg2': 0.000043,
+        'segundos': 0.000022301,
+        'ticks': 43.0
+      },
+      {
+        'T': 79569815,
+        'has_solution': True,
+        'recursiones': 12171,
+        'resultado': 10,
+        'seg2': 0.000105,
+        'segundos': 0.00010076,
+        'ticks': 105.0
+      },
+      {
+        'T': 79569815,
+        'has_solution': True,
+        'recursiones': 24,
+        'resultado': 1,
+        'seg2': 0.000007,
+        'segundos': 0.000004071,
+        'ticks': 7.0
+      },
+      {
+        'T': 79569815,
+        'has_solution': True,
+        'recursiones': 3959,
+        'resultado': 5,
+        'seg2': 0.00005,
+        'segundos': 0.000040838,
+        'ticks': 50.0
+      },
+      {
+        'T': 79569815,
+        'has_solution': True,
+        'recursiones': 10886,
+        'resultado': 8,
+        'seg2': 0.000109,
+        'segundos': 0.000144154,
+        'ticks': 109.0
+      },
+      {
+        'T': 79569815,
+        'has_solution': True,
+        'recursiones': 12260,
+        'resultado': 11,
+        'seg2': 0.000077,
+        'segundos': 0.000073866,
+        'ticks': 77.0
+      },
+      {
+        'T': 79569815,
+        'has_solution': True,
+        'recursiones': 167,
+        'resultado': 2,
+        'seg2': 0.000011,
+        'segundos': 0.000004907,
+        'ticks': 11.0
+      },
+      {
+        'T': 79569815,
+        'has_solution': True,
+        'recursiones': 12273,
+        'resultado': 12,
+        'seg2': 0.000132,
+        'segundos': 0.0001546,
+        'ticks': 132.0
+      },
+      {
+        'T': 79569815,
+        'has_solution': True,
+        'recursiones': 6598,
+        'resultado': 6,
+        'seg2': 0.000093,
+        'segundos': 0.000077392,
+        'ticks': 93.0
+      },
+      {
+        'T': 79569815,
+        'has_solution': True,
+        'recursiones': 6598,
+        'resultado': 6,
+        'seg2': 0.00007,
+        'segundos': 0.00006558,
+        'ticks': 70.0
+      },
+      {
+        'T': 79569815,
+        'has_solution': True,
+        'recursiones': 672,
+        'resultado': 3,
+        'seg2': 0.000017,
+        'segundos': 0.000011283,
+        'ticks': 17.0
+      }
+    ],
+    13: [
+      {
+        'T': 67781413,
+        'has_solution': True,
+        'recursiones': 194,
+        'resultado': 2,
+        'seg2': 0.000011,
+        'segundos': 0.000005899,
+        'ticks': 11.0
+      },
+      {
+        'T': 67781413,
+        'has_solution': True,
+        'recursiones': 194,
+        'resultado': 2,
+        'seg2': 0.000011,
+        'segundos': 0.000006267,
+        'ticks': 11.0
+      },
+      {
+        'T': 67781413,
+        'has_solution': True,
+        'recursiones': 2558,
+        'resultado': 4,
+        'seg2': 0.000034,
+        'segundos': 0.000029095,
+        'ticks': 34.0
+      },
+      {
+        'T': 67781413,
+        'has_solution': True,
+        'recursiones': 22716,
+        'resultado': 9,
+        'seg2': 0.000221,
+        'segundos': 0.000279398,
+        'ticks': 221.0
+      },
+      {
+        'T': 67781413,
+        'has_solution': True,
+        'recursiones': 843,
+        'resultado': 3,
+        'seg2': 0.000017,
+        'segundos': 0.0000123,
+        'ticks': 17.0
+      },
+      {
+        'T': 67781413,
+        'has_solution': True,
+        'recursiones': 15711,
+        'resultado': 7,
+        'seg2': 0.000168,
+        'segundos': 0.000162202,
+        'ticks': 168.0
+      },
+      {
+        'T': 67781413,
+        'has_solution': True,
+        'recursiones': 15711,
+        'resultado': 7,
+        'seg2': 0.000152,
+        'segundos': 0.000141529,
+        'ticks': 152.0
+      },
+      {
+        'T': 67781413,
+        'has_solution': True,
+        'recursiones': 22716,
+        'resultado': 9,
+        'seg2': 0.00014,
+        'segundos': 0.000136868,
+        'ticks': 140.0
+      },
+      {
+        'T': 67781413,
+        'has_solution': True,
+        'recursiones': 24443,
+        'resultado': 11,
+        'seg2': 0.000144,
+        'segundos': 0.00014192,
+        'ticks': 144.0
+      },
+      {
+        'T': 67781413,
+        'has_solution': True,
+        'recursiones': 194,
+        'resultado': 2,
+        'seg2': 0.000009,
+        'segundos': 0.000004863,
+        'ticks': 9.0
+      },
+      {
+        'T': 67781413,
+        'has_solution': True,
+        'recursiones': 24560,
+        'resultado': 13,
+        'seg2': 0.000202,
+        'segundos': 0.000203937,
+        'ticks': 202.0
+      },
+      {
+        'T': 67781413,
+        'has_solution': True,
+        'recursiones': 22716,
+        'resultado': 9,
+        'seg2': 0.000217,
+        'segundos': 0.000240184,
+        'ticks': 217.0
+      },
+      {
+        'T': 67781413,
+        'has_solution': True,
+        'recursiones': 24560,
+        'resultado': 13,
+        'seg2': 0.000236,
+        'segundos': 0.000230155,
+        'ticks': 236.0
+      },
+      {
+        'T': 67781413,
+        'has_solution': True,
+        'recursiones': 24560,
+        'resultado': 13,
+        'seg2': 0.000196,
+        'segundos': 0.00019136,
+        'ticks': 196.0
+      },
+      {
+        'T': 67781413,
+        'has_solution': True,
+        'recursiones': 26,
+        'resultado': 1,
+        'seg2': 0.000007,
+        'segundos': 0.000003582,
+        'ticks': 7.0
+      },
+      {
+        'T': 67781413,
+        'has_solution': True,
+        'recursiones': 22716,
+        'resultado': 9,
+        'seg2': 0.000143,
+        'segundos': 0.000138244,
+        'ticks': 143.0
+      },
+      {
+        'T': 67781413,
+        'has_solution': True,
+        'recursiones': 843,
+        'resultado': 3,
+        'seg2': 0.000013,
+        'segundos': 0.000009015,
+        'ticks': 13.0
+      },
+      {
+        'T': 67781413,
+        'has_solution': True,
+        'recursiones': 10564,
+        'resultado': 6,
+        'seg2': 0.000096,
+        'segundos': 0.000093652,
+        'ticks': 96.0
+      },
+      {
+        'T': 67781413,
+        'has_solution': True,
+        'recursiones': 26,
+        'resultado': 1,
+        'seg2': 0.000009,
+        'segundos': 0.000004924,
+        'ticks': 9.0
+      },
+      {
+        'T': 67781413,
+        'has_solution': True,
+        'recursiones': 5846,
+        'resultado': 5,
+        'seg2': 0.000041,
+        'segundos': 0.000037746,
+        'ticks': 41.0
+      }
+    ],
+    14: [
+      {
+        'T': 214189,
+        'has_solution': True,
+        'recursiones': 3406,
+        'resultado': 4,
+        'seg2': 0.000029,
+        'segundos': 0.000025641,
+        'ticks': 29.0
+      },
+      {
+        'T': 214189,
+        'has_solution': True,
+        'recursiones': 49120,
+        'resultado': 13,
+        'seg2': 0.000383,
+        'segundos': 0.000387974,
+        'ticks': 383.0
+      },
+      {
+        'T': 214189,
+        'has_solution': True,
+        'recursiones': 3406,
+        'resultado': 4,
+        'seg2': 0.000037,
+        'segundos': 0.000034277,
+        'ticks': 37.0
+      },
+      {
+        'T': 214189,
+        'has_solution': True,
+        'recursiones': 223,
+        'resultado': 2,
+        'seg2': 0.000008,
+        'segundos': 0.000004865,
+        'ticks': 8.0
+      },
+      {
+        'T': 214189,
+        'has_solution': True,
+        'recursiones': 1041,
+        'resultado': 3,
+        'seg2': 0.000014,
+        'segundos': 0.00001041,
+        'ticks': 14.0
+      },
+      {
+        'T': 214189,
+        'has_solution': True,
+        'recursiones': 49002,
+        'resultado': 12,
+        'seg2': 0.000284,
+        'segundos': 0.00028098,
+        'ticks': 284.0
+      },
+      {
+        'T': 214189,
+        'has_solution': True,
+        'recursiones': 48457,
+        'resultado': 11,
+        'seg2': 0.000282,
+        'segundos': 0.000277554,
+        'ticks': 282.0
+      },
+      {
+        'T': 214189,
+        'has_solution': True,
+        'recursiones': 8410,
+        'resultado': 5,
+        'seg2': 0.000057,
+        'segundos': 0.000054876,
+        'ticks': 57.0
+      },
+      {
+        'T': 214189,
+        'has_solution': True,
+        'recursiones': 48457,
+        'resultado': 11,
+        'seg2': 0.000298,
+        'segundos': 0.000297758,
+        'ticks': 298.0
+      },
+      {
+        'T': 214189,
+        'has_solution': True,
+        'recursiones': 16417,
+        'resultado': 6,
+        'seg2': 0.000101,
+        'segundos': 0.000097559,
+        'ticks': 101.0
+      },
+      {
+        'T': 214189,
+        'has_solution': True,
+        'recursiones': 28,
+        'resultado': 1,
+        'seg2': 0.000008,
+        'segundos': 0.000003833,
+        'ticks': 8.0
+      },
+      {
+        'T': 214189,
+        'has_solution': True,
+        'recursiones': 8410,
+        'resultado': 5,
+        'seg2': 0.000082,
+        'segundos': 0.000078094,
+        'ticks': 82.0
+      },
+      {
+        'T': 214189,
+        'has_solution': True,
+        'recursiones': 35720,
+        'resultado': 8,
+        'seg2': 0.000208,
+        'segundos': 0.000204466,
+        'ticks': 208.0
+      },
+      {
+        'T': 214189,
+        'has_solution': True,
+        'recursiones': 46729,
+        'resultado': 10,
+        'seg2': 0.000291,
+        'segundos': 0.000291602,
+        'ticks': 291.0
+      },
+      {
+        'T': 214189,
+        'has_solution': True,
+        'recursiones': 16417,
+        'resultado': 6,
+        'seg2': 0.000156,
+        'segundos': 0.000147982,
+        'ticks': 156.0
+      },
+      {
+        'T': 214189,
+        'has_solution': True,
+        'recursiones': 8410,
+        'resultado': 5,
+        'seg2': 0.000083,
+        'segundos': 0.000074916,
+        'ticks': 83.0
+      },
+      {
+        'T': 214189,
+        'has_solution': True,
+        'recursiones': 48457,
+        'resultado': 11,
+        'seg2': 0.000539,
+        'segundos': 0.00053142,
+        'ticks': 539.0
+      },
+      {
+        'T': 214189,
+        'has_solution': True,
+        'recursiones': 223,
+        'resultado': 2,
+        'seg2': 0.000028,
+        'segundos': 0.000049322,
+        'ticks': 28.0
+      },
+      {
+        'T': 214189,
+        'has_solution': True,
+        'recursiones': 49002,
+        'resultado': 12,
+        'seg2': 0.00031,
+        'segundos': 0.00030836,
+        'ticks': 310.0
+      },
+      {
+        'T': 214189,
+        'has_solution': True,
+        'recursiones': 35720,
+        'resultado': 8,
+        'seg2': 0.000332,
+        'segundos': 0.000369721,
+        'ticks': 332.0
+      }
+    ],
+    15: [
+      {
+        'T': 74115939,
+        'has_solution': True,
+        'recursiones': 98286,
+        'resultado': 15,
+        'seg2': 0.000562,
+        'segundos': 0.000559325,
+        'ticks': 562.0
+      },
+      {
+        'T': 74115939,
+        'has_solution': True,
+        'recursiones': 254,
+        'resultado': 2,
+        'seg2': 0.000008,
+        'segundos': 0.000005593,
+        'ticks': 8.0
+      },
+      {
+        'T': 74115939,
+        'has_solution': True,
+        'recursiones': 30,
+        'resultado': 1,
+        'seg2': 0.000012,
+        'segundos': 0.00000485,
+        'ticks': 12.0
+      },
+      {
+        'T': 74115939,
+        'has_solution': True,
+        'recursiones': 11822,
+        'resultado': 5,
+        'seg2': 0.000118,
+        'segundos': 0.000108809,
+        'ticks': 118.0
+      },
+      {
+        'T': 74115939,
+        'has_solution': True,
+        'recursiones': 97472,
+        'resultado': 12,
+        'seg2': 0.00085,
+        'segundos': 0.00086667,
+        'ticks': 850.0
+      },
+      {
+        'T': 74115939,
+        'has_solution': True,
+        'recursiones': 4452,
+        'resultado': 4,
+        'seg2': 0.000034,
+        'segundos': 0.000030547,
+        'ticks': 34.0
+      },
+      {
+        'T': 74115939,
+        'has_solution': True,
+        'recursiones': 95198,
+        'resultado': 11,
+        'seg2': 0.000557,
+        'segundos': 0.000553924,
+        'ticks': 557.0
+      },
+      {
+        'T': 74115939,
+        'has_solution': True,
+        'recursiones': 11822,
+        'resultado': 5,
+        'seg2': 0.000117,
+        'segundos': 0.000113086,
+        'ticks': 117.0
+      },
+      {
+        'T': 74115939,
+        'has_solution': True,
+        'recursiones': 42708,
+        'resultado': 7,
+        'seg2': 0.000249,
+        'segundos': 0.000245338,
+        'ticks': 249.0
+      },
+      {
+        'T': 74115939,
+        'has_solution': True,
+        'recursiones': 254,
+        'resultado': 2,
+        'seg2': 0.000016,
+        'segundos': 0.000008581,
+        'ticks': 16.0
+      },
+      {
+        'T': 74115939,
+        'has_solution': True,
+        'recursiones': 30,
+        'resultado': 1,
+        'seg2': 0.000008,
+        'segundos': 0.000004436,
+        'ticks': 8.0
+      },
+      {
+        'T': 74115939,
+        'has_solution': True,
+        'recursiones': 98270,
+        'resultado': 14,
+        'seg2': 0.000658,
+        'segundos': 0.000661503,
+        'ticks': 658.0
+      },
+      {
+        'T': 74115939,
+        'has_solution': True,
+        'recursiones': 30,
+        'resultado': 1,
+        'seg2': 0.000008,
+        'segundos': 0.00000374,
+        'ticks': 8.0
+      },
+      {
+        'T': 74115939,
+        'has_solution': True,
+        'recursiones': 98270,
+        'resultado': 14,
+        'seg2': 0.000704,
+        'segundos': 0.00072701,
+        'ticks': 704.0
+      },
+      {
+        'T': 74115939,
+        'has_solution': True,
+        'recursiones': 98136,
+        'resultado': 13,
+        'seg2': 0.000703,
+        'segundos': 0.000702419,
+        'ticks': 703.0
+      },
+      {
+        'T': 74115939,
+        'has_solution': True,
+        'recursiones': 89466,
+        'resultado': 10,
+        'seg2': 0.000507,
+        'segundos': 0.000503188,
+        'ticks': 507.0
+      },
+      {
+        'T': 74115939,
+        'has_solution': True,
+        'recursiones': 42708,
+        'resultado': 7,
+        'seg2': 0.000375,
+        'segundos': 0.00036636,
+        'ticks': 375.0
+      },
+      {
+        'T': 74115939,
+        'has_solution': True,
+        'recursiones': 30,
+        'resultado': 1,
+        'seg2': 0.000007,
+        'segundos': 0.000003728,
+        'ticks': 7.0
+      },
+      {
+        'T': 74115939,
+        'has_solution': True,
+        'recursiones': 254,
+        'resultado': 2,
+        'seg2': 0.000018,
+        'segundos': 0.000010072,
+        'ticks': 18.0
+      },
+      {
+        'T': 74115939,
+        'has_solution': True,
+        'recursiones': 98270,
+        'resultado': 14,
+        'seg2': 0.000631,
+        'segundos': 0.000646899,
+        'ticks': 631.0
+      }
+    ],
+    16: [
+      {
+        'T': 39524403,
+        'has_solution': True,
+        'recursiones': 196572,
+        'resultado': 15,
+        'seg2': 0.001342,
+        'segundos': 0.00137589,
+        'ticks': 1342.0
+      },
+      {
+        'T': 39524403,
+        'has_solution': True,
+        'recursiones': 140478,
+        'resultado': 9,
+        'seg2': 0.000867,
+        'segundos': 0.000870728,
+        'ticks': 867.0
+      },
+      {
+        'T': 39524403,
+        'has_solution': True,
+        'recursiones': 196421,
+        'resultado': 14,
+        'seg2': 0.001419,
+        'segundos': 0.001429467,
+        'ticks': 1419.0
+      },
+      {
+        'T': 39524403,
+        'has_solution': True,
+        'recursiones': 167933,
+        'resultado': 10,
+        'seg2': 0.001029,
+        'segundos': 0.00102732,
+        'ticks': 1029.0
+      },
+      {
+        'T': 39524403,
+        'has_solution': True,
+        'recursiones': 167933,
+        'resultado': 10,
+        'seg2': 0.001473,
+        'segundos': 0.001480878,
+        'ticks': 1473.0
+      },
+      {
+        'T': 39524403,
+        'has_solution': True,
+        'recursiones': 196421,
+        'resultado': 14,
+        'seg2': 0.001653,
+        'segundos': 0.001652707,
+        'ticks': 1653.0
+      },
+      {
+        'T': 39524403,
+        'has_solution': True,
+        'recursiones': 32,
+        'resultado': 1,
+        'seg2': 0.000011,
+        'segundos': 0.000005133,
+        'ticks': 11.0
+      },
+      {
+        'T': 39524403,
+        'has_solution': True,
+        'recursiones': 196572,
+        'resultado': 15,
+        'seg2': 0.001445,
+        'segundos': 0.001489851,
+        'ticks': 1445.0
+      },
+      {
+        'T': 39524403,
+        'has_solution': True,
+        'recursiones': 32,
+        'resultado': 1,
+        'seg2': 0.000011,
+        'segundos': 0.000005562,
+        'ticks': 11.0
+      },
+      {
+        'T': 39524403,
+        'has_solution': True,
+        'recursiones': 196572,
+        'resultado': 15,
+        'seg2': 0.001211,
+        'segundos': 0.001208524,
+        'ticks': 1211.0
+      },
+      {
+        'T': 39524403,
+        'has_solution': True,
+        'recursiones': 195622,
+        'resultado': 13,
+        'seg2': 0.001356,
+        'segundos': 0.001356017,
+        'ticks': 1356.0
+      },
+      {
+        'T': 39524403,
+        'has_solution': True,
+        'recursiones': 32,
+        'resultado': 1,
+        'seg2': 0.000018,
+        'segundos': 0.000016227,
+        'ticks': 18.0
+      },
+      {
+        'T': 39524403,
+        'has_solution': True,
+        'recursiones': 1526,
+        'resultado': 3,
+        'seg2': 0.000026,
+        'segundos': 0.000019332,
+        'ticks': 26.0
+      },
+      {
+        'T': 39524403,
+        'has_solution': True,
+        'recursiones': 192683,
+        'resultado': 12,
+        'seg2': 0.001454,
+        'segundos': 0.00145394,
+        'ticks': 1454.0
+      },
+      {
+        'T': 39524403,
+        'has_solution': True,
+        'recursiones': 287,
+        'resultado': 2,
+        'seg2': 0.000011,
+        'segundos': 0.000006642,
+        'ticks': 11.0
+      },
+      {
+        'T': 39524403,
+        'has_solution': True,
+        'recursiones': 196589,
+        'resultado': 16,
+        'seg2': 0.001104,
+        'segundos': 0.001101473,
+        'ticks': 1104.0
+      },
+      {
+        'T': 39524403,
+        'has_solution': True,
+        'recursiones': 184676,
+        'resultado': 11,
+        'seg2': 0.001561,
+        'segundos': 0.001638363,
+        'ticks': 1561.0
+      },
+      {
+        'T': 39524403,
+        'has_solution': True,
+        'recursiones': 196589,
+        'resultado': 16,
+        'seg2': 0.001724,
+        'segundos': 0.001739862,
+        'ticks': 1724.0
+      },
+      {
+        'T': 39524403,
+        'has_solution': True,
+        'recursiones': 196572,
+        'resultado': 15,
+        'seg2': 0.001754,
+        'segundos': 0.001788945,
+        'ticks': 1754.0
+      },
+      {
+        'T': 39524403,
+        'has_solution': True,
+        'recursiones': 104729,
+        'resultado': 8,
+        'seg2': 0.00102,
+        'segundos': 0.001013438,
+        'ticks': 1020.0
+      }
+    ],
+    17: [
+      {
+        'T': 73400358,
+        'has_solution': True,
+        'recursiones': 352621,
+        'resultado': 11,
+        'seg2': 0.002133,
+        'segundos': 0.002137907,
+        'ticks': 2133.0
+      },
+      {
+        'T': 73400358,
+        'has_solution': True,
+        'recursiones': 308422,
+        'resultado': 10,
+        'seg2': 0.001825,
+        'segundos': 0.001820055,
+        'ticks': 1825.0
+      },
+      {
+        'T': 73400358,
+        'has_solution': True,
+        'recursiones': 392058,
+        'resultado': 14,
+        'seg2': 0.003347,
+        'segundos': 0.003395209,
+        'ticks': 3347.0
+      },
+      {
+        'T': 73400358,
+        'has_solution': True,
+        'recursiones': 393178,
+        'resultado': 16,
+        'seg2': 0.002959,
+        'segundos': 0.002978496,
+        'ticks': 2959.0
+      },
+      {
+        'T': 73400358,
+        'has_solution': True,
+        'recursiones': 52950,
+        'resultado': 6,
+        'seg2': 0.000328,
+        'segundos': 0.000349648,
+        'ticks': 328.0
+      },
+      {
+        'T': 73400358,
+        'has_solution': True,
+        'recursiones': 388319,
+        'resultado': 13,
+        'seg2': 0.003306,
+        'segundos': 0.003388061,
+        'ticks': 3306.0
+      },
+      {
+        'T': 73400358,
+        'has_solution': True,
+        'recursiones': 393178,
+        'resultado': 16,
+        'seg2': 0.003361,
+        'segundos': 0.003865237,
+        'ticks': 3361.0
+      },
+      {
+        'T': 73400358,
+        'has_solution': True,
+        'recursiones': 34,
+        'resultado': 1,
+        'seg2': 0.000005,
+        'segundos': 0.000003408,
+        'ticks': 5.0
+      },
+      {
+        'T': 73400358,
+        'has_solution': True,
+        'recursiones': 393196,
+        'resultado': 17,
+        'seg2': 0.002199,
+        'segundos': 0.002196496,
+        'ticks': 2199.0
+      },
+      {
+        'T': 73400358,
+        'has_solution': True,
+        'recursiones': 104221,
+        'resultado': 7,
+        'seg2': 0.000609,
+        'segundos': 0.000612396,
+        'ticks': 609.0
+      },
+      {
+        'T': 73400358,
+        'has_solution': True,
+        'recursiones': 34,
+        'resultado': 1,
+        'seg2': 0.000007,
+        'segundos': 0.000003498,
+        'ticks': 7.0
+      },
+      {
+        'T': 73400358,
+        'has_solution': True,
+        'recursiones': 7256,
+        'resultado': 4,
+        'seg2': 0.000052,
+        'segundos': 0.000048708,
+        'ticks': 52.0
+      },
+      {
+        'T': 73400358,
+        'has_solution': True,
+        'recursiones': 392058,
+        'resultado': 14,
+        'seg2': 0.002192,
+        'segundos': 0.00218899,
+        'ticks': 2192.0
+      },
+      {
+        'T': 73400358,
+        'has_solution': True,
+        'recursiones': 104221,
+        'resultado': 7,
+        'seg2': 0.0006,
+        'segundos': 0.000597565,
+        'ticks': 600.0
+      },
+      {
+        'T': 73400358,
+        'has_solution': True,
+        'recursiones': 245217,
+        'resultado': 9,
+        'seg2': 0.001897,
+        'segundos': 0.001903938,
+        'ticks': 1897.0
+      },
+      {
+        'T': 73400358,
+        'has_solution': True,
+        'recursiones': 377372,
+        'resultado': 12,
+        'seg2': 0.002116,
+        'segundos': 0.00211413,
+        'ticks': 2116.0
+      },
+      {
+        'T': 73400358,
+        'has_solution': True,
+        'recursiones': 388319,
+        'resultado': 13,
+        'seg2': 0.002654,
+        'segundos': 0.002655013,
+        'ticks': 2654.0
+      },
+      {
+        'T': 73400358,
+        'has_solution': True,
+        'recursiones': 377372,
+        'resultado': 12,
+        'seg2': 0.002119,
+        'segundos': 0.002118509,
+        'ticks': 2119.0
+      },
+      {
+        'T': 73400358,
+        'has_solution': True,
+        'recursiones': 393196,
+        'resultado': 17,
+        'seg2': 0.002556,
+        'segundos': 0.002577115,
+        'ticks': 2556.0
+      },
+      {
+        'T': 73400358,
+        'has_solution': True,
+        'recursiones': 34,
+        'resultado': 1,
+        'seg2': 0.000009,
+        'segundos': 0.000004419,
+        'ticks': 9.0
+      }
+    ],
+    18: [
+      {
+        'T': 75534592,
+        'has_solution': True,
+        'recursiones': 553650,
+        'resultado': 10,
+        'seg2': 0.004012,
+        'segundos': 0.004504678,
+        'ticks': 4012.0
+      },
+      {
+        'T': 75534592,
+        'has_solution': True,
+        'recursiones': 29273,
+        'resultado': 5,
+        'seg2': 0.000327,
+        'segundos': 0.000456816,
+        'ticks': 327.0
+      },
+      {
+        'T': 75534592,
+        'has_solution': True,
+        'recursiones': 661055,
+        'resultado': 11,
+        'seg2': 0.003888,
+        'segundos': 0.003917621,
+        'ticks': 3888.0
+      },
+      {
+        'T': 75534592,
+        'has_solution': True,
+        'recursiones': 157179,
+        'resultado': 7,
+        'seg2': 0.000909,
+        'segundos': 0.000905529,
+        'ticks': 909.0
+      },
+      {
+        'T': 75534592,
+        'has_solution': True,
+        'recursiones': 276518,
+        'resultado': 8,
+        'seg2': 0.001661,
+        'segundos': 0.001681035,
+        'ticks': 1661.0
+      },
+      {
+        'T': 75534592,
+        'has_solution': True,
+        'recursiones': 36,
+        'resultado': 1,
+        'seg2': 0.000007,
+        'segundos': 0.00000366,
+        'ticks': 7.0
+      },
+      {
+        'T': 75534592,
+        'has_solution': True,
+        'recursiones': 74968,
+        'resultado': 6,
+        'seg2': 0.000677,
+        'segundos': 0.000836279,
+        'ticks': 677.0
+      },
+      {
+        'T': 75534592,
+        'has_solution': True,
+        'recursiones': 9078,
+        'resultado': 4,
+        'seg2': 0.000069,
+        'segundos': 0.000062645,
+        'ticks': 69.0
+      },
+      {
+        'T': 75534592,
+        'has_solution': True,
+        'recursiones': 9078,
+        'resultado': 4,
+        'seg2': 0.000093,
+        'segundos': 0.000088624,
+        'ticks': 93.0
+      },
+      {
+        'T': 75534592,
+        'has_solution': True,
+        'recursiones': 553650,
+        'resultado': 10,
+        'seg2': 0.003212,
+        'segundos': 0.003289609,
+        'ticks': 3212.0
+      },
+      {
+        'T': 75534592,
+        'has_solution': True,
+        'recursiones': 36,
+        'resultado': 1,
+        'seg2': 0.000041,
+        'segundos': 0.000020331,
+        'ticks': 41.0
+      },
+      {
+        'T': 75534592,
+        'has_solution': True,
+        'recursiones': 359,
+        'resultado': 2,
+        'seg2': 0.000013,
+        'segundos': 0.000008723,
+        'ticks': 13.0
+      },
+      {
+        'T': 75534592,
+        'has_solution': True,
+        'recursiones': 553650,
+        'resultado': 10,
+        'seg2': 0.003794,
+        'segundos': 0.003953692,
+        'ticks': 3794.0
+      },
+      {
+        'T': 75534592,
+        'has_solution': True,
+        'recursiones': 765705,
+        'resultado': 13,
+        'seg2': 0.00432,
+        'segundos': 0.004328594,
+        'ticks': 4320.0
+      },
+      {
+        'T': 75534592,
+        'has_solution': True,
+        'recursiones': 661055,
+        'resultado': 11,
+        'seg2': 0.005746,
+        'segundos': 0.00662883,
+        'ticks': 5746.0
+      },
+      {
+        'T': 75534592,
+        'has_solution': True,
+        'recursiones': 276518,
+        'resultado': 8,
+        'seg2': 0.001768,
+        'segundos': 0.001768372,
+        'ticks': 1768.0
+      },
+      {
+        'T': 75534592,
+        'has_solution': True,
+        'recursiones': 36,
+        'resultado': 1,
+        'seg2': 0.00001,
+        'segundos': 0.000004888,
+        'ticks': 10.0
+      },
+      {
+        'T': 75534592,
+        'has_solution': True,
+        'recursiones': 765705,
+        'resultado': 13,
+        'seg2': 0.004521,
+        'segundos': 0.00460627,
+        'ticks': 4521.0
+      },
+      {
+        'T': 75534592,
+        'has_solution': True,
+        'recursiones': 785083,
+        'resultado': 15,
+        'seg2': 0.005353,
+        'segundos': 0.005436545,
+        'ticks': 5353.0
+      },
+      {
+        'T': 75534592,
+        'has_solution': True,
+        'recursiones': 786392,
+        'resultado': 17,
+        'seg2': 0.004662,
+        'segundos': 0.004705505,
+        'ticks': 4662.0
+      }
+    ],
+    19: [
+      {
+        'T': 53122999,
+        'has_solution': True,
+        'recursiones': 694043,
+        'resultado': 9,
+        'seg2': 0.006106,
+        'segundos': 0.007437479,
+        'ticks': 6106.0
+      },
+      {
+        'T': 53122999,
+        'has_solution': True,
+        'recursiones': 1572842,
+        'resultado': 19,
+        'seg2': 0.013443,
+        'segundos': 0.01745241,
+        'ticks': 13443.0
+      },
+      {
+        'T': 53122999,
+        'has_solution': True,
+        'recursiones': 433706,
+        'resultado': 8,
+        'seg2': 0.002463,
+        'segundos': 0.002459371,
+        'ticks': 2463.0
+      },
+      {
+        'T': 53122999,
+        'has_solution': True,
+        'recursiones': 1495725,
+        'resultado': 13,
+        'seg2': 0.01301,
+        'segundos': 0.016053554,
+        'ticks': 13010.0
+      },
+      {
+        'T': 53122999,
+        'has_solution': True,
+        'recursiones': 694043,
+        'resultado': 9,
+        'seg2': 0.004133,
+        'segundos': 0.004161004,
+        'ticks': 4133.0
+      },
+      {
+        'T': 53122999,
+        'has_solution': True,
+        'recursiones': 1571304,
+        'resultado': 16,
+        'seg2': 0.010218,
+        'segundos': 0.010344594,
+        'ticks': 10218.0
+      },
+      {
+        'T': 53122999,
+        'has_solution': True,
+        'recursiones': 11226,
+        'resultado': 4,
+        'seg2': 0.00014,
+        'segundos': 0.000105478,
+        'ticks': 140.0
+      },
+      {
+        'T': 53122999,
+        'has_solution': True,
+        'recursiones': 232155,
+        'resultado': 7,
+        'seg2': 0.001354,
+        'segundos': 0.001353187,
+        'ticks': 1354.0
+      },
+      {
+        'T': 53122999,
+        'has_solution': True,
+        'recursiones': 398,
+        'resultado': 2,
+        'seg2': 0.000011,
+        'segundos': 0.000007139,
+        'ticks': 11.0
+      },
+      {
+        'T': 53122999,
+        'has_solution': True,
+        'recursiones': 1214717,
+        'resultado': 11,
+        'seg2': 0.008284,
+        'segundos': 0.008514898,
+        'ticks': 8284.0
+      },
+      {
+        'T': 53122999,
+        'has_solution': True,
+        'recursiones': 1495725,
+        'resultado': 13,
+        'seg2': 0.008911,
+        'segundos': 0.00913461,
+        'ticks': 8911.0
+      },
+      {
+        'T': 53122999,
+        'has_solution': True,
+        'recursiones': 232155,
+        'resultado': 7,
+        'seg2': 0.002153,
+        'segundos': 0.002157638,
+        'ticks': 2153.0
+      },
+      {
+        'T': 53122999,
+        'has_solution': True,
+        'recursiones': 1572614,
+        'resultado': 17,
+        'seg2': 0.009938,
+        'segundos': 0.010081113,
+        'ticks': 9938.0
+      },
+      {
+        'T': 53122999,
+        'has_solution': True,
+        'recursiones': 232155,
+        'resultado': 7,
+        'seg2': 0.001648,
+        'segundos': 0.00170183,
+        'ticks': 1648.0
+      },
+      {
+        'T': 53122999,
+        'has_solution': True,
+        'recursiones': 38,
+        'resultado': 1,
+        'seg2': 0.000007,
+        'segundos': 0.000003635,
+        'ticks': 7.0
+      },
+      {
+        'T': 53122999,
+        'has_solution': True,
+        'recursiones': 1572822,
+        'resultado': 18,
+        'seg2': 0.011552,
+        'segundos': 0.014801667,
+        'ticks': 11552.0
+      },
+      {
+        'T': 53122999,
+        'has_solution': True,
+        'recursiones': 38,
+        'resultado': 1,
+        'seg2': 0.000015,
+        'segundos': 0.000005655,
+        'ticks': 15.0
+      },
+      {
+        'T': 53122999,
+        'has_solution': True,
+        'recursiones': 104248,
+        'resultado': 6,
+        'seg2': 0.000614,
+        'segundos': 0.000611389,
+        'ticks': 614.0
+      },
+      {
+        'T': 53122999,
+        'has_solution': True,
+        'recursiones': 694043,
+        'resultado': 9,
+        'seg2': 0.004242,
+        'segundos': 0.004265757,
+        'ticks': 4242.0
+      },
+      {
+        'T': 53122999,
+        'has_solution': True,
+        'recursiones': 1565491,
+        'resultado': 15,
+        'seg2': 0.011933,
+        'segundos': 0.012631727,
+        'ticks': 11933.0
+      }
+    ]
+  },'Prog. Din.': {
+    10: [
+      {
+        'T': 29431699,
+        'has_solution': True,
+        'recursiones': 397,
+        'resultado': 6,
+        'seg2': 1.604668,
+        'segundos': 1.765162491,
+        'ticks': 1604670.0
+      },
+      {
+        'T': 29431699,
+        'has_solution': True,
+        'recursiones': 606,
+        'resultado': 5,
+        'seg2': 1.563155,
+        'segundos': 1.720300542,
+        'ticks': 1563160.0
+      }
+    ],
+    11: [
+      {
+        'T': 44041103,
+        'has_solution': True,
+        'recursiones': 222,
+        'resultado': 10,
+        'seg2': 2.62156,
+        'segundos': 3.014158243,
+        'ticks': 2621560.0
+      },
+      {
+        'T': 44041103,
+        'has_solution': True,
+        'recursiones': 251,
+        'resultado': 9,
+        'seg2': 2.702153,
+        'segundos': 3.180679511,
+        'ticks': 2702150.0
+      }
+    ],
+    12: [
+      {
+        'T': 1958364,
+        'has_solution': True,
+        'recursiones': 805,
+        'resultado': 6,
+        'seg2': 0.122317,
+        'segundos': 0.126922104,
+        'ticks': 122317.0
+      },
+      {
+        'T': 1958364,
+        'has_solution': True,
+        'recursiones': 2016,
+        'resultado': 5,
+        'seg2': 0.125971,
+        'segundos': 0.135277999,
+        'ticks': 125971.0
+      }
+    ],
+    13: [
+      {
+        'T': 57861699,
+        'has_solution': True,
+        'recursiones': 352,
+        'resultado': 11,
+        'seg2': 4.126195,
+        'segundos': 5.022090258,
+        'ticks': 4126200.0
+      },
+      {
+        'T': 57861699,
+        'has_solution': True,
+        'recursiones': 2472,
+        'resultado': 6,
+        'seg2': 4.206531,
+        'segundos': 5.428186796,
+        'ticks': 4206530.0
+      }
+    ],
+    14: [
+      {
+        'T': 3036740,
+        'has_solution': True,
+        'recursiones': 1674,
+        'resultado': 7,
+        'seg2': 0.217673,
+        'segundos': 0.23626333,
+        'ticks': 217673.0
+      },
+      {
+        'T': 3036740,
+        'has_solution': True,
+        'recursiones': 7794,
+        'resultado': 3,
+        'seg2': 0.217059,
+        'segundos': 0.236362969,
+        'ticks': 217059.0
+      }
+    ],
+    15: [
+      {
+        'T': 34428510,
+        'has_solution': True,
+        'recursiones': 467,
+        'resultado': 13,
+        'seg2': 2.781823,
+        'segundos': 3.168963831,
+        'ticks': 2781820.0
+      },
+      {
+        'T': 34428510,
+        'has_solution': True,
+        'recursiones': 7873,
+        'resultado': 3,
+        'seg2': 2.822106,
+        'segundos': 3.08006291,
+        'ticks': 2822110.0
+      }
+    ],
+    16: [
+      {
+        'T': 77914849,
+        'has_solution': True,
+        'recursiones': 12259,
+        'resultado': 2,
+        'seg2': 6.991275,
+        'segundos': 8.539917691,
+        'ticks': 6991280.0
+      },
+      {
+        'T': 77914849,
+        'has_solution': True,
+        'recursiones': 961,
+        'resultado': 12,
+        'seg2': 7.067208,
+        'segundos': 8.649757743,
+        'ticks': 7067210.0
+      }
+    ],
+    17: [
+      {
+        'T': 16909857,
+        'has_solution': True,
+        'recursiones': 547,
+        'resultado': 17,
+        'seg2': 1.446646,
+        'segundos': 1.598103196,
+        'ticks': 1446650.0
+      },
+      {
+        'T': 16909857,
+        'has_solution': True,
+        'recursiones': 1368,
+        'resultado': 12,
+        'seg2': 1.450595,
+        'segundos': 1.558213733,
+        'ticks': 1450600.0
+      }
+    ],
+    18: [
+      {
+        'T': 48336794,
+        'has_solution': True,
+        'recursiones': 7152,
+        'resultado': 1,
+        'seg2': 4.713771,
+        'segundos': 5.948551493,
+        'ticks': 4713770.0
+      },
+      {
+        'T': 48336794,
+        'has_solution': True,
+        'recursiones': 615,
+        'resultado': 18,
+        'seg2': 4.761944,
+        'segundos': 5.856511394,
+        'ticks': 4761940.0
+      }
+    ],
+    19: [
+      {
+        'T': 73387118,
+        'has_solution': True,
+        'recursiones': 15785,
+        'resultado': 9,
+        'seg2': 7.812944,
+        'segundos': 9.504982392,
+        'ticks': 7812940.0
+      },
+      {
+        'T': 73387118,
+        'has_solution': True,
+        'recursiones': 12978,
+        'resultado': 7,
+        'seg2': 7.808858,
+        'segundos': 9.535911213,
+        'ticks': 7808860.0
+      }
+    ]
+  }
+}
