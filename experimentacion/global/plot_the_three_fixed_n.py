@@ -33,7 +33,9 @@ def do_statistics(raw_input):
 				masked_recursiones.append(float(m['recursiones']))
 				masked_Ts.append(int(m['T']))
 
-			masked_measures = stats.mstats.trim(masked_measures, (0.15, 0.15), relative=True)
+			# masked_measures = np.multiply(masked_measures, [1000] * len(masked_measures)) # segundos a milisegundos
+			masked_measures = stats.mstats.trim(masked_measures, (0, 0), relative=True)
+
 			measures = []
 			ticks = []
 			recursiones = []
@@ -67,7 +69,6 @@ def do_statistics(raw_input):
 def preplot(runs):
 	lines = {}
 
-	# pdb.set_trace()
 	for run_name in runs:
 		xs = [int(i) for i in runs[run_name].keys()]
 		ys = []
@@ -77,14 +78,11 @@ def preplot(runs):
 			ys.append(stats['mean'])
 			yerror.append(stats['stdev'])
 
-		xs, ys, yerror = (list(t) for t in zip(*sorted(zip(xs, ys, yerror)))) # sorts xs, ys and yerror by xs
+		# xs, ys, yerror = (list(t) for t in zip(*sorted(zip(xs, ys, yerror)))) # sorts xs, ys and yerror by xs
 
 		xs = [int(i) for i in xs]
 		ys = [float(i) for i in ys]
 		yerror = [float(i) for i in yerror]
-
-		print(run_name)
-		print(ys)
 
 		lines[run_name] = {}
 		lines[run_name]['xs'] = xs
@@ -95,10 +93,10 @@ def preplot(runs):
 
 def plot(lines):
 	log('plotting', 0)
-	
+
 	## scaling y limites de los ejes
-	plt.yscale('log', basey=2)
-	# plt.xscale('log', basex=2)
+	# plt.yscale('log', basey=2)
+	plt.xscale('log', basex=10)
 
 	## setup
 	for run_name, line in lines.items():
@@ -108,7 +106,7 @@ def plot(lines):
 	## labels
 	#plt.suptitle('Ondas', fontsize=16)
 	#plt.title('Ciclos consumidos por píxel en función de píxeles totales\ncon desviación estándar')
-	plt.xlabel('n')
+	plt.xlabel('T (valor objetivo)')
 	plt.ylabel('Tiempo (segundos)')
 	plt.legend()
 	#plt.legend(loc='upper right', bbox_to_anchor=(0.99, 0.8)) # para que no tape la linea de O0
@@ -119,9 +117,9 @@ def plot(lines):
 	plt.grid(b=True, which='minor', color='black', linestyle='dotted', alpha=0.05)
 	plt.minorticks_on()
 
-	xs = line['xs']
-	xint = range(min(xs), math.ceil(max(xs))+1, 3)
-	plt.xticks(xint)
+	# xs = line['xs']
+	# xint = range(min(xs), math.ceil(max(xs))+1, 3)
+	# plt.xticks(xint)
 
 	plt.draw()
 	plt.show()

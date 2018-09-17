@@ -117,4 +117,11 @@ Podemos observar la superioridad en performance de la implementación con Progra
 
 Para este experimento utilizamos un valor $T$ de ocho dígitos decimales. Podemos observar que en ambos casos el algoritmo de Programación Dinámica no tiene un buen desempeño. En cambio, el de Fuerza Bruta y Back Tracking compiten cercanamente. Cuando la solución a los problemas está exactamente al principio de la lista, el algoritmo de fuerza bruta resulta más eficiente y porque este – por como fue implementado – inicia su búsqueda desde el comienzo de la lista. En cambio, cuando la solución está al final de la secuencia, el algoritmo de Back Tracking es ligeramente más rápido por el motivo análogo al anterior: Back Tracking inicia su búsqueda desde el final de la lista de valores. ¿Pero qué pasa con el algoritmo de Programación Dinámica? No parece ser eficiente en ningún aspecto. Hipotetizamos que es por el excesivamente elevado valor de $T$. Analizaremos este aspecto en la siguiente sección.
 
-\subsubsection{Cardinal fijo, valor objetivo dinámico}
+\subsubsection{Cardinal fijo y valor objetivo dinámico con listas pequeñas}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.5\textwidth]{bf-and-bt-and-pd-shuff-nounsolv-fixed-n}
+	\caption{\footnotesize Segundos consumidos en función del valor objetivo T}
+	\label{fig:bf-and-bt-and-pd}
+\end{figure}
+En este experimento fijamos el cardinal de los valores posibles a $n=5$ e iteramos sobre el valor de $T$. Podemos ver que para los algoritmos de Back Tracking y Brute Force, solucionar un problema de tamaño 5 para cualquier $T$ es instantáneo mientras que los tiempos tomados por la implementación de Programación Dinámica aumentan drásticamente a medida que $T$ lo hace.

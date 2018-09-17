@@ -1,10 +1,10 @@
 {
 	'exe' : '../impl/cmake-build-debug/impl',
 	'T_start' : 10,
-	'T_end' : 100000000,
+	'T_end' : 10000000000,
 	'T_multiplier' : 10,
-	'repetitions_per_n' : 5,
-	'fixed_n': 28,
+	'repetitions_per_n' : 2,
+	'fixed_n': 10,
 	'include_unsolvable_problems' : False,
 	'shuffle_problems' : True,
 	'solutions_at_tail' : False,
@@ -15,6 +15,6 @@
 			'algorithm' : 'bt'
 		},'Prog. Din.' : {
 			'algorithm' : 'dp'
-		},
+		}
 	}
 }

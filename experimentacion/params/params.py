@@ -14,6 +14,6 @@
 			'algorithm' : 'bt'
 		},'Prog. Din.' : {
 			'algorithm' : 'dp'
-		},
+		}
 	}
 }

@@ -10,7 +10,7 @@ def main(params, output_file):
 	log('starting', 0)
 	results_per_exec = {}
 	problems = build_problems(params)
-	
+
 	for run_name, run_desc in params['runs'].items():
 		log('exec %s' % run_name, 1)
 		results_per_exec[run_name] = run_for_algorithm(params, run_desc['algorithm'], problems)
