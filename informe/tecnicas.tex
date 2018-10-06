@@ -6,17 +6,11 @@ Se nos pidió implementar tres soluciones para el problema utilizando las siguie
 	\item Programación dinámica
 \end{itemize}
 
-\subsection{Brute-forcing}
-Esta técnica consiste en probar absolutamente todas las combinaciones posibles dado un conjunto de posibles soluciones definido. Si bien esta técnica es sencilla de implementar y asegura encontrar una solución al problema si es que existe, su complejidad suele ser cara y se disponen de alternativas más eficientes que veremos a continuación.
-
-\subsection{Backtracking}
+\subsection{Brute-forcing y Backtracking}
+La técnica de Brute Forcing consiste en probar absolutamente todas las combinaciones posibles dado un conjunto de posibles soluciones definido. Si bien esta técnica es sencilla de implementar y asegura encontrar una solución al problema si es que existe, su complejidad suele ser cara y se disponen de alternativas más eficientes que veremos a continuación como Backtracking, que suele ser una solución \textit{inteligente} de fuerza bruta.
 
 \subsection{Programación Dinámica}
-Esta técnica puede ser resumida como \textit{divide, conquer \& memoization}, donde se minimizan las llamadas recursivas al extinguir aquellas que ya han sido calculadas anteriormente. Esto sucede cuando existen recursiones que se invocan más de una vez con los mismos parámetros.
-
-\vskip 8pt
-
-En este documento, se considerarán dos enfoques de la programación dinámica:
+Esta técnica puede ser resumida como \textit{divide, conquer \& memoization}, donde se minimizan las llamadas recursivas al extinguir aquellas que ya han sido calculadas anteriormente. Esto sucede cuando existen recursiones que se invocan más de una vez con los mismos parámetros. En este documento, se considerarán dos enfoques de la programación dinámica:
 \begin{itemize}
 	\item El enfoque top-down (o \textit{memoization})
 	\item El enfoque bottom-up (o \textit{tabulation})

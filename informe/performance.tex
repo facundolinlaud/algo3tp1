@@ -61,7 +61,7 @@ Al igual que en los gráficos de fuerza bruta, la tendencia es clara: la funció
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.5\textwidth]{bt-div-cota}
+	\includegraphics[width=1\textwidth]{bt-div-cota}
 	\caption{\footnotesize Segundos consumidos en función de la cantidad de elementos de $values$ dividido $n*2^n$}
 	\label{fig:plot-bt-div-cota}
 \end{figure}
@@ -90,12 +90,17 @@ En estos experimentos podemos notar una tendencia extraña en el grafico \ref{fi
 \subsubsection{Entradas densas y aleatorias}
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.5\textwidth]{bf-and-bt-and-pd}
-	\caption{\footnotesize Segundos consumidos en función de la cantidad de elementos de $values$}
-	\label{fig:bf-and-bt-and-pd}
+	\begin{minipage}{0.48\textwidth}
+		\centering
+		\includegraphics[width=1\textwidth]{bf-and-cota}
+		\caption{\footnotesize Segundos consumidos en función de la cantidad de elementos de $values$}
+		\label{fig:bf-and-bt-and-pd}
+	\end{minipage}%
+	\hspace{0.03\textwidth}
+	\begin{minipage}{0.48\textwidth}
+		Podemos observar la superioridad en performance de la implementación con Programación Dinámica versus Back Tracking y Fuerza Bruta para entradas densas y aleatorias, es decir, con una cantidad alta de elementos. Mientras que la primera es completamente lineal, las dos últimas son exponenciales. Pero este caso se da siempre y cuando la composición de los problemas sea totalmente aleatoria. ¿Qué situación tendríamos si las soluciones se encontrasen en una posición temprana de la lista? ¿Y si el valor objetivo $T$ es muy grande? ¿Y si además las listas fuesen pequeñas?
+	\end{minipage}%
 \end{figure}
-
-Podemos observar la superioridad en performance de la implementación con Programación Dinámica versus Back Tracking y Fuerza Bruta para entradas densas y aleatorias, es decir, con una cantidad alta de elementos. Mientras que la primera es completamente lineal, las dos últimas son exponenciales. Pero este caso se da siempre y cuando la composición de los problemas sea totalmente aleatoria. ¿Qué situación tendríamos si las soluciones se encontrasen en una posición temprana de la lista? ¿Y si el valor objetivo $T$ es muy grande? ¿Y si además las listas fuesen pequeñas?
 
 \subsubsection{Soluciones tempranas o tardías con $T$ elevado}
 \begin{figure}[H]

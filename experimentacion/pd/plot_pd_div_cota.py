@@ -188,8 +188,8 @@ def plot(lines):
 	plt.xlabel('n')
 	plt.ylabel('Tiempo (milésimas)')
 	plt.legend()
-	plt.ylim(-0.001, 0.001)
-	plt.ticklabel_format(axis='y', style='sci', scilimits=(-0.001, 0.001))
+	plt.ylim(-0.0001, 0.0001)
+	plt.ticklabel_format(axis='y', style='sci', scilimits=(-0.0001, 0.0001))
 	#plt.legend(loc='upper right', bbox_to_anchor=(0.99, 0.8)) # para que no tape la linea de O0
 
 	## grids

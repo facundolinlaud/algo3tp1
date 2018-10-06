@@ -147,6 +147,7 @@ def plot(lines):
 	# plt.xscale('log', basex=2)
 
 	## setup
+	plt.rcParams["figure.figsize"] = (16,4)
 	run_name = 'Back-Tracking'
 	line = lines[run_name]
 
@@ -169,8 +170,8 @@ def plot(lines):
 	plt.xlabel('n')
 	plt.ylabel('Tiempo (segundos)')
 	plt.legend()
-	plt.ylim(-0.001, 0.001)
-	plt.ticklabel_format(axis='y', style='sci', scilimits=(-0.001, 0.001))
+	plt.ylim(-0.00001, 0.00001)
+	plt.ticklabel_format(axis='y', style='sci', scilimits=(-0.00001, 0.00001))
 	#plt.legend(loc='upper right', bbox_to_anchor=(0.99, 0.8)) # para que no tape la linea de O0
 
 	## grids
@@ -180,7 +181,7 @@ def plot(lines):
 	plt.minorticks_on()
 
 	xs = line['xs']
-	xint = range(min(xs), math.ceil(max(xs))+1, 3)
+	xint = range(min(xs), math.ceil(max(xs))+1, 1)
 	plt.xticks(xint)
 
 	plt.draw()

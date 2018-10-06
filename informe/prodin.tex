@@ -1,7 +1,7 @@
 \section{Programación dinámica}
 Antes que nada, debemos demostrar que el Principio de Optimalidad de Bellman vale para el problema de la suma de subconjuntos. Es decir, que toda solución óptima de un problema es construida a partir de subsoluciones óptimas de sus respectivos subproblemas. ¿Entonces, se cumple el principio de optimalidad? Verifiquémoslo.
 
-\subsubsection{Cumplimiento del Principio de Optimalidad}
+\subsection{Cumplimiento del Principio de Optimalidad}
 Asumiendo $I$ un conjunto solución de $n$ índices correspondientes a elementos en $V$ tal que $I=\{1, ..., n\}$ y $\sum_{i \in I}v_{i} = T$ con $T$ el valor objetivo. Para cada valor posible en $V$ hay dos posibilidades: que sea parte de la solución o no lo sea.
 
 \begin{enumerate}[I)]
@@ -28,7 +28,6 @@ Asumiendo $I$ un conjunto solución de $n$ índices correspondientes a elementos
 	La equivalencia entre $I^\prime$ e $I^{\prime\prime}$ obtenida como conclusión contradice la declaración $|I^{\prime\prime}| < |I^\prime|$, obteniéndose un absurdo. Luego, $I^\prime$ es subsolución óptima del subproblema.
 \end{enumerate}
 Finalmente, el problema satisface el principio de optimalidad.
-\vskip 8pt
 $\qedwhite$
 \vskip 8pt
 De esta manera, formulamos el problema recursivamente:
@@ -86,16 +85,12 @@ Este algorítmo tiene un enfoque top-down. Es invocado con los parámetros $(i, 
 	\item En cambio, si el valor de $accumulator$ no es cero, el camino no tiene solución, pues el camino recursivo no dispone de elementos suficientes para sumar $accumulator$.
 \end{itemize}
 
-Cualquiera sea la respuesta, esta se almacena en una matriz global $dic$ en los índices $(i, accumulator)$ para ser reutilizada la próxima vez que la función $Subset-Sum$ sea invocada con los mismos parámetros.
-
-\vskip 8pt
-
 Si el valor de $i$ es distinto de cero, entonces estamos en presencia de un paso recursivo. Aquí existen dos casos posibles:
 \begin{itemize}
 	\item $V[i]$ es mayor al valor acumulado al que se quiere llegar; es decir, el elemento del conjunto $V$ que se está analizando supera el valor de $accumulated$ por lo tanto no puede ser parte de la solución. En este, caso el algoritmo continúa por el camino recursivo donde $V[i]$ no es solución.
 	\item $V[i]$ no es mayor al valor acumulado y podría llegar a ser parte de la solución. En este caso, se consideran y exploran ambos caminos: donde $V[i]$ es incluído en la solución y donde no lo es. El algoritmo se quedará con el menor de los dos caminos. Es decir, el de menor cardinalidad. Aquí es importante aclarar la importancia de devolver $\infty$ en el caso base sin solución explicado anteriormente.
 \end{itemize}
-Nuevamente, cualquiera sea el resultado del camino recursivo, este se guardará en el diccionario con los índices correspondientes. Finalmente, el algoritmo retornará lo que sea que haya guardado recientemente o no en los índices $(i, accumulator)$ del diccionario.
+Cualquiera sea el resultado del camino recursivo, este se guardará en el diccionario global en los índices $(i, accumulator)$ para ser reutilizado la próxima vez que la función $Subset-Sum$ sea invocada con los mismos parámetros.
 
 \subsection{Complejidad}
 Debido a la naturaleza de la técnica de programación dinámica, la complejidad del algoritmo queda definida de la siguiente manera:
@@ -104,5 +99,3 @@ $\mathcal{O}(f) = \mathcal{O}(\#subproblemas) * \mathcal{O}(\#costo \ por \ subp
 \vskip 8pt
 
 Para esto, debemos resolver la complejidad del algoritmo exceptuando las recursiones. Es fácil observar que, asumiendo un diccionario con escritura y lectura en $\mathcal{O}(1)$, todo el algoritmo es $\mathcal{O}(1)$. Luego, la complejidad de la solución entera estará determinada por la cantidad de subproblemas totales, que es exactamente $n * T$, recordando que $n$ es la cantidad de números utilizables para llegar al objetivo $T$. Es decir, el algoritmo sólo hace recursión sobre los subproblemas cuyo resultado no calculó previamente. En caso de haberlo calculado, este estará disponible en el diccionario en $\mathcal{O}(1)$.
-
-\subsection{Análisis de performance}

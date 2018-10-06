@@ -55,13 +55,13 @@ Sea la tupla $(V, n, T)$ una instancia del problema de la Suma De Subconjuntos, 
 		\label{fig:alg-bruteforce}
 	\end{minipage}
 \end{center}
-Se puede observar que el algoritmo está dividido en dos:
+Se puede observar que el algoritmo está dividido en dos partes:
 \begin{itemize}
 	\item La función $Subset-Sum$ que toma un parámetro $t$ que representa la suma objetivo (y original) a alcanzar
 	\item La función $Is-Subset-Solution$ que toma tres parámetros: $k$ que representa el tamaño de grupos en los cuales se intentará agrupar el conjunto de valores originales para llegar a $t$. El segundo parámetro es $from$, un índice que apunta a un elemento dentro de la lista de valores $V$ consideraba global, válida y disponible (junto con su respectivo tamaño $n$). El tercer parámetro es $t$ y lleva la suma acumulada objetivo del subproblema.
 \end{itemize}
 
-El funcionamiento del algoritmo es sencillo: se empieza invocando la función $Subset-Sum$ con una suma objetivo determinada. Esta función, a su vez, invoca $n$ veces la rutina $Is-Subset-Solution(i$, $from = 0$, t = $t)$, con $i = 1, ..., n$. Además, el bucle se seguirá ejecutándo mientras esta última rutina no retorne $true$.
+El funcionamiento del algoritmo es sencillo: se empieza invocando la función $Subset-Sum$ con una suma objetivo determinada. Esta función, a su vez, invoca $n$ veces la rutina $Is-Subset-Solution(i$, $from = 0$, t = $t)$, con $i = 1, ..., n$. Además, el bucle se seguirá ejecutando mientras esta última rutina no retorne $true$.
 
 \vskip 8pt
 
@@ -87,4 +87,4 @@ Es fácil chequear que cada llamada a $Is-Subset-Solution$ se realiza $n$ veces 
 
 \vskip 8pt
 
-Podemos demostrar que la complejidad de $Is-Subset-Solution$ pertenece a la clase $O(n*2^{n}$) pues cada llamada a esta función debe resolver reccurentemente, como mucho, $2^{n}$ problemas: es decir, para cada elemento $e$ de $V$, analizar el camino donde $V_{e}$ pertenece a la posible solución así como el camino donde $V_{e}$ no pertenece a la posible solución. De hecho, la complejidad real del algoritmo nunca será igual a $n*2^{n}$ porque cada recursión se detendrá al haber completado todos los grupos de $k$ elementos.
+Podemos demostrar que la complejidad de $Is-Subset-Solution$ pertenece a la clase $\mathcal{O}(2^{n}$) pues cada llamada a esta función debe resolver reccurentemente, como mucho, $2^{n}$ problemas; es decir, para cada elemento $e$ de $V$, analizar el camino donde $V_{e}$ pertenece a la posible solución así como el camino donde $V_{e}$ no pertenece a la posible solución. De hecho, la complejidad real del algoritmo nunca será igual a $n*2^{n}$ porque cada recursión se detendrá al haber completado todos los grupos de $k$ elementos. Finalmente, la complejidad final del algoritmo $Subset-Sum$ es $\mathcal{O}(n*2^n)$.

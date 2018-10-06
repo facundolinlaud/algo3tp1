@@ -150,6 +150,10 @@ def plot(lines):
 	for xe, ye in zip(line['xs'], line['yss']):
 		plt.scatter([xe] * len(ye), ye, c="g", alpha=0.3)
 
+	plt.scatter([], [], c='palegreen', label='Programación Dinámica (Promedio por cada n)')
+	for xs, ys in zip(line['xs'], line['ys']):
+		plt.scatter([xs], [ys], c="palegreen", alpha=0.9)
+
 	########## error bar con promedios de prodin ########
 	# plt.errorbar(line['xs'], line['ys'], yerr=line['yerror'], label='Programación Dinámica', color='gold', 
 	# 	linewidth=1, xerr=None, fmt='o-', ecolor=None, elinewidth=1, capsize=1, barsabove=False, lolims=False, 

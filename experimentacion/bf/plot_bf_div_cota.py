@@ -113,7 +113,7 @@ def preplot(runs):
 
 
 	##################################
-	pdb.set_trace()
+	# pdb.set_trace()
 
 	ys = np.divide(ys, cota_ys)
 
@@ -169,8 +169,8 @@ def plot(lines):
 	plt.ylabel('Tiempo (milisegundos)')
 	plt.legend()
 	# plt.ticklabel_format(style='sci', axis='y')
-	plt.ylim(-0.001, 0.001)
-	plt.ticklabel_format(axis='y', style='sci', scilimits=(-0.001, 0.001))
+	plt.ylim(-0.00001, 0.00001)
+	plt.ticklabel_format(axis='y', style='sci', scilimits=(-0.00001, 0.00001))
 	#plt.legend(loc='upper right', bbox_to_anchor=(0.99, 0.8)) # para que no tape la linea de O0
 
 	## grids

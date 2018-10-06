@@ -1,44 +1,6 @@
 \section{Análisis del problema}
-Definiremos el conjunto de $n$ elementos $I$ como la estructura que almacena todos los índices de valores asociados $v_{i}\in \mathds{N}_{0}$.
-Comenzaremos analizando las aristas del problema con una serie de ejemplos:
+En este documento se analizará el problema de la suma de subconjuntos (\textit{subset sum} en inglés). Dado un conjunto de $n$ elementos $V$ generalizados $v_{i}$ y un valor objetivo $T$, decidir si existe un subconjunto de S cuyos elementos sumen exactamente $T$ y, de existir múltiples soluciones, dar el mínimo cardinal. En el futuro, nos referiremos a las instancias de este problema con una tupla de la forma: $(V, n, T)$.
 
 \vskip 8pt
 
-\subsection{Casos descartables}
-Podemos decidir rápidamente si una instancia tiene solución si esta cumple alguna de las siguientes características:
-
-\subsubsection{Elementos mayores al valor objetivo}
-Si todos los elementos del conjunto son mayores al valor objetivo $T$, entonces no importa que subconjunto se elija, el valor $T$ será inferior a cualquier elemento del subconjunto exceptuando el caso $T=0$ y el conjunto vacío.
-
-\subsubsection{Suma total impar y valor objetivo equivalente a la mitad del total}
-Sea $total$ la suma de todos los elementos del conjunto, si se busca obtener un subconjunto que sume $\frac{total}{2}$, es necesario que $total$ sea divisible por dos. De lo contrario, no sería posible encontrar una mitad de $total$ en el conjunto $I$.
-
-\vskip 8pt
-
-En otras palabras, no existe un subconjunto solución $I$ tal que $\sum_{i \in I}^{} v_{i} = \frac{T}{2}$ porque $2 \nmid total$ y todos los valores asociados a $v_{i}$ en $I$ son naturales.
-
-\subsection{Casos no descartables}
-A diferencia de los anteriores, la factibilidad de ciertos casos no puede ser determinada a simple vista. Para ello, es necesario procesar estas instancias del problema mediante diferentes algoritmos que se explayarán más adelante. Ahora, analizaremos algunas posibles formas del problema de la suma de subconjuntos:
-
-\vskip 8pt
-\textbf{Primer ejemplo}
-\vskip 8pt
-Dada una lista indexada desde el cero de valores $V=[10, 15, 5, 10, 5]$ y $T=25$ podemos encontrar las siguientes cinco soluciones, donde la menor cardinalidad es dos:
-\begin{itemize}
-	\item $I=\{0, 1\}$, sumando los valores 10 y 15
-	\item $I=\{1, 3\}$, sumando los valores 15 y 10
-	\item $I=\{0, 2, 3\}$, sumando los valores 10, 2 y 10
-	\item $I=\{0, 3, 4\}$, sumando los valores 10, 10 y 5
-	\item $I=\{1, 2, 4\}$, sumando los valores 15, 5 y 5
-\end{itemize}
-
-\textbf{Segundo ejemplo}
-\vskip 8pt
-$V=[2, 8, 9, 13, 16]$ y $T=24$ podemos encontrar sólo una solución de cardinalidad dos:
-\begin{itemize}
-	\item $I=\{1, 4\}$, sumando los valores 8 y 16
-\end{itemize}
-
-\textbf{Tercer ejemplo}
-\vskip 8pt
-$V=[2, 8, 9, 13, 16]$ y $T=20$ no posee soluciones.
+Es interesante analizar este problema y sus derivados por su importante papel, por ejemplo, en las Ciencias de la Computación. Uno de sus caso de uso es encontrar la mejor distribución de tareas a ejecutar en dos procesadores, minimizando tiempos de \textit{idling} no es mas que una instancia del \textit{subset sum} con $T = \frac{total}{2}$, siendo $total$ la suma de los tiempos totales de todas las tareas a ejecutar.

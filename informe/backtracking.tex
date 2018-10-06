@@ -14,7 +14,7 @@ La técnica de backtracking hace foco en el descarte de ramificaciones infactibl
 					\li \If $t = 0$ \textbf{then}
 					\li \Then
 						\If $cardinal\_so\_far < minimum\_cardinal\_so\_far$ \textbf{then} \Then
-							\li $minimum\_cardinal\_so\_far = cardinal\_so\_far$
+							\li $minimum\_cardinal\_so\_far \leftarrow cardinal\_so\_far$
 						\End
 						\zi
 						\li \Return $0$
@@ -38,9 +38,23 @@ En este algoritmo se asumen globales las variables $values$ (los valores disponi
 
 \vskip 8pt
 
-El funcionamiento del algoritmo es similar al de \textit{brute-force} pero más inteligente. Es decir, en el momento en el que una rama deja de ser factible, esta es descartada inmediatamente. Esto se puede observar en las líneas 10 y 11 donde, si el valor que se está evaluando en el momento excede la suma buscada, entonces se desecha la alternativa. Esto representa una poda por factibilidad. Además, se lleva un registro de cual fue el mínimo cardinal entre todas las soluciones encontradas hasta el momento y se utiliza como límite para futuras exploraciones. Es decir, si se encontró una solución con cardinal $m$, cualquier subconjunto de $valores$ que sume $T$ pero disponga de un cardinal mayor a $m$ no será una solución óptima al problema. Esto se conoce como una poda por optimalidad y se puede observar en las líneas 1, 2, 5 y 6.
+El funcionamiento del algoritmo es similar al de \textit{brute-force} pero más inteligente. Es decir, en el momento en el que una rama deja de ser factible, esta es descartada inmediatamente. Esto se puede observar en las líneas 10 y 11 donde, si el valor que se está evaluando en el momento excede la suma buscada, entonces se desecha la alternativa. Esto representa una poda por factibilidad y cualquier conjunto de valores tomados como posible solución que excedan $T$ no pueden ser solución. Además, se lleva un registro de cual fue el mínimo cardinal entre todas las soluciones factibles encontradas hasta el momento y se utiliza como límite para futuras exploraciones. Es decir, si se encontró una solución con cardinal $m$, cualquier subconjunto de $valores$ que sume $T$ pero disponga de un cardinal mayor a $m$ no será una solución óptima al problema. Esto se conoce como una poda por optimalidad y se puede observar en las líneas 1, 2, 5 y 6.
+
+\vskip 8pt
+
+Supongamos $S=<s_{1}, ..., s_{k}>$ una solución óptima con cardinal finito para un problema $(V, n, T)$. Ya sabemos que el algoritmo encontrará una solución si la hay. Falta analizar qué sucederá cuando la encuentre:
+
+\begin{enumerate}[I)]
+	\item $S$ es la primera solución encontrada por el algoritmo, por lo tanto $cardinal\_so\_far$ es $\infty$. Luego, $|S| < cardinal\_so\_far$ por lo tanto $S$ es persistida como solución óptima.
+	\item $S$ no es la primera solución encontrada por el algoritmo, por lo tanto $cardinal\_so\_far < \infty$.
+	\begin{enumerate}[a)]
+		\item Si $|S| < cardinal\_so\_far$ entonces $S$ será mejor solución que la anterior encontrada. Luego, se persiste el cardinal de $S$ como solución óptima.
+		\item Si $|S| = cardinal\_so\_far$ entonces $S$ será igual solución que la anterior encontrada. El cardinal de $S$ sigue siendo solución óptima por más que haya sido encontrado a partir de otro conjunto de valores.
+		\item Si $|S| > cardinal\_so\_far$ implica que se llegó al valor $T$ sumando menos elementos que $S$, contradiciendo la hipótesis de que el cardinal de $S$ es solución óptima. Absurdo.
+	\end{enumerate}
+\end{enumerate}
+
+De esta manera, podemos corroborar que la solución real del problema nunca será podada en favor de una peor solución.
 
 \subsection{Complejidad}
 Este algoritmo comparte la misma complejidad de peor caso que la implementación \textit{brute force}. En el peor de los escenarios, el algoritmo debe resolver $n*2^n$ subproblemas pues por cada elemento a evaluar de $values$, se pueden llegar a computar las $2^n$ configuraciones de elementos posibles.
-
-\subsection{Análisis de performance}

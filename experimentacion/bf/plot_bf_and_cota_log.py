@@ -150,6 +150,12 @@ def plot(lines):
 	for xe, ye in zip(line['xs'], line['yss']):
 		plt.scatter([xe] * len(ye), ye, c="rebeccapurple", alpha=0.3)
 
+	# pdb.set_trace()
+	plt.scatter([], [], c='magenta', label='Brute Force (Promedio por cada n)')
+	for xs, ys in zip(line['xs'], line['ys']):
+		plt.scatter([xs], [ys], c="magenta", alpha=1)
+
+
 	########## error bar con promedios de prodin ########
 	# plt.errorbar(line['xs'], line['ys'], yerr=line['yerror'], label='Back Tracking', color='gold', 
 	# 	linewidth=1, xerr=None, fmt='o-', ecolor=None, elinewidth=1, capsize=1, barsabove=False, lolims=False, 
